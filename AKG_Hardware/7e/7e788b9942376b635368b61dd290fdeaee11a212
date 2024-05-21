@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20240226T000006Z - 97737@0ec842cea42d
+DTSTART:20240226T030000Z
+DTEND:20240226T033000Z
+ATTENDEE:MAILTO:babar@akghardware.com
+ATTENDEE:MAILTO:saleh@akghardware.com
+CREATED:20240226T000006Z
+DESCRIPTION:Mobile: +96898083207\nEmail: babar@akghardware.com\nWhat do you
+  want to transport?: Glue Pallet\nIn case of Other Product\, please mentio
+ n the products and their quantities:\nADESILEX P7 GREY 63.00 25 KG Bag\nIn
+ voice Reference: NV/2024/02030\nInvoice date: 22/02/2024\nPurchase from Br
+ anch: Mabela\nServed by: Ansar Dayaroth\nPlease enter the Customer's deliv
+ ery location address:\nhttps://maps.app.goo.gl/cRNRwCg9AANkfXjn7?g_st=iw [
+ 1]\nPlease enter the contact number for delivery:\nAHMED AL RAWAHI\n920404
+ 66\n\n\n[1] https://maps.app.goo.gl/cRNRwCg9AANkfXjn7?g_st=iw
+DTSTAMP:20240226T000006Z
+ORGANIZER;CN="Rawabi Bosher Trading & Const. Est. LLC., Mitsubishi/Fuso : 8
+ 201 BK":MAILTO:saleh@akghardware.com
+SUMMARY:3 Ton Transportation to Ad Dakhiliyah 1 Pallet with Babar Affan
+BEGIN:VALARM
+ACTION:AUDIO
+DESCRIPTION:Notification - 15 Minutes
+TRIGGER;related=START:PT15M
+END:VALARM
+BEGIN:VALARM
+ACTION:AUDIO
+DESCRIPTION:Email - 3 Hours
+TRIGGER;related=START:PT3H
+END:VALARM
+BEGIN:VALARM
+ACTION:AUDIO
+DESCRIPTION:SMS Text Message - 1 Hours
+TRIGGER;related=START:PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,1540 @@
+Return-Path: <farooqui@mismuscat.com>
+Delivered-To: babar@akghardware.com
+Received: from cpanel21.interactivedns.com
+	by cpanel21.interactivedns.com with LMTP
+	id uBfOBzTNCmUkARUAGRFUPQ
+	(envelope-from <farooqui@mismuscat.com>)
+	for <babar@akghardware.com>; Wed, 20 Sep 2023 16:15:08 +0530
+Return-path: <farooqui@mismuscat.com>
+Envelope-to: babar@akghardware.com
+Delivery-date: Wed, 20 Sep 2023 16:15:08 +0530
+Received: from mail-yw1-f169.google.com ([209.85.128.169]:61913)	by
+ cpanel21.interactivedns.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.96)	(envelope-from <farooqui@mismuscat.com>)	id 1qiuhh-005vo6-0r	for
+ babar@akghardware.com;	Wed, 20 Sep 2023 16:15:08 +0530
+Received: by mail-yw1-f169.google.com with SMTP id
+ 00721157ae682-59bfb0825efso60665177b3.3        for <babar@akghardware.com>;
+ Wed, 20 Sep 2023 03:45:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=mismuscat.com;
+ s=google; t=1695206703; x=1695811503; darn=akghardware.com;       
+ h=cc:to:subject:message-id:date:from:in-reply-to:references        
+ :mime-version:from:to:cc:subject:date:message-id:reply-to;       
+ bh=WA7ugr/QtAH8wSnpTrFC8c+NeSWNIm5dMWavW++67ns=;       
+ b=F17aMC9ImIw16lkF+pbvEq1VGwUrI8i1n0sxveFwqy3/yREonO1IY0f19VkJiIAfs+        
+ 75MvHfIrzv1VrRvfoWGhMDrHttlqtwg9chpxz7gvXEp79HyQbYFXFhboU3T+smfMi+W9        
+ L4eYTKh3vYT/1u5NDtYkTAMAkt+jGm5dflcjA=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1695206703; x=1695811503;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=WA7ugr/QtAH8wSnpTrFC8c+NeSWNIm5dMWavW++67ns=;
+        b=IrDm6wZG7s8vUWXAkcZo7+vu30EDHiS/COZiaV1N7xiQ99CMuNlDWGI/mXLSGklOdJ
+         YBNIGhSzpGOkARaLzAMOJakRFuUc1I1/Adi7fibykWTREF8Cd8UiZVXi7d2RLtzC5Z+1
+         ZYgrk31N+DbMSfjNBXCt9tQRx/0QuWVaNx4lXn1yqybHvGaCFNlAre/WmI1lQ0I2UekN
+         eUmMYsgeraPfPkYzmfduKR9jhQmLwaslZBE1sJxROMG7ti59hGN6LbjPCKW/cka4ceG3
+         E9iNplIB+0fiM6x/IzVtVMD0RgO7V6UTmreLjedeUHGm08aQY6rTgzXb3DaKEHnEb5xQ
+         7pBw==
+X-Gm-Message-State: AOJu0YzYAteTfPVL15VXvtGU79SA08jPD4p6+K9rOV4kBnqvLK0qh1l8
+	HuqvX+lNRg3lz7Yh/p9tt6ofbr8cGWzkcbhlvvvV5Lrq90r2nVrOMHXGPuCVQbxhbRTmDFyt9Dd
+	TRTHkvCJZ7sPQRiPCJNa3SID8KH5vZKgDQo2pVtU+ONqyZb1041BJ9j3Cc8pyl8U5NSoqE59Wf2
+	+BBes7SjoHpDGAP+Z2
+X-Google-Smtp-Source: =?utf-8?q?AGHT+IGcndboT2U5/1neTeso0g8J1HI6T0CokbyTpYLj?=
+ =?utf-8?q?shw0/v42O1b9V8/92+GptC9ILAK6H74sfiLF9tIzd4vvvzg=3D?=
+X-Received: by 2002:a0d:d9ce:0:b0:59b:eea6:3392 with SMTP id
+ b197-20020a0dd9ce000000b0059beea63392mr2086002ywe.8.1695206702297; Wed, 20
+ Sep 2023 03:45:02 -0700 (PDT)
+MIME-Version: 1.0
+References: <108870684235105.1693212604.346178054809570-openerp-message-notify@0ec842cea42d>
+ <284306984525426.1694434185.720199346542358-openerp-4370-purchase.order@0ec842cea42d>
+ <AS8PR06MB77509E984E0C87FF5B59FD93E3F2A@AS8PR06MB7750.eurprd06.prod.outlook.com>
+ <GV1PR06MB837062984E03C742BA7A75FE9CF2A@GV1PR06MB8370.eurprd06.prod.outlook.com>
+ <AS8PR06MB78776C554239490346BC25BE91F2A@AS8PR06MB7877.eurprd06.prod.outlook.com>
+ <002b01d9e533$168d6bc0$43a84340$@akghardware.com> <AM0PR06MB45465530760123A0513C2EF3C6F1A@AM0PR06MB4546.eurprd06.prod.outlook.com>
+ <AD23D9E9-6A9A-9247-8D9A-619F8C876BB1@hxcore.ol> <CAEOSpCOOMmdozcb_bN_piBNAYai_RHrS7QnyJ9vRtPoK-nnmNQ@mail.gmail.com>
+ <AM0PR06MB4546939C4000CDFF86961071C6FBA@AM0PR06MB4546.eurprd06.prod.outlook.com>
+ <00ac01d9eb8d$180b9a70$4822cf50$@akghardware.com> <CAEOSpCNMSk5bzRuT_9GHzxhg61utVWw_580ptSDkqXyzF8=fGA@mail.gmail.com>
+In-Reply-To: <CAEOSpCNMSk5bzRuT_9GHzxhg61utVWw_580ptSDkqXyzF8=fGA@mail.gmail.com>
+From: FAROOQUI HU <farooqui@mismuscat.com>
+Date: Wed, 20 Sep 2023 14:44:49 +0400
+Message-ID: <CADbRMY+OkQ=yA8anXKXJr0s11K2Kf_bwvAHvcSpmfcjk71gdNQ@mail.gmail.com>
+Subject:
+ Re: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref P00122) - DE 111780
+To: babar@akghardware.com
+Cc: Hidalgo Reynaldo <r.hidalgo@mapei.ae>, Joju Pradeep <joju@mismuscat.com>,
+ 	Yazbeck Roger <r.yazbeck@mapei.ae>, Abdallah Bachir <b.abdallah@mapei.ae>,
+ 	MCC CSR Export <csrexport@mapei.ae>, Import <saroop@mismuscat.com>,
+ jehad@akghardware.com
+Content-Type: multipart/alternative; boundary="0000000000004fc8730605c811d6"
+
+--0000000000004fc8730605c811d6
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Babar,
+
+Please arrange Advance Duty & VAT - OMR 350.00 ASAP.
+
+
+
+
+*Please note our VAT Registration No. VATIN OM1100017102*
+
+
+=E2=80=9CEffective from 16th April 2021, VAT shall be applicable as per new
+Government regulation in the Sultanate of Oman. All our quotations are
+exclusive of value added tax (VAT) & will be subject to VAT at the
+prevailing rate=E2=80=9D.
+
+
+
+
+
+*Notification:*
+
+*As per Royal Oman Police (ROP) Customs with immediate effect,  all import
+shipments must have the*
+
+*original : invoice, Packing List and Certificate of Origin. If any of
+these documents is not available or is a*
+
+*copy, then it will attract 2% additional customs duty on CIF value.*
+
+
+
+*FAROOQUI *
+
+*Assistant Manager =E2=80=93 Imports*
+
+[image: Description: Description: cid:f71b3b8f-2bd1-4c9a-9012-b2a9a65ae53d]
+
+*MUSCAT INTERNATIONAL SHIPPING & LOGISTICS LLC*
+
+Office No 104, AL Khaleel Head Office Building, Way No 240
+Building No 439, Al Ghubra North, Muscat, Sultanate of Oman
+Po Box: 1820 | PC: 133
+
+farooqui@mismuscat.com *|* mismuscat.com
+
+PHONE +968 22555566| 22553355 | 24498177| 24494680
+
+MOB + 968 9524 1933 | FAX +968 24493049 |
+
+*JCILO** | **GAIN** | **OCPA** | **PCN (OVERSEAS NETWORK)*
+
+
+On Wed, Sep 20, 2023 at 1:18=E2=80=AFPM Joju Pradeep <joju@mismuscat.com> w=
+rote:
+
+> Dear Sir,
+>
+> Well noted. We will arrange the trailer.
+>
+>
+>
+> Best Regards,
+>
+> *Joju Pradeep*
+>
+> COMMERCIAL MANAGER
+>
+>
+> *MUSCAT INTERNATIONAL SHIPPING & LOGISTICS LLC*
+>
+> Office No 104, AL Khaleel Head Office Building, Way No 240
+> Building No 439, Al Ghubra North, Muscat, Sultanate of Oman, Po Box: 1820
+> | PC: 133
+>
+> *joju@mismuscat.com <joju@mismuscat.com>* *|* mismuscat.com
+>
+> OMAN + 968 94392585 | PHONE +968
+> 22553355/22555566/24498177/24494680 | FAX +968
+> 24493049
+>
+> *JCILO** | **GAIN** | **OCPA** | **PCN (OVERSEAS NETWORK)*
+>
+> BEST MEMBER 2017 at the 4TH JCILO (Jay's Club International Logistics
+> Organisation) SYMPOSIUM
+>
+>
+>
+>
+>
+>
+> On Wed, Sep 20, 2023 at 10:38=E2=80=AFAM <babar@akghardware.com> wrote:
+>
+>> Dear Joju,
+>>
+>>
+>>
+>> Please make the necessary arrangements for the collection of the shipmen=
+t
+>> tomorrow at the below-mentioned time slot.
+>>
+>>
+>>
+>> Dear Reynaldo,
+>>
+>>
+>>
+>> Please make sure that all the necessary documentation is available and i=
+s
+>> shared on time.
+>>
+>>
+>>
+>> *Best regards,*
+>>
+>>
+>>
+>>
+>>
+>> *From:* MCC CSR Export <csrexport@mapei.ae>
+>> *Sent:* Monday, September 18, 2023 11:40 AM
+>> *To:* Joju Pradeep <joju@mismuscat.com>; jehad@akghardware.com
+>> *Cc:* babar@akghardware.com; Yazbeck Roger <r.yazbeck@mapei.ae>; Hidalgo
+>> Reynaldo <r.hidalgo@mapei.ae>; Abdallah Bachir <b.abdallah@mapei.ae>;
+>> Import <saroop@mismuscat.com>; FAROOQUI HU <farooqui@mismuscat.com>
+>> *Subject:* RE: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref
+>> P00122) - DE 111780
+>>
+>>
+>>
+>> Dear All,
+>>
+>> Please find below the collection schedule. We regret to inform you that
+>> due to a migration from the old to the new system, we will only be able =
+to
+>> provide the following collection schedule.
+>>
+>>
+>>
+>> Additionally, we only have limited staff (doing the loading and unloadin=
+g
+>> of the containers/trailers) due to sick leave. In the new system, you ca=
+n
+>> rest assured that all future orders will be processed quickly and easily=
+.
+>>
+>>
+>>
+>> Date
+>>
+>> Day
+>>
+>> Slot
+>>
+>> Mvt.Type
+>>
+>> Cust/Suppl.
+>>
+>> Del_Ref
+>>
+>> Truck_type
+>>
+>> Remarks
+>>
+>> Sum of Number of trucks
+>>
+>> 21-09-23
+>>
+>> Thursday
+>>
+>> 14:00-15:00
+>>
+>> EXPORT
+>>
+>> RAWABI BOSHER TRADING & CONST. EST.
+>>
+>> 23DE111780
+>>
+>> 40FT CTR
+>>
+>> (blank)
+>>
+>> 1
+>>
+>>
+>>
+>> Thank you and my apologies for any inconvenience caused.
+>>
+>>
+>>
+>>
+>>
+>> *Best Regards*
+>>
+>> *Reynaldo Hidalgo,Jr. *| C*ustomer Service Representative*
+>>
+>> email csrexport@mapei.ae
+>>
+>> *MAPEI CONSTRUCTION CHEMICALS L.L.C*
+>>
+>> P.O Box: 73869, Dubai - United Arab Emirates
+>>
+>> T. +971 4 815 6666 | F. +971 4 885 8438 | www.mapei.ae
+>>
+>>
+>>
+>> <https://www.mapei.com/ae/en/about-us/mapei-in-uae/certification>
+>>
+>> *Follow us on:*
+>>
+>> *[image: Icon Description automatically generated]*
+>> <https://www.linkedin.com/company/mapei-middleeast-eastafrica>*[image:
+>> Icon Description automatically generated]*
+>> <https://www.instagram.com/mapeimeea/>
+>>
+>> *Note:*
+>>
+>> *The Requirement of Official and Commercial Evidence under the Indirect
+>> Export of Goods.*
+>>
+>> *As per provisions of Article 30.2 of Cabinet Decision No. 52 of 2017 on
+>> the Executive Regulations of the Federal  Decree-law No. 8 of 2017 on Va=
+lue
+>> Added Tax in the UAE, an indirect export of Goods from an implementing
+>> state ( which include UAE ) to overseas customer shall be subject to VAT=
+ at
+>> the rate of 0% (Zero percent) only if the prescribed conditions are
+>> fulfilled.*
+>>
+>> *As set forth in the Article 4.a and 4.b of the aforementioned law and t=
+o
+>> ensure our compliance with the regulatory requirements, we would require
+>> the Official and Commercial evidence documents of export of goods within=
+ 45
+>> days from our date of supply of goods. In case of failure in doing so,
+>> Mapei will not benefit of the tax rate of zero percent applicable for th=
+e
+>> indirect export of goods and therefore will be required to reverse the
+>> initial Tax Invoice issued at the rate of 0% VAT and issue a new Tax
+>> Invoice with the standard rate applicable at 5% VAT. The customer
+>> acknowledges and agrees that it will accept the revised invoice and be
+>> obliged to remit the VAT amount to Mapei in view of the regulatory
+>> requirement.*
+>>
+>> *The Official evidence means Export documents issued by the local Emirat=
+e
+>> Customs Department in respect of Goods leaving the State including Exit
+>> certificate from the customs authorities. *
+>>
+>> *The Commercial evidence shall include any the following: *
+>>
+>>    1. *Airway bill. *
+>>    2. *Bill of lading. *
+>>    3. *Consignment note. *
+>>    4. *Certificate of shipment. *
+>>
+>> *The evidence obtained as proof of Export, whether official or
+>> commercial, must identify the following;*
+>>
+>>    1. *The Supplier.*
+>>    2. *The Consignor.*
+>>    3. *The Goods.*
+>>    4. *The Value.*
+>>    5. *The Export destination.*
+>>    6. *The mode of transport and route of the export movement.*
+>>
+>>
+>>
+>> *From:* Joju Pradeep <joju@mismuscat.com>
+>> *Sent:* Tuesday, September 12, 2023 11:46 AM
+>> *To:* jehad@akghardware.com
+>> *Cc:* MCC CSR Export <csrexport@mapei.ae>; babar@akghardware.com;
+>> Yazbeck Roger <r.yazbeck@mapei.ae>; Hidalgo Reynaldo <r.hidalgo@mapei.ae=
+>;
+>> Abdallah Bachir <b.abdallah@mapei.ae>; Import <saroop@mismuscat.com>;
+>> FAROOQUI HU <farooqui@mismuscat.com>
+>> *Subject:* Re: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref
+>> P00122) - DE 111780
+>>
+>>
+>>
+>> *Informative*
+>>
+>> This email was sent from an external party outside the MAPEI group. Do
+>> not click on the links or open attachments unless you identify the sende=
+r
+>> and know that the content is safe.
+>> ------------------------------
+>>
+>> Dear Sir,
+>>
+>>
+>>
+>> Well Noted.
+>>
+>>
+>>
+>>
+>>
+>> Best Regards,
+>>
+>> *Joju Pradeep*
+>>
+>> COMMERCIAL MANAGER
+>>
+>>
+>>
+>> *[image: Image removed by sender.]*
+>>
+>> *MUSCAT INTERNATIONAL SHIPPING & LOGISTICS LLC*
+>>
+>> Office No 104, AL Khaleel Head Office Building, Way No 240
+>> Building No 439, Al Ghubra North, Muscat, Sultanate of Oman, Po Box: 182=
+0
+>> | PC: 133
+>>
+>> *joju@mismuscat.com <joju@mismuscat.com>* *|* mismuscat.com
+>> <https://urlsand.esvalabs.com/?u=3Dhttp%3A%2F%2Fmismuscat.com%2F&e=3D863=
+73c93&h=3Dc42c7c0a&f=3Dy&p=3Dy>
+>>
+>> OMAN + 968 94392585 | PHONE +968
+>> 22553355/22555566/24498177/24494680 | FAX +968
+>> 24493049
+>>
+>> *JCILO** | **GAIN** | **OCPA** | **PCN (OVERSEAS NETWORK)*
+>>
+>> BEST MEMBER 2017 at the 4TH JCILO (Jay's Club International Logistics
+>> Organisation) SYMPOSIUM
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>> On Tue, Sep 12, 2023 at 9:22=E2=80=AFAM jehad@akghardware.com <
+>> jehad@akghardware.com> wrote:
+>>
+>> Dear @Hidalgo Reynaldo <r.hidalgo@mapei.ae>,
+>>
+>> It was a pleasure talking to you earlier this this mooring. As requested=
+,
+>> we will share the TT within the hour.
+>>
+>> As agree, I would kindly ask to make sure the consignment is ready for
+>> dispatch on the 14th or 15th of September.
+>>
+>>
+>>
+>> Dear @Joju Pradeep <joju@mismuscat.com>
+>>
+>> Please make sure your vehicle is ready for pickup once we get the final
+>> conformation on the date.
+>>
+>>
+>>
+>> Yours,
+>>
+>> [image: signature_393130664]
+>>
+>>
+>>
+>> *From: *MCC CSR Export <csrexport@mapei.ae>
+>> *Date: *Tuesday, 12 September 2023 at 8:53 AM
+>> *To: *babar@akghardware.com <babar@akghardware.com>, Yazbeck Roger <
+>> r.yazbeck@mapei.ae>
+>> *Cc: *Abdallah Bachir <b.abdallah@mapei.ae>, jehad@akghardware.com <
+>> jehad@akghardware.com>, Hidalgo Reynaldo <r.hidalgo@mapei.ae>, 'Joju
+>> Pradeep' <joju@mismuscat.com>
+>> *Subject: *RE: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref
+>> P00122) - DE 111780
+>>
+>> Dear Babar,
+>>
+>> Good Day!
+>>
+>> As of now, all stocks are available except for the Adesilex P9 Grey & P9
+>> White, which should be available on the 11th & 14th, respectively.
+>>
+>>
+>>
+>> Requesting you to please provide us with the TT copy as proof of Payment=
+.
+>>
+>>
+>>
+>> Thank you!
+>>
+>>
+>>
+>> *Best Regards*
+>>
+>> *Reynaldo Hidalgo,Jr. *| C*ustomer Service Representative*
+>>
+>> email csrexport@mapei.ae
+>>
+>> *MAPEI CONSTRUCTION CHEMICALS L.L.C*
+>>
+>> P.O Box: 73869, Dubai - United Arab Emirates
+>>
+>> T. +971 4 815 6666 | F. +971 4 885 8438 | www.mapei.ae
+>> <https://urlsand.esvalabs.com/?u=3Dhttp%3A%2F%2Fwww.mapei.ae%2F&e=3D8637=
+3c93&h=3D6a4358b4&f=3Dy&p=3Dy>
+>>
+>>
+>>
+>>
+>>
+>> <https://urlsand.esvalabs.com/?u=3Dhttps%3A%2F%2Fwww.mapei.com%2Fae%2Fen=
+%2Fabout-us%2Fmapei-in-uae%2Fcertification&e=3D86373c93&h=3Dd8073429&f=3Dy&=
+p=3Dy>
+>>
+>> *Follow us on:*
+>>
+>> *[image: Icon Description automatically generated]*
+>> <https://urlsand.esvalabs.com/?u=3Dhttps%3A%2F%2Fwww.linkedin.com%2Fcomp=
+any%2Fmapei-middleeast-eastafrica&e=3D86373c93&h=3De2bb47c7&f=3Dy&p=3Dy>*[i=
+mage:
+>> Icon Description automatically generated]*
+>> <https://urlsand.esvalabs.com/?u=3Dhttps%3A%2F%2Fwww.instagram.com%2Fmap=
+eimeea%2F&e=3D86373c93&h=3D5a7ffc52&f=3Dy&p=3Dy>
+>>
+>> *Note:*
+>>
+>> *The Requirement of Official and Commercial Evidence under the Indirect
+>> Export of Goods.*
+>>
+>> *As per provisions of Article 30.2 of Cabinet Decision No. 52 of 2017 on
+>> the Executive Regulations of the Federal  Decree-law No. 8 of 2017 on Va=
+lue
+>> Added Tax in the UAE, an indirect export of Goods from an implementing
+>> state ( which include UAE ) to overseas customer shall be subject to VAT=
+ at
+>> the rate of 0% (Zero percent) only if the prescribed conditions are
+>> fulfilled.*
+>>
+>> *As set forth in the Article 4.a and 4.b of the aforementioned law and t=
+o
+>> ensure our compliance with the regulatory requirements, we would require
+>> the Official and Commercial evidence documents of export of goods within=
+ 45
+>> days from our date of supply of goods. In case of failure in doing so,
+>> Mapei will not benefit of the tax rate of zero percent applicable for th=
+e
+>> indirect export of goods and therefore will be required to reverse the
+>> initial Tax Invoice issued at the rate of 0% VAT and issue a new Tax
+>> Invoice with the standard rate applicable at 5% VAT. The customer
+>> acknowledges and agrees that it will accept the revised invoice and be
+>> obliged to remit the VAT amount to Mapei in view of the regulatory
+>> requirement.*
+>>
+>> *The Official evidence means Export documents issued by the local Emirat=
+e
+>> Customs Department in respect of Goods leaving the State including Exit
+>> certificate from the customs authorities. *
+>>
+>> *The Commercial evidence shall include any the following: *
+>>
+>> 1.       *Airway bill. *
+>>
+>> 2.       *Bill of lading. *
+>>
+>> 3.       *Consignment note. *
+>>
+>> 4.       *Certificate of shipment. *
+>>
+>> *The evidence obtained as proof of Export, whether official or
+>> commercial, must identify the following;*
+>>
+>> 1.       *The Supplier.*
+>>
+>> 2.       *The Consignor.*
+>>
+>> 3.       *The Goods.*
+>>
+>> 4.       *The Value.*
+>>
+>> 5.       *The Export destination.*
+>>
+>> 6.       *The mode of transport and route of the export movement.*
+>>
+>>
+>>
+>> *From:* babar@akghardware.com <babar@akghardware.com>
+>> *Sent:* Tuesday, September 12, 2023 8:39 AM
+>> *To:* Yazbeck Roger <r.yazbeck@mapei.ae>
+>> *Cc:* Abdallah Bachir <b.abdallah@mapei.ae>; MCC CSR Export <
+>> csrexport@mapei.ae>; jehad@akghardware.com; Hidalgo Reynaldo <
+>> r.hidalgo@mapei.ae>; 'Joju Pradeep' <joju@mismuscat.com>
+>> *Subject:* RE: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref
+>> P00122) - DE 111780
+>>
+>>
+>>
+>> *Informative*
+>>
+>> This email was sent from an external party outside the MAPEI group. Do
+>> not click on the links or open attachments unless you identify the sende=
+r
+>> and know that the content is safe.
+>> ------------------------------
+>>
+>> Dear Roger,
+>>
+>>
+>>
+>> Thank you for the email.
+>>
+>>
+>>
+>> Please also advise on the readiness of the order, so that we may proceed
+>> accordingly.
+>>
+>>
+>>
+>> *Best regards,*
+>>
+>>
+>>
+>>
+>>
+>> *From:* Yazbeck Roger <r.yazbeck@mapei.ae>
+>> *Sent:* Monday, September 11, 2023 4:32 PM
+>> *To:* jehad@akghardware.com
+>> *Cc:* Babar Affan <babar@akghardware.com>; Abdallah Bachir <
+>> b.abdallah@mapei.ae>; MCC CSR Export <csrexport@mapei.ae>
+>> *Subject:* Rawabi Bosher Trading & Const. Est. LLC. Order (Ref P00122) -
+>> DE 111780
+>>
+>>
+>>
+>> Dear Jehad,
+>>
+>>
+>>
+>> Kindly find attached revised PI.
+>>
+>>
+>>
+>> Thank you.
+>>
+>>
+>>
+>> Best regards,
+>>
+>>
+>>
+>> Roger Yazbeck | Business Development Executive
+>>
+>> M. +971 56 656 0287
+>>
+>> email r.yazbeck@mapei.ae
+>>
+>>
+>>
+>> MAPEI CONSTRUCTION CHEMICALS L.L.C
+>>
+>> P.O Box: 73869, Dubai - United Arab Emirates
+>>
+>> T. +971 4 815 6666 | F. +971 4 885 8438 | www.mapei.com
+>> <https://urlsand.esvalabs.com/?u=3Dhttp%3A%2F%2Fwww.mapei.com&e=3D86373c=
+93&h=3De91c33f3&f=3Dy&p=3Dy>
+>>
+>>
+
+--0000000000004fc8730605c811d6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:comic sa=
+ns ms,sans-serif;color:#073763">Dear Babar,</div><div class=3D"gmail_defaul=
+t" style=3D"font-family:comic sans ms,sans-serif;color:#073763"><br></div><=
+div class=3D"gmail_default" style=3D"font-family:comic sans ms,sans-serif;c=
+olor:#073763">Please arrange Advance Duty &amp; VAT - OMR 350.00 ASAP.</div=
+><div class=3D"gmail_default" style=3D"font-family:comic sans ms,sans-serif=
+;color:#073763"><br clear=3D"all"></div><div><div dir=3D"ltr" class=3D"gmai=
+l_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><span styl=
+e=3D"background-color:rgb(255,255,0)"></span><div><br></div><div><br></div>=
+<div><br></div><b><u><span style=3D"font-size:9.0pt;font-family:&quot;Calib=
+ri&quot;,sans-serif;color:red">Please note our VAT=C2=A0Registration No.=C2=
+=A0VATIN OM1100017102</span></u></b><table cellpadding=3D"0" border=3D"0"><=
+tbody><tr><td style=3D"padding:7.5pt .75pt .75pt .75pt"><p class=3D"MsoNorm=
+al" style=3D"background:white"><b><u><span style=3D"font-size:9.0pt;font-fa=
+mily:&quot;Calibri&quot;,sans-serif;color:red"><br></span></u></b><span sty=
+le=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#222=
+222"></span></p><p class=3D"MsoNormal" style=3D"background:white"><span sty=
+le=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#1f3=
+864;background:yellow">=E2=80=9CEffective
+ from 16th=C2=A0April 2021,=C2=A0VAT=C2=A0shall be applicable as per new Go=
+vernment=20
+regulation in the Sultanate of Oman. All our quotations are exclusive of
+ value added tax (VAT) &amp; will=C2=A0be=C2=A0subject to=C2=A0VAT=C2=A0at =
+the=20
+prevailing=C2=A0rate=E2=80=9D.</span><span style=3D"font-size:9.0pt;font-fa=
+mily:&quot;Calibri&quot;,sans-serif;color:#1f3864"></span></p><p class=3D"M=
+soNormal" style=3D"background:white"><span style=3D"font-size:9.0pt;font-fa=
+mily:&quot;Calibri&quot;,sans-serif;color:#1f3864">=C2=A0</span></p><p clas=
+s=3D"MsoNormal" style=3D"margin-left:47.25pt;line-height:11.2pt;background:=
+white"><span style=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-=
+serif;color:#1f3864">=C2=A0<span style=3D"background:yellow"></span></span>=
+<span style=3D"font-size:9.0pt;font-family:&quot;Sylfaen&quot;,serif;color:=
+#222222"> <br></span></p><p class=3D"MsoNormal" style=3D"background:white">=
+<b><u><span style=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-s=
+erif;color:#c00000" lang=3D"EN-GB">Notification:</span></u></b></p><p class=
+=3D"MsoNormal" style=3D"background:white"><b><span style=3D"font-size:9.0pt=
+;font-family:&quot;Calibri&quot;,sans-serif;color:#c00000" lang=3D"EN-GB">A=
+s per Royal Oman Police (ROP) Customs with immediate effect,=C2=A0 all impo=
+rt shipments must have the</span></b><span style=3D"font-size:9.0pt;font-fa=
+mily:&quot;Calibri&quot;,sans-serif;color:#222222"></span></p><p class=3D"M=
+soNormal" style=3D"background:white"><b><span style=3D"font-size:9.0pt;font=
+-family:&quot;Calibri&quot;,sans-serif;color:#c00000" lang=3D"EN-GB">origin=
+al : invoice, Packing List and Certificate of Origin. If any of these docum=
+ents is not available or is a</span></b><span style=3D"font-size:9.0pt;font=
+-family:&quot;Calibri&quot;,sans-serif;color:#222222"></span></p><p class=
+=3D"MsoNormal" style=3D"background:white"><b><span style=3D"font-size:9.0pt=
+;font-family:&quot;Calibri&quot;,sans-serif;color:#c00000" lang=3D"EN-GB">c=
+opy, then it will attract 2% additional customs duty on CIF value.</span></=
+b><span style=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif=
+;color:#222222"></span></p><b><span style=3D"font-size:10.0pt;font-family:&=
+quot;Calibri&quot;,sans-serif;color:red">=C2=A0</span></b><p class=3D"MsoNo=
+rmal" style=3D"color:rgb(34,34,34);background-image:initial;background-posi=
+tion:initial;background-repeat:initial"><span style=3D"font-family:comic sa=
+ns ms,sans-serif"><b><span style=3D"font-size:10pt;color:rgb(192,0,0)" lang=
+=3D"EN-GB"><br></span></b></span></p><p class=3D"MsoNormal"><span style=3D"=
+font-family:comic sans ms,sans-serif"><b><span style=3D"font-size:13.5pt;co=
+lor:rgb(190,26,42)">FAROOQUI </span></b></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D"padding:6.0pt .75pt 3.0pt .75pt">
+  <p class=3D"MsoNormal" style=3D"line-height:105%"><b><u><span style=3D"fo=
+nt-family:Verdana,sans-serif;color:rgb(0,32,96);background-image:initial;ba=
+ckground-position:initial;background-repeat:initial">Assistant Manager =E2=
+=80=93
+  Imports</span></u></b><span style=3D"font-size:8.5pt;line-height:105%;fon=
+t-family:&quot;Roboto&quot;,&quot;serif&quot;;color:#002060"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D"border-top:solid #b2b2b2 2.25pt;border-left:none;border-bott=
+om:solid #b2b2b2 6.0pt;border-right:none;padding:7.5pt .75pt .75pt .75pt">
+  <table cellpadding=3D"0" border=3D"0">
+   <tbody><tr>
+    <td style=3D"padding:.75pt .75pt .75pt .75pt">
+    <p class=3D"MsoNormal" style=3D"text-align:center;line-height:105%" ali=
+gn=3D"center"><span style=3D"font-size:12.0pt;line-height:105%;font-family:=
+&quot;Times New Roman&quot;,&quot;serif&quot;;color:#1f4e79"><img alt=3D"De=
+scription: Description: cid:f71b3b8f-2bd1-4c9a-9012-b2a9a65ae53d" width=3D"=
+248" height=3D"80"></span></p>
+    </td>
+    <td style=3D"padding:0in 0in 0in 7.5pt">
+    <table style=3D"width:246.9pt" width=3D"329" cellpadding=3D"0" border=
+=3D"0">
+     <tbody><tr style=3D"height:10.3pt">
+      <td style=3D"padding:7.5pt .75pt .75pt .75pt;height:10.3pt">
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><b><span style=3D"f=
+ont-size:8.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&qu=
+ot;serif&quot;;color:#1f4e79">MUSCAT
+      INTERNATIONAL SHIPPING &amp; LOGISTICS LLC</span></b><span style=3D"f=
+ont-size:8.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&qu=
+ot;serif&quot;;color:#1f4e79"></span></p>
+      </td>
+     </tr>
+     <tr style=3D"height:31.6pt">
+      <td style=3D"padding:.75pt .75pt .75pt .75pt;height:31.6pt">
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><span style=3D"font=
+-size:9.0pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;;color:#4f4f4f">Office
+      No 104, AL Khaleel Head Office Building, Way No 240<br>
+      Building No 439, Al Ghubra North, Muscat, Sultanate of Oman<br>
+      Po Box: 1820 | PC: 133</span></p>
+      </td>
+     </tr>
+     <tr style=3D"height:11.0pt">
+      <td style=3D"padding:.75pt .75pt .75pt .75pt;height:11.0pt">
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><a href=3D"mailto:f=
+arooqui@mismuscat.com" target=3D"_blank"><span style=3D"font-size:9.0pt;lin=
+e-height:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;col=
+or:blue">farooqui@mismuscat.com</span></a><span style=3D"font-size:9.0pt;li=
+ne-height:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;co=
+lor:#595959">=C2=A0<b>|</b>=C2=A0</span><a href=3D"http://mismuscat.com/" t=
+arget=3D"_blank"><span style=3D"font-size:9.0pt;line-height:105%;font-famil=
+y:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#595959">mismuscat.co=
+m</span></a><span style=3D"font-size:9.0pt;line-height:105%;font-family:&qu=
+ot;Times New Roman&quot;,&quot;serif&quot;;color:#595959"></span></p>
+      </td>
+     </tr>
+     <tr style=3D"height:19.85pt">
+      <td style=3D"padding:.75pt .75pt .75pt .75pt;height:19.85pt">
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><span style=3D"font=
+-size:8.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;;color:#4f4f4f">PHONE=C2=A0+968
+      22555566| 22553355=C2=A0|=C2=A024498177| 24494680</span></p>
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><span style=3D"font=
+-size:8.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;;color:#4f4f4f">MOB=C2=A0+
+      968 9524 1933=C2=A0|=C2=A0FAX=C2=A0+968
+      24493049=C2=A0|=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0</span></p>
+      </td>
+     </tr>
+     <tr style=3D"height:8.8pt">
+      <td style=3D"padding:.75pt .75pt .75pt .75pt;height:8.8pt">
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><b><span style=3D"f=
+ont-size:7.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&qu=
+ot;serif&quot;;color:#7c7c7c">JCILO</span></b><b><span style=3D"font-size:7=
+.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&q=
+uot;;color:#be1a2a">=C2=A0|=C2=A0</span></b><b><span style=3D"font-size:7.5=
+pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quo=
+t;;color:#7c7c7c">GAIN</span></b><b><span style=3D"font-size:7.5pt;line-hei=
+ght:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#b=
+e1a2a">=C2=A0|=C2=A0</span></b><b><span style=3D"font-size:7.5pt;line-heigh=
+t:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#7c7=
+c7c">OCPA</span></b><b><span style=3D"font-size:7.5pt;line-height:105%;font=
+-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#be1a2a">=C2=A0=
+|=C2=A0</span></b><b><span style=3D"font-size:7.5pt;line-height:105%;font-f=
+amily:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#7c7c7c">PCN
+      (OVERSEAS NETWORK)</span></b><span style=3D"font-size:7.5pt;line-heig=
+ht:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#7c=
+7c7c"></span></p>
+      </td>
+     </tr>
+    </tbody></table>
+    </td>
+   </tr>
+  </tbody></table>
+  </td>
+ </tr>
+</tbody></table></div></div></div><br></div><br><div class=3D"gmail_quote">=
+<div dir=3D"ltr" class=3D"gmail_attr">On Wed, Sep 20, 2023 at 1:18=E2=80=AF=
+PM Joju Pradeep &lt;<a href=3D"mailto:joju@mismuscat.com">joju@mismuscat.co=
+m</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin=
+:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"=
+><div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:georgia=
+,serif">Dear Sir,</div><div class=3D"gmail_default" style=3D"font-family:ge=
+orgia,serif"><br></div><div class=3D"gmail_default" style=3D"font-family:ge=
+orgia,serif">Well noted. We will arrange the trailer.=C2=A0</div><div><div =
+dir=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"ltr"><di=
+v dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div =
+dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"=
+ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div =
+dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"=
+ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div =
+dir=3D"ltr"><p class=3D"MsoNormal" style=3D"margin-right:0in;margin-left:0i=
+n;font-size:12pt"><br></p><p class=3D"MsoNormal" style=3D"margin-right:0in;=
+margin-left:0in;font-size:12pt"><br></p><p class=3D"MsoNormal" style=3D"mar=
+gin-right:0in;margin-left:0in">Best Regards,</p><table border=3D"0" cellpad=
+ding=3D"0" style=3D"background-image:initial;background-position:initial;ba=
+ckground-repeat:initial">
+ <tbody><tr style=3D"height:11.1pt">
+  <td width=3D"508" style=3D"width:380.7pt;padding:7.5pt 0.75pt 0.75pt;heig=
+ht:11.1pt">
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt"><b><span style=3D=
+"font-size:13.5pt;font-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;;=
+color:rgb(190,26,42)">Joju Pradeep</span></b></p>
+  </td>
+ </tr>
+ <tr style=3D"height:13.7pt">
+  <td width=3D"508" style=3D"width:380.7pt;padding:6pt 0.75pt 3pt;height:13=
+.7pt">
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal=
+"><span><span style=3D"font-size:8.5pt;font-family:&quot;Times New Roman&qu=
+ot;,&quot;serif&quot;;color:rgb(107,107,107);background-image:initial;backg=
+round-position:initial;background-repeat:initial">COMMERCIAL=C2=A0</span></=
+span><span style=3D"font-size:8.5pt;font-family:Georgia,&quot;serif&quot;;c=
+olor:rgb(107,107,107);background-image:initial;background-position:initial;=
+background-repeat:initial">MANAGER</span><span style=3D"font-size:12pt;font=
+-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;;color:rgb(107,107,107)=
+"></span></p>
+  </td>
+ </tr>
+</tbody></table><table border=3D"0" cellpadding=3D"0" style=3D"background-i=
+mage:initial;background-position:initial;background-repeat:initial"><tbody>=
+<tr><td style=3D"border-width:2.25pt medium 6pt;border-style:solid none;bor=
+der-color:rgb(178,178,178) currentcolor;padding:7.5pt 0.75pt 0.75pt"><table=
+ border=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"padding:0.75pt"><p =
+align=3D"center" style=3D"margin-right:0in;margin-left:0in;font-size:12pt;f=
+ont-family:&quot;Times New Roman&quot;,serif;text-align:center"><b style=3D=
+"font-size:12pt"><span style=3D"font-size:8.5pt;font-family:Roboto;color:rg=
+b(31,73,125)"><img src=3D"https://ci3.googleusercontent.com/mail-sig/AIorK4=
+xz3fVSwwWVuP6tuf9iMA98C213c_2ls3vDzH8NE7ubMHWdyl4JXwnoUkHPKTqbrgWeG6dd7mE">=
+</span></b><br></p><p align=3D"center" style=3D"margin-right:0in;margin-lef=
+t:0in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif;text-ali=
+gn:center"><span style=3D"font-size:12pt;font-family:Roboto;color:rgb(31,73=
+,125)"></span></p></td><td style=3D"padding:0in 0in 0in 7.5pt"><table borde=
+r=3D"0" cellpadding=3D"0">
+ <tbody><tr>
+  <td style=3D"padding:7.5pt 0.75pt 0.75pt">
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal=
+"><b><span style=3D"font-size:13.5pt;font-family:&quot;Helvetica&quot;,&quo=
+t;sans-serif&quot;;color:rgb(11,83,148)">MUSCAT INTERNATIONAL
+  SHIPPING &amp; LOGISTICS LLC</span></b><span style=3D"font-size:9pt;font-=
+family:&quot;Helvetica&quot;,&quot;sans-serif&quot;"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D"padding:0.75pt">
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal=
+"><span style=3D"font-size:9pt;font-family:&quot;Helvetica&quot;,&quot;sans=
+-serif&quot;;color:rgb(79,79,79)">Office No 104, AL
+  Khaleel Head Office Building, Way No 240<br>
+  Building No 439, Al Ghubra North, Muscat, Sultanate of Oman, Po Box: 1820=
+ |
+  PC: 133</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D"padding:0.75pt">
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal=
+"><u><span style=3D"font-size:9pt;font-family:Roboto,&quot;serif&quot;;colo=
+r:rgb(107,107,107);background-image:initial;background-position:initial;bac=
+kground-repeat:initial"><a href=3D"mailto:joju@mismuscat.com" target=3D"_bl=
+ank"><span><span style=3D"font-family:&quot;Times New Roman&quot;,&quot;ser=
+if&quot;;color:rgb(107,107,107)"></span></span><span style=3D"font-family:&=
+quot;Helvetica&quot;,&quot;sans-serif&quot;;color:rgb(107,107,107)">joju@mi=
+smuscat.com</span></a></span></u><span style=3D"font-size:9pt;font-family:&=
+quot;Helvetica&quot;,&quot;sans-serif&quot;">=C2=A0<b><span style=3D"color:=
+rgb(107,107,107)">|</span></b>=C2=A0<a href=3D"http://mismuscat.com/" targe=
+t=3D"_blank"><span style=3D"color:rgb(107,107,107)">mismuscat.com</span></a=
+></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D"padding:0.75pt">
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal=
+"><span style=3D"font-size:8.5pt;font-family:&quot;Helvetica&quot;,&quot;sa=
+ns-serif&quot;;color:rgb(79,79,79)">OMAN=C2=A0+ 968
+  94392585=C2=A0|=C2=A0PHONE=C2=A0+968
+  22553355/22555566/24498177/24494680=C2=A0|=C2=A0FAX=C2=A0+968
+  24493049=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D"padding:0.75pt">
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal=
+"><b><span style=3D"font-size:7.5pt;font-family:&quot;Helvetica&quot;,&quot=
+;sans-serif&quot;;color:rgb(124,124,124)">JCILO</span></b><b><span style=3D=
+"font-size:7.5pt;font-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;;c=
+olor:rgb(190,26,42)">=C2=A0|=C2=A0</span></b><b><span style=3D"font-size:7.=
+5pt;font-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;;color:rgb(124,=
+124,124)">GAIN</span></b><b><span style=3D"font-size:7.5pt;font-family:&quo=
+t;Helvetica&quot;,&quot;sans-serif&quot;;color:rgb(190,26,42)">=C2=A0|=C2=
+=A0</span></b><b><span style=3D"font-size:7.5pt;font-family:&quot;Helvetica=
+&quot;,&quot;sans-serif&quot;;color:rgb(124,124,124)">OCPA</span></b><b><sp=
+an style=3D"font-size:7.5pt;font-family:&quot;Helvetica&quot;,&quot;sans-se=
+rif&quot;;color:rgb(190,26,42)">=C2=A0|=C2=A0</span></b><b><span style=3D"f=
+ont-size:7.5pt;font-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;;col=
+or:rgb(124,124,124)">PCN (OVERSEAS NETWORK)</span></b><span style=3D"font-s=
+ize:7.5pt;font-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;;color:rg=
+b(124,124,124)"></span></p>
+  </td>
+ </tr>
+</tbody></table></td></tr></tbody></table></td></tr><tr><td style=3D"paddin=
+g:7.5pt 0.75pt 0.75pt"><table border=3D"0" cellpadding=3D"0" style=3D"backg=
+round-image:initial;background-position:initial;background-repeat:initial">
+ <tbody><tr>
+  <td width=3D"626" style=3D"width:469.5pt;padding:7.5pt 0.75pt 0.75pt">
+  <p class=3D"MsoNormal" style=3D"margin-bottom:12pt;line-height:normal"><s=
+pan style=3D"font-size:8.5pt;font-family:&quot;Helvetica&quot;,&quot;sans-s=
+erif&quot;;color:rgb(124,124,124)">BEST MEMBER 2017 at the 4TH JCILO (Jay&#=
+39;s
+  Club International Logistics Organisation) SYMPOSIUM</span></p>
+  </td>
+ </tr>
+</tbody></table><p class=3D"MsoNormal" style=3D"margin-right:0in;margin-lef=
+t:0in;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><span s=
+tyle=3D"font-size:11pt;font-family:Calibri,sans-serif;color:rgb(31,73,125)"=
+><br>=C2=A0</span></p></td></tr></tbody></table><br></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div><br></div><br><div class=
+=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Wed, Sep 20, 2023=
+ at 10:38=E2=80=AFAM &lt;<a href=3D"mailto:babar@akghardware.com" target=3D=
+"_blank">babar@akghardware.com</a>&gt; wrote:<br></div><blockquote class=3D=
+"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(2=
+04,204,204);padding-left:1ex"><div><div lang=3D"EN-US"><div><p class=3D"Mso=
+Normal">Dear Joju,<u></u><u></u></p><p class=3D"MsoNormal"><u></u>=C2=A0<u>=
+</u></p><p class=3D"MsoNormal">Please make the necessary arrangements for t=
+he collection of the shipment tomorrow at the below-mentioned time slot.<u>=
+</u><u></u></p><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p><p class=3D"M=
+soNormal">Dear Reynaldo,<u></u><u></u></p><p class=3D"MsoNormal"><u></u>=C2=
+=A0<u></u></p><p class=3D"MsoNormal">Please make sure that all the necessar=
+y documentation is available and is shared on time.<u></u><u></u></p><p cla=
+ss=3D"MsoNormal"><u></u>=C2=A0<u></u></p><div><p class=3D"MsoNormal"><b><i>=
+Best regards,<u></u><u></u></i></b></p><p class=3D"MsoNormal"><u></u>=C2=A0=
+<u></u></p><p class=3D"MsoNormal"><img width=3D"624" height=3D"216" style=
+=3D"width: 6.5in; height: 2.25in;" id=3D"m_-8354296439570449182m_-313076584=
+3854147441Picture_x0020_5"><u></u><u></u></p></div><p class=3D"MsoNormal"><=
+u></u>=C2=A0<u></u></p><div><div style=3D"border-width:1pt medium medium;bo=
+rder-style:solid none none;border-color:rgb(225,225,225) currentcolor curre=
+ntcolor;padding:3pt 0in 0in"><p class=3D"MsoNormal"><b>From:</b> MCC CSR Ex=
+port &lt;<a href=3D"mailto:csrexport@mapei.ae" target=3D"_blank">csrexport@=
+mapei.ae</a>&gt; <br><b>Sent:</b> Monday, September 18, 2023 11:40 AM<br><b=
+>To:</b> Joju Pradeep &lt;<a href=3D"mailto:joju@mismuscat.com" target=3D"_=
+blank">joju@mismuscat.com</a>&gt;; <a href=3D"mailto:jehad@akghardware.com"=
+ target=3D"_blank">jehad@akghardware.com</a><br><b>Cc:</b> <a href=3D"mailt=
+o:babar@akghardware.com" target=3D"_blank">babar@akghardware.com</a>; Yazbe=
+ck Roger &lt;<a href=3D"mailto:r.yazbeck@mapei.ae" target=3D"_blank">r.yazb=
+eck@mapei.ae</a>&gt;; Hidalgo Reynaldo &lt;<a href=3D"mailto:r.hidalgo@mape=
+i.ae" target=3D"_blank">r.hidalgo@mapei.ae</a>&gt;; Abdallah Bachir &lt;<a =
+href=3D"mailto:b.abdallah@mapei.ae" target=3D"_blank">b.abdallah@mapei.ae</=
+a>&gt;; Import &lt;<a href=3D"mailto:saroop@mismuscat.com" target=3D"_blank=
+">saroop@mismuscat.com</a>&gt;; FAROOQUI HU &lt;<a href=3D"mailto:farooqui@=
+mismuscat.com" target=3D"_blank">farooqui@mismuscat.com</a>&gt;<br><b>Subje=
+ct:</b> RE: Rawabi Bosher Trading &amp; Const. Est. LLC. Order (Ref P00122)=
+ - DE 111780<u></u><u></u></p></div></div><p class=3D"MsoNormal"><u></u>=C2=
+=A0<u></u></p><p class=3D"MsoNormal">Dear All,<u></u><u></u></p><p class=3D=
+"MsoNormal">Please find below the collection schedule. We regret to inform =
+you that due to a migration from the old to the new system, we will only be=
+ able to provide the following collection schedule. <u></u><u></u></p><p cl=
+ass=3D"MsoNormal"><u></u>=C2=A0<u></u></p><p class=3D"MsoNormal">Additional=
+ly, we only have limited staff (doing the loading and unloading of the cont=
+ainers/trailers) due to sick leave. In the new system, you can rest assured=
+ that all future orders will be processed quickly and easily.<u></u><u></u>=
+</p><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p><table border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" width=3D"1256" style=3D"width:942pt;border-=
+collapse:collapse"><tbody><tr style=3D"height:15pt"><td width=3D"95" nowrap=
+ valign=3D"bottom" style=3D"width:71pt;border:1pt solid rgb(217,217,217);ba=
+ckground:rgb(47,117,181);padding:0in 5.4pt;height:15pt"><p class=3D"MsoNorm=
+al"><span style=3D"color:white">Date<u></u><u></u></span></p></td><td width=
+=3D"95" nowrap valign=3D"bottom" style=3D"width:71pt;border-width:1pt 1pt 1=
+pt medium;border-style:solid solid solid none;border-color:rgb(217,217,217)=
+ rgb(217,217,217) rgb(217,217,217) currentcolor;background:rgb(47,117,181);=
+padding:0in 5.4pt;height:15pt"><p class=3D"MsoNormal"><span style=3D"color:=
+white">Day<u></u><u></u></span></p></td><td width=3D"95" nowrap valign=3D"b=
+ottom" style=3D"width:71pt;border-width:1pt 1pt 1pt medium;border-style:sol=
+id solid solid none;border-color:rgb(217,217,217) rgb(217,217,217) rgb(217,=
+217,217) currentcolor;background:rgb(47,117,181);padding:0in 5.4pt;height:1=
+5pt"><p class=3D"MsoNormal"><span style=3D"color:white">Slot<u></u><u></u><=
+/span></p></td><td width=3D"137" nowrap valign=3D"bottom" style=3D"width:10=
+3pt;border-width:1pt 1pt 1pt medium;border-style:solid solid solid none;bor=
+der-color:rgb(217,217,217) rgb(217,217,217) rgb(217,217,217) currentcolor;b=
+ackground:rgb(47,117,181);padding:0in 5.4pt;height:15pt"><p class=3D"MsoNor=
+mal"><span style=3D"color:white">Mvt.Type<u></u><u></u></span></p></td><td =
+width=3D"311" nowrap valign=3D"bottom" style=3D"width:233pt;border-width:1p=
+t 1pt 1pt medium;border-style:solid solid solid none;border-color:rgb(217,2=
+17,217) rgb(217,217,217) rgb(217,217,217) currentcolor;background:rgb(47,11=
+7,181);padding:0in 5.4pt;height:15pt"><p class=3D"MsoNormal"><span style=3D=
+"color:white">Cust/Suppl.<u></u><u></u></span></p></td><td width=3D"195" no=
+wrap valign=3D"bottom" style=3D"width:146pt;border-width:1pt 1pt 1pt medium=
+;border-style:solid solid solid none;border-color:rgb(217,217,217) rgb(217,=
+217,217) rgb(217,217,217) currentcolor;background:rgb(47,117,181);padding:0=
+in 5.4pt;height:15pt"><p class=3D"MsoNormal"><span style=3D"color:white">De=
+l_Ref<u></u><u></u></span></p></td><td width=3D"91" nowrap valign=3D"bottom=
+" style=3D"width:68pt;border-width:1pt 1pt 1pt medium;border-style:solid so=
+lid solid none;border-color:rgb(217,217,217) rgb(217,217,217) rgb(217,217,2=
+17) currentcolor;background:rgb(47,117,181);padding:0in 5.4pt;height:15pt">=
+<p class=3D"MsoNormal"><span style=3D"color:white">Truck_type<u></u><u></u>=
+</span></p></td><td width=3D"76" nowrap valign=3D"bottom" style=3D"width:57=
+pt;border-width:1pt 1pt 1pt medium;border-style:solid solid solid none;bord=
+er-color:rgb(217,217,217) rgb(217,217,217) rgb(217,217,217) currentcolor;ba=
+ckground:rgb(47,117,181);padding:0in 5.4pt;height:15pt"><p class=3D"MsoNorm=
+al"><span style=3D"color:white">Remarks<u></u><u></u></span></p></td><td wi=
+dth=3D"163" nowrap valign=3D"bottom" style=3D"width:122pt;border-width:1pt =
+1pt 1pt medium;border-style:solid solid solid none;border-color:rgb(217,217=
+,217) rgb(217,217,217) rgb(217,217,217) currentcolor;background:rgb(47,117,=
+181);padding:0in 5.4pt;height:15pt"><p class=3D"MsoNormal"><span style=3D"c=
+olor:white">Sum of Number of trucks<u></u><u></u></span></p></td></tr><tr s=
+tyle=3D"height:15pt"><td width=3D"95" nowrap valign=3D"bottom" style=3D"wid=
+th:71pt;border-width:medium 1pt 1pt;border-style:none solid solid;border-co=
+lor:currentcolor rgb(217,217,217) rgb(217,217,217);background:rgb(155,194,2=
+30);padding:0in 5.4pt;height:15pt"><p class=3D"MsoNormal" align=3D"right" s=
+tyle=3D"text-align:right"><span style=3D"color:white">21-09-23<u></u><u></u=
+></span></p></td><td width=3D"95" nowrap valign=3D"bottom" style=3D"width:7=
+1pt;border-width:medium 1pt 1pt medium;border-style:none solid solid none;b=
+order-color:currentcolor rgb(217,217,217) rgb(217,217,217) currentcolor;bac=
+kground:rgb(221,235,247);padding:0in 5.4pt;height:15pt"><p class=3D"MsoNorm=
+al"><span style=3D"color:black">Thursday<u></u><u></u></span></p></td><td w=
+idth=3D"95" nowrap valign=3D"bottom" style=3D"width:71pt;border-width:mediu=
+m 1pt 1pt medium;border-style:none solid solid none;border-color:currentcol=
+or rgb(217,217,217) rgb(217,217,217) currentcolor;padding:0in 5.4pt;height:=
+15pt"><p class=3D"MsoNormal"><span style=3D"color:black">14:00-15:00<u></u>=
+<u></u></span></p></td><td width=3D"137" nowrap valign=3D"bottom" style=3D"=
+width:103pt;border-width:medium 1pt 1pt medium;border-style:none solid soli=
+d none;border-color:currentcolor rgb(217,217,217) rgb(217,217,217) currentc=
+olor;background:rgb(221,235,247);padding:0in 5.4pt;height:15pt"><p class=3D=
+"MsoNormal"><span style=3D"color:black">EXPORT<u></u><u></u></span></p></td=
+><td width=3D"311" nowrap valign=3D"bottom" style=3D"width:233pt;border-wid=
+th:medium 1pt 1pt medium;border-style:none solid solid none;border-color:cu=
+rrentcolor rgb(217,217,217) rgb(217,217,217) currentcolor;padding:0in 5.4pt=
+;height:15pt"><p class=3D"MsoNormal"><span style=3D"color:black">RAWABI BOS=
+HER TRADING &amp; CONST. EST. <u></u><u></u></span></p></td><td width=3D"19=
+5" nowrap valign=3D"bottom" style=3D"width:146pt;border-width:medium 1pt 1p=
+t medium;border-style:none solid solid none;border-color:currentcolor rgb(2=
+17,217,217) rgb(217,217,217) currentcolor;background:rgb(221,235,247);paddi=
+ng:0in 5.4pt;height:15pt"><p class=3D"MsoNormal"><span style=3D"color:black=
+">23DE111780<u></u><u></u></span></p></td><td width=3D"91" nowrap valign=3D=
+"bottom" style=3D"width:68pt;border-width:medium 1pt 1pt medium;border-styl=
+e:none solid solid none;border-color:currentcolor rgb(217,217,217) rgb(217,=
+217,217) currentcolor;padding:0in 5.4pt;height:15pt"><p class=3D"MsoNormal"=
+><span style=3D"color:black">40FT CTR<u></u><u></u></span></p></td><td widt=
+h=3D"76" nowrap valign=3D"bottom" style=3D"width:57pt;border-width:medium 1=
+pt 1pt medium;border-style:none solid solid none;border-color:currentcolor =
+rgb(217,217,217) rgb(217,217,217) currentcolor;padding:0in 5.4pt;height:15p=
+t"><p class=3D"MsoNormal"><span style=3D"color:black">(blank)<u></u><u></u>=
+</span></p></td><td width=3D"163" nowrap valign=3D"bottom" style=3D"width:1=
+22pt;border-width:medium 1pt 1pt medium;border-style:none solid solid none;=
+border-color:currentcolor rgb(217,217,217) rgb(217,217,217) currentcolor;pa=
+dding:0in 5.4pt;height:15pt"><p class=3D"MsoNormal" align=3D"right" style=
+=3D"text-align:right"><span style=3D"color:black">1<u></u><u></u></span></p=
+></td></tr></tbody></table><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p><=
+p class=3D"MsoNormal">Thank you and my apologies for any inconvenience caus=
+ed.<u></u><u></u></p><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p><p clas=
+s=3D"MsoNormal"><u></u>=C2=A0<u></u></p><div><p class=3D"MsoNormal"><b><spa=
+n style=3D"font-family:Mistral;color:gray">Best Regards<u></u><u></u></span=
+></b></p><p class=3D"MsoNormal" style=3D"margin-bottom:6pt"><b><span style=
+=3D"font-size:10pt">Reynaldo Hidalgo,Jr. </span></b><span style=3D"font-siz=
+e:9pt">| C<b>ustomer Service Representative<u></u><u></u></b></span></p><p =
+class=3D"MsoNormal" style=3D"margin-bottom:6pt"><span style=3D"font-size:9p=
+t">email <a href=3D"mailto:csrexport@mapei.ae" target=3D"_blank"><span styl=
+e=3D"color:rgb(5,99,193)">csrexport@mapei.ae</span></a><span style=3D"color=
+:black">=C2=A0 </span></span><span><u></u><u></u></span></p><p class=3D"Mso=
+Normal" style=3D"margin-top:4pt"><span><img border=3D"0" width=3D"184" heig=
+ht=3D"49" style=3D"width: 1.9166in; height: 0.5083in;" id=3D"m_-83542964395=
+70449182m_-3130765843854147441Picture_x0020_38"></span><b><span style=3D"fo=
+nt-size:8pt;color:rgb(0,112,192)"><u></u><u></u></span></b></p><p class=3D"=
+MsoNormal" style=3D"margin-top:4pt"><b><span style=3D"font-size:8pt;color:r=
+gb(0,112,192)">MAPEI CONSTRUCTION CHEMICALS L.L.C<u></u><u></u></span></b><=
+/p><p class=3D"MsoNormal"><span style=3D"font-size:8pt;color:rgb(0,112,192)=
+">P.O Box: 73869, Dubai - United Arab Emirates<u></u><u></u></span></p><p c=
+lass=3D"MsoNormal"><span style=3D"font-size:8pt;color:rgb(0,112,192)">T. +9=
+71 4 815 6666 | F. +971 4 885 8438 | </span><a href=3D"http://www.mapei.ae/=
+" target=3D"_blank"><span style=3D"font-size:8pt;color:rgb(0,112,192)">www.=
+mapei.ae</span></a><span style=3D"font-size:8pt;color:rgb(29,27,17)">=C2=A0=
+=C2=A0</span><span style=3D"font-size:8pt;color:rgb(31,73,125)"><u></u><u><=
+/u></span></p><p class=3D"MsoNormal"><span lang=3D"en-AE"><u></u>=C2=A0<u><=
+/u></span></p><p class=3D"MsoNormal"><a href=3D"https://www.mapei.com/ae/en=
+/about-us/mapei-in-uae/certification" target=3D"_blank"><span style=3D"colo=
+r:windowtext;text-decoration:none"><img border=3D"0" width=3D"202" height=
+=3D"49" style=3D"width: 2.1in; height: 0.5083in;" id=3D"m_-8354296439570449=
+182m_-3130765843854147441Picture_x0020_8"></span></a><b><i><u><span style=
+=3D"font-size:10pt;color:rgb(0,112,192)"><u></u><u></u></span></u></i></b><=
+/p><p class=3D"MsoNormal"><b><i><u><span style=3D"font-size:10pt;color:rgb(=
+0,112,192)">Follow us on:</span></u></i></b><b><i><u><span style=3D"font-si=
+ze:14pt"> </span></u></i></b><b><i><u><span lang=3D"en-AE" style=3D"font-si=
+ze:14pt"><u></u><u></u></span></u></i></b></p><p class=3D"MsoNormal"><a hre=
+f=3D"https://www.linkedin.com/company/mapei-middleeast-eastafrica" target=
+=3D"_blank"><b><span style=3D"color:windowtext;text-decoration:none"><img b=
+order=3D"0" width=3D"38" height=3D"37" style=3D"width: 0.4in; height: 0.383=
+3in;" id=3D"m_-8354296439570449182m_-3130765843854147441Picture_x0020_10" a=
+lt=3D"Icon
+
+Description automatically generated"></span></b></a><a href=3D"https://www.=
+instagram.com/mapeimeea/" target=3D"_blank"><b><span style=3D"color:windowt=
+ext;text-decoration:none"><img border=3D"0" width=3D"38" height=3D"37" styl=
+e=3D"width: 0.4in; height: 0.3833in;" id=3D"m_-8354296439570449182m_-313076=
+5843854147441Picture_x0020_11" alt=3D"Icon
+
+Description automatically generated"></span></b></a><span><u></u><u></u></s=
+pan></p><p class=3D"MsoNormal"><b><i><u><span style=3D"font-size:9pt">Note:=
+<u></u><u></u></span></u></i></b></p><p class=3D"MsoNormal"><i><u><span sty=
+le=3D"font-size:9pt">The Requirement of Official and Commercial Evidence un=
+der the Indirect Export of Goods.<u></u><u></u></span></u></i></p><p class=
+=3D"MsoNormal"><i><span style=3D"font-size:9pt">As per provisions of Articl=
+e 30.2 of Cabinet Decision No. 52 of 2017 on the Executive Regulations of t=
+he Federal=C2=A0 Decree-law No. 8 of 2017 on Value Added Tax in the UAE, an=
+ indirect export of Goods from an implementing state ( which include UAE ) =
+to overseas customer shall be subject to VAT at the rate of 0% (Zero percen=
+t) only if the prescribed conditions are fulfilled.<u></u><u></u></span></i=
+></p><p class=3D"MsoNormal" style=3D"text-align:justify"><i><span style=3D"=
+font-size:9pt">As set forth in the Article 4.a and 4.b of the aforementione=
+d law and to ensure our compliance with the regulatory requirements, we wou=
+ld require the <b>Official</b> and <b>Commercial </b>evidence documents of =
+export of goods <b>within 45 days</b> from our date of supply of goods. In =
+case of failure in doing so, Mapei will not benefit of the tax rate of zero=
+ percent applicable for the indirect export of goods and therefore will be =
+required to reverse the initial Tax Invoice issued at the rate of 0% VAT an=
+d issue a new Tax Invoice with the standard rate applicable at 5% VAT. The =
+customer acknowledges and agrees that it will accept the revised invoice an=
+d be obliged to remit the VAT amount to Mapei in view of the regulatory req=
+uirement.<u></u><u></u></span></i></p><p class=3D"MsoNormal" style=3D"text-=
+align:justify"><i><span style=3D"font-size:9pt">The <b>Official evidence</b=
+> means Export documents issued by the local Emirate Customs Department in =
+respect of Goods leaving the State including Exit certificate from the cust=
+oms authorities. <u></u><u></u></span></i></p><p class=3D"MsoNormal"><i><sp=
+an style=3D"font-size:9pt">The <b>Commercial evidence</b> shall include any=
+ the following: <u></u><u></u></span></i></p><ol style=3D"margin-top:0in" s=
+tart=3D"1" type=3D"a"><li class=3D"MsoNormal" style=3D"margin-left:0.25in">=
+<i><span style=3D"font-size:9pt">Airway bill. <u></u><u></u></span></i></li=
+><li class=3D"MsoNormal" style=3D"margin-left:0.25in"><i><span style=3D"fon=
+t-size:9pt">Bill of lading. <u></u><u></u></span></i></li><li class=3D"MsoN=
+ormal" style=3D"margin-left:0.25in"><i><span style=3D"font-size:9pt">Consig=
+nment note. <u></u><u></u></span></i></li><li class=3D"MsoNormal" style=3D"=
+margin-left:0.25in"><i><span style=3D"font-size:9pt">Certificate of shipmen=
+t. <u></u><u></u></span></i></li></ol><p class=3D"MsoNormal"><i><span style=
+=3D"font-size:9pt">The evidence obtained as proof of Export, whether offici=
+al or commercial, must identify the following;<u></u><u></u></span></i></p>=
+<ol style=3D"margin-top:0in" start=3D"1" type=3D"a"><li class=3D"MsoNormal"=
+ style=3D"margin-left:0.25in"><i><span style=3D"font-size:9pt">The Supplier=
+.<u></u><u></u></span></i></li><li class=3D"MsoNormal" style=3D"margin-left=
+:0.25in"><i><span style=3D"font-size:9pt">The Consignor.<u></u><u></u></spa=
+n></i></li><li class=3D"MsoNormal" style=3D"margin-left:0.25in"><i><span st=
+yle=3D"font-size:9pt">The Goods.<u></u><u></u></span></i></li><li class=3D"=
+MsoNormal" style=3D"margin-left:0.25in"><i><span style=3D"font-size:9pt">Th=
+e Value.<u></u><u></u></span></i></li><li class=3D"MsoNormal" style=3D"marg=
+in-left:0.25in"><i><span style=3D"font-size:9pt">The Export destination.<u>=
+</u><u></u></span></i></li><li class=3D"MsoNormal" style=3D"margin-left:0.2=
+5in"><i><span style=3D"font-size:9pt">The mode of transport and route of th=
+e export movement.<u></u><u></u></span></i></li></ol></div><p class=3D"MsoN=
+ormal"><u></u>=C2=A0<u></u></p><div><div style=3D"border-width:1pt medium m=
+edium;border-style:solid none none;border-color:rgb(225,225,225) currentcol=
+or currentcolor;padding:3pt 0in 0in"><p class=3D"MsoNormal"><b>From:</b> Jo=
+ju Pradeep &lt;<a href=3D"mailto:joju@mismuscat.com" target=3D"_blank">joju=
+@mismuscat.com</a>&gt; <br><b>Sent:</b> Tuesday, September 12, 2023 11:46 A=
+M<br><b>To:</b> <a href=3D"mailto:jehad@akghardware.com" target=3D"_blank">=
+jehad@akghardware.com</a><br><b>Cc:</b> MCC CSR Export &lt;<a href=3D"mailt=
+o:csrexport@mapei.ae" target=3D"_blank">csrexport@mapei.ae</a>&gt;; <a href=
+=3D"mailto:babar@akghardware.com" target=3D"_blank">babar@akghardware.com</=
+a>; Yazbeck Roger &lt;<a href=3D"mailto:r.yazbeck@mapei.ae" target=3D"_blan=
+k">r.yazbeck@mapei.ae</a>&gt;; Hidalgo Reynaldo &lt;<a href=3D"mailto:r.hid=
+algo@mapei.ae" target=3D"_blank">r.hidalgo@mapei.ae</a>&gt;; Abdallah Bachi=
+r &lt;<a href=3D"mailto:b.abdallah@mapei.ae" target=3D"_blank">b.abdallah@m=
+apei.ae</a>&gt;; Import &lt;<a href=3D"mailto:saroop@mismuscat.com" target=
+=3D"_blank">saroop@mismuscat.com</a>&gt;; FAROOQUI HU &lt;<a href=3D"mailto=
+:farooqui@mismuscat.com" target=3D"_blank">farooqui@mismuscat.com</a>&gt;<b=
+r><b>Subject:</b> Re: Rawabi Bosher Trading &amp; Const. Est. LLC. Order (R=
+ef P00122) - DE 111780<u></u><u></u></p></div></div><p class=3D"MsoNormal">=
+<u></u>=C2=A0<u></u></p><div style=3D"border:1pt dotted rgb(0,51,51);paddin=
+g:2pt"><p class=3D"MsoNormal" style=3D"background:pink"><b><span style=3D"f=
+ont-size:12pt;font-family:Arial,sans-serif;color:black">Informative</span><=
+/b><span style=3D"color:black"> </span><u></u><u></u></p><div><p class=3D"M=
+soNormal" style=3D"background:pink"><span style=3D"font-size:10pt;font-fami=
+ly:Arial,sans-serif;color:black">This email was sent from an external party=
+ outside the MAPEI group. Do not click on the links or open attachments unl=
+ess you identify the sender and know that the content is safe.<u></u><u></u=
+></span></p></div></div><div class=3D"MsoNormal" align=3D"center" style=3D"=
+text-align:center"><hr size=3D"2" width=3D"100%" align=3D"center"></div><di=
+v><div><div><p class=3D"MsoNormal"><span style=3D"font-family:Georgia,serif=
+">Dear Sir,<u></u><u></u></span></p></div><div><p class=3D"MsoNormal"><span=
+ style=3D"font-family:Georgia,serif"><u></u>=C2=A0<u></u></span></p></div><=
+div><p class=3D"MsoNormal"><span style=3D"font-family:Georgia,serif">Well N=
+oted.=C2=A0<u></u><u></u></span></p></div><div><div><div><div><div><div><di=
+v><div><div><div><div><div><div><div><div><div><div><div><div><div><div><di=
+v><div><div><div><div><div><div><div><div><div><div><div><div><div><div><di=
+v><div><div><div><div><div><div><div><div><div><div><div><div><div><div><di=
+v><div><div><div><div><div><div><div><div><div><div><p class=3D"MsoNormal">=
+<span style=3D"font-size:12pt"><u></u>=C2=A0<u></u></span></p><p class=3D"M=
+soNormal"><span style=3D"font-size:12pt"><u></u>=C2=A0<u></u></span></p><p =
+class=3D"MsoNormal">Best Regards,<u></u><u></u></p><table border=3D"0" cell=
+spacing=3D"3" cellpadding=3D"0" style=3D"background-image:initial;backgroun=
+d-position:initial;background-repeat:initial"><tbody><tr style=3D"height:11=
+.1pt"><td width=3D"508" style=3D"width:380.7pt;padding:7.5pt 0.75pt 0.75pt;=
+height:11.1pt"><p class=3D"MsoNormal"><b><span style=3D"font-size:13.5pt;fo=
+nt-family:Helvetica,sans-serif;color:rgb(190,26,42)">Joju Pradeep</span></b=
+><u></u><u></u></p></td></tr><tr style=3D"height:13.7pt"><td width=3D"508" =
+style=3D"width:380.7pt;padding:6pt 0.75pt 3pt;height:13.7pt"><p class=3D"Ms=
+oNormal"><span style=3D"font-size:8.5pt;font-family:&quot;Times New Roman&q=
+uot;,serif;color:rgb(107,107,107)">COMMERCIAL=C2=A0</span><span style=3D"fo=
+nt-size:8.5pt;font-family:Georgia,serif;color:rgb(107,107,107)">MANAGER</sp=
+an><u></u><u></u></p></td></tr></tbody></table><p class=3D"MsoNormal"><u></=
+u>=C2=A0<u></u></p><table border=3D"0" cellspacing=3D"3" cellpadding=3D"0" =
+style=3D"background-image:initial;background-position:initial;background-re=
+peat:initial"><tbody><tr><td style=3D"border-width:2.25pt medium 6pt;border=
+-style:solid none;border-color:rgb(178,178,178) currentcolor;padding:7.5pt =
+0.75pt 0.75pt"><table border=3D"0" cellspacing=3D"3" cellpadding=3D"0"><tbo=
+dy><tr><td style=3D"padding:0.75pt"><p align=3D"center" style=3D"text-align=
+:center"><b><span style=3D"font-size:8.5pt;font-family:Roboto;color:rgb(31,=
+73,125);border:1pt solid windowtext;padding:0in"><img border=3D"0" width=3D=
+"100" height=3D"100" style=3D"width: 1.0416in; height: 1.0416in;" id=3D"m_-=
+8354296439570449182m_-3130765843854147441Picture_x0020_2" alt=3D"Image remo=
+ved by sender."></span></b><span style=3D"font-size:12pt;font-family:&quot;=
+Times New Roman&quot;,serif"><u></u><u></u></span></p></td><td style=3D"pad=
+ding:0in 0in 0in 7.5pt"><table border=3D"0" cellspacing=3D"3" cellpadding=
+=3D"0"><tbody><tr><td style=3D"padding:7.5pt 0.75pt 0.75pt"><p class=3D"Mso=
+Normal"><b><span style=3D"font-size:13.5pt;font-family:Helvetica,sans-serif=
+;color:rgb(11,83,148)">MUSCAT INTERNATIONAL SHIPPING &amp; LOGISTICS LLC</s=
+pan></b><u></u><u></u></p></td></tr><tr><td style=3D"padding:0.75pt"><p cla=
+ss=3D"MsoNormal"><span style=3D"font-size:9pt;font-family:Helvetica,sans-se=
+rif;color:rgb(79,79,79)">Office No 104, AL Khaleel Head Office Building, Wa=
+y No 240<br>Building No 439, Al Ghubra North, Muscat, Sultanate of Oman, Po=
+ Box: 1820 | PC: 133</span><u></u><u></u></p></td></tr><tr><td style=3D"pad=
+ding:0.75pt"><p class=3D"MsoNormal"><u><span style=3D"font-size:9pt;font-fa=
+mily:Roboto;color:rgb(107,107,107)"><a href=3D"mailto:joju@mismuscat.com" t=
+arget=3D"_blank"><span style=3D"font-family:Helvetica,sans-serif;color:rgb(=
+107,107,107)">joju@mismuscat.com</span></a></span></u><span style=3D"font-s=
+ize:9pt;font-family:Helvetica,sans-serif">=C2=A0<b><span style=3D"color:rgb=
+(107,107,107)">|</span></b>=C2=A0<a href=3D"https://urlsand.esvalabs.com/?u=
+=3Dhttp%3A%2F%2Fmismuscat.com%2F&amp;e=3D86373c93&amp;h=3Dc42c7c0a&amp;f=3D=
+y&amp;p=3Dy" title=3D"mismuscat.com" target=3D"_blank"><span style=3D"color=
+:rgb(107,107,107)">mismuscat.com</span></a></span><u></u><u></u></p></td></=
+tr><tr><td style=3D"padding:0.75pt"><p class=3D"MsoNormal"><span style=3D"f=
+ont-size:8.5pt;font-family:Helvetica,sans-serif;color:rgb(79,79,79)">OMAN=
+=C2=A0+ 968 94392585=C2=A0|=C2=A0PHONE=C2=A0+968 22553355/22555566/24498177=
+/24494680=C2=A0|=C2=A0FAX=C2=A0+968 24493049=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0</span><u></u><u></u></p></td>=
+</tr><tr><td style=3D"padding:0.75pt"><p class=3D"MsoNormal"><b><span style=
+=3D"font-size:7.5pt;font-family:Helvetica,sans-serif;color:rgb(124,124,124)=
+">JCILO</span></b><b><span style=3D"font-size:7.5pt;font-family:Helvetica,s=
+ans-serif;color:rgb(190,26,42)">=C2=A0|=C2=A0</span></b><b><span style=3D"f=
+ont-size:7.5pt;font-family:Helvetica,sans-serif;color:rgb(124,124,124)">GAI=
+N</span></b><b><span style=3D"font-size:7.5pt;font-family:Helvetica,sans-se=
+rif;color:rgb(190,26,42)">=C2=A0|=C2=A0</span></b><b><span style=3D"font-si=
+ze:7.5pt;font-family:Helvetica,sans-serif;color:rgb(124,124,124)">OCPA</spa=
+n></b><b><span style=3D"font-size:7.5pt;font-family:Helvetica,sans-serif;co=
+lor:rgb(190,26,42)">=C2=A0|=C2=A0</span></b><b><span style=3D"font-size:7.5=
+pt;font-family:Helvetica,sans-serif;color:rgb(124,124,124)">PCN (OVERSEAS N=
+ETWORK)</span></b><u></u><u></u></p></td></tr></tbody></table></td></tr></t=
+body></table></td></tr><tr><td style=3D"padding:7.5pt 0.75pt 0.75pt"><table=
+ border=3D"0" cellspacing=3D"3" cellpadding=3D"0" style=3D"background-image=
+:initial;background-position:initial;background-repeat:initial"><tbody><tr>=
+<td width=3D"626" style=3D"width:469.5pt;padding:7.5pt 0.75pt 0.75pt"><p cl=
+ass=3D"MsoNormal" style=3D"margin-bottom:12pt"><span style=3D"font-size:8.5=
+pt;font-family:Helvetica,sans-serif;color:rgb(124,124,124)">BEST MEMBER 201=
+7 at the 4TH JCILO (Jay&#39;s Club International Logistics Organisation) SY=
+MPOSIUM</span><u></u><u></u></p></td></tr></tbody></table><p class=3D"MsoNo=
+rmal"><span style=3D"color:rgb(31,73,125)"><br>=C2=A0</span><span style=3D"=
+font-size:12pt;font-family:&quot;Times New Roman&quot;,serif"><u></u><u></u=
+></span></p></td></tr></tbody></table><p class=3D"MsoNormal"><u></u>=C2=A0<=
+u></u></p></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p></div><p class=3D"Mso=
+Normal"><u></u>=C2=A0<u></u></p><div><div><p class=3D"MsoNormal">On Tue, Se=
+p 12, 2023 at 9:22=E2=80=AFAM <a href=3D"mailto:jehad@akghardware.com" targ=
+et=3D"_blank">jehad@akghardware.com</a> &lt;<a href=3D"mailto:jehad@akghard=
+ware.com" target=3D"_blank">jehad@akghardware.com</a>&gt; wrote:<u></u><u><=
+/u></p></div><blockquote style=3D"border-width:medium medium medium 1pt;bor=
+der-style:none none none solid;border-color:currentcolor currentcolor curre=
+ntcolor rgb(204,204,204);padding:0in 0in 0in 6pt;margin:5pt 0in 5pt 4.8pt">=
+<div><div><div><p class=3D"MsoNormal">Dear <a href=3D"mailto:r.hidalgo@mape=
+i.ae" target=3D"_blank"><span style=3D"text-decoration:none">@Hidalgo Reyna=
+ldo</span></a>,<u></u><u></u></p><p class=3D"MsoNormal">It was a pleasure t=
+alking to you earlier this this mooring. As requested, we will share the TT=
+ within the hour. <u></u><u></u></p><p class=3D"MsoNormal">As agree, I woul=
+d kindly ask to make sure the consignment is ready for dispatch on the 14<s=
+up>th</sup> or 15<sup>th</sup> of September. <u></u><u></u></p><p class=3D"=
+MsoNormal">=C2=A0<u></u><u></u></p><p class=3D"MsoNormal">Dear <a href=3D"m=
+ailto:joju@mismuscat.com" target=3D"_blank"><span style=3D"text-decoration:=
+none">@Joju Pradeep</span></a><u></u><u></u></p><p class=3D"MsoNormal">Plea=
+se make sure your vehicle is ready for pickup once we get the final conform=
+ation on the date. <u></u><u></u></p><p class=3D"MsoNormal">=C2=A0<u></u><u=
+></u></p><div><p class=3D"MsoNormal">Yours,<u></u><u></u></p><p class=3D"Ms=
+oNormal"><img border=3D"0" width=3D"640" height=3D"221" style=3D"width: 6.6=
+666in; height: 2.3in;" id=3D"m_-8354296439570449182m_-3130765843854147441_x=
+0000_i1042" alt=3D"signature_393130664"><u></u><u></u></p></div><p class=3D=
+"MsoNormal">=C2=A0<u></u><u></u></p><div id=3D"m_-8354296439570449182m_-313=
+0765843854147441m_4679587268579554648mail-editor-reference-message-containe=
+r"><div><div style=3D"border-width:1pt medium medium;border-style:solid non=
+e none;border-color:rgb(181,196,223) currentcolor currentcolor;padding:3pt =
+0in 0in"><p class=3D"MsoNormal" style=3D"margin-bottom:12pt"><b><span style=
+=3D"font-size:12pt;color:black">From: </span></b><span style=3D"font-size:1=
+2pt;color:black">MCC CSR Export &lt;<a href=3D"mailto:csrexport@mapei.ae" t=
+arget=3D"_blank">csrexport@mapei.ae</a>&gt;<br><b>Date: </b>Tuesday, 12 Sep=
+tember 2023 at 8:53 AM<br><b>To: </b><a href=3D"mailto:babar@akghardware.co=
+m" target=3D"_blank">babar@akghardware.com</a> &lt;<a href=3D"mailto:babar@=
+akghardware.com" target=3D"_blank">babar@akghardware.com</a>&gt;, Yazbeck R=
+oger &lt;<a href=3D"mailto:r.yazbeck@mapei.ae" target=3D"_blank">r.yazbeck@=
+mapei.ae</a>&gt;<br><b>Cc: </b>Abdallah Bachir &lt;<a href=3D"mailto:b.abda=
+llah@mapei.ae" target=3D"_blank">b.abdallah@mapei.ae</a>&gt;, <a href=3D"ma=
+ilto:jehad@akghardware.com" target=3D"_blank">jehad@akghardware.com</a> &lt=
+;<a href=3D"mailto:jehad@akghardware.com" target=3D"_blank">jehad@akghardwa=
+re.com</a>&gt;, Hidalgo Reynaldo &lt;<a href=3D"mailto:r.hidalgo@mapei.ae" =
+target=3D"_blank">r.hidalgo@mapei.ae</a>&gt;, &#39;Joju Pradeep&#39; &lt;<a=
+ href=3D"mailto:joju@mismuscat.com" target=3D"_blank">joju@mismuscat.com</a=
+>&gt;<br><b>Subject: </b>RE: Rawabi Bosher Trading &amp; Const. Est. LLC. O=
+rder (Ref P00122) - DE 111780</span><u></u><u></u></p></div><p class=3D"Mso=
+Normal">Dear Babar,<u></u><u></u></p><p class=3D"MsoNormal">Good Day!<u></u=
+><u></u></p><p class=3D"MsoNormal">As of now, all stocks are available exce=
+pt for the Adesilex P9 Grey &amp; P9 White, which should be available on th=
+e 11th &amp; 14th, respectively.<u></u><u></u></p><p class=3D"MsoNormal">=
+=C2=A0<u></u><u></u></p><p class=3D"MsoNormal">Requesting you to please pro=
+vide us with the TT copy as proof of Payment. <u></u><u></u></p><p class=3D=
+"MsoNormal">=C2=A0<u></u><u></u></p><p class=3D"MsoNormal">Thank you! =C2=
+=A0<u></u><u></u></p><p class=3D"MsoNormal">=C2=A0<u></u><u></u></p><div><p=
+ class=3D"MsoNormal"><b><span style=3D"font-family:Mistral;color:gray">Best=
+ Regards</span></b><u></u><u></u></p><p class=3D"MsoNormal" style=3D"margin=
+-bottom:6pt"><b>Reynaldo Hidalgo,Jr. </b><span style=3D"font-size:9pt">| C<=
+b>ustomer Service Representative</b></span><u></u><u></u></p><p class=3D"Ms=
+oNormal" style=3D"margin-bottom:6pt"><span style=3D"font-size:9pt">email <a=
+ href=3D"mailto:csrexport@mapei.ae" target=3D"_blank"><span style=3D"color:=
+rgb(5,99,193)">csrexport@mapei.ae</span></a><span style=3D"color:black">=C2=
+=A0 </span></span><u></u><u></u></p><p class=3D"MsoNormal" style=3D"margin-=
+top:4pt"><img border=3D"0" width=3D"184" height=3D"49" style=3D"width: 1.91=
+66in; height: 0.5083in;" id=3D"m_-8354296439570449182m_-3130765843854147441=
+_x0000_i1041"><u></u><u></u></p><p class=3D"MsoNormal" style=3D"margin-top:=
+4pt"><b><span style=3D"font-size:8pt;color:rgb(0,112,192)">MAPEI CONSTRUCTI=
+ON CHEMICALS L.L.C</span></b><u></u><u></u></p><p class=3D"MsoNormal"><span=
+ style=3D"font-size:8pt;color:rgb(0,112,192)">P.O Box: 73869, Dubai - Unite=
+d Arab Emirates</span><u></u><u></u></p><p class=3D"MsoNormal"><span style=
+=3D"font-size:8pt;color:rgb(0,112,192)">T. +971 4 815 6666 | F. +971 4 885 =
+8438 | </span><a href=3D"https://urlsand.esvalabs.com/?u=3Dhttp%3A%2F%2Fwww=
+.mapei.ae%2F&amp;e=3D86373c93&amp;h=3D6a4358b4&amp;f=3Dy&amp;p=3Dy" title=
+=3D"www.mapei.ae" target=3D"_blank"><span style=3D"font-size:8pt;color:rgb(=
+0,112,192)">www.mapei.ae</span></a><span style=3D"font-size:8pt;color:rgb(2=
+9,27,17)">=C2=A0=C2=A0</span><u></u><u></u></p><p class=3D"MsoNormal">=C2=
+=A0<u></u><u></u></p><p class=3D"MsoNormal"><a href=3D"https://urlsand.esva=
+labs.com/?u=3Dhttps%3A%2F%2Fwww.mapei.com%2Fae%2Fen%2Fabout-us%2Fmapei-in-u=
+ae%2Fcertification&amp;e=3D86373c93&amp;h=3Dd8073429&amp;f=3Dy&amp;p=3Dy" t=
+itle=3D"www.mapei.com" target=3D"_blank"><span style=3D"color:windowtext;te=
+xt-decoration:none"><img border=3D"0" width=3D"202" height=3D"49" style=3D"=
+width: 2.1in; height: 0.5083in;" id=3D"m_-8354296439570449182m_-31307658438=
+54147441_x0000_i1040"></span></a><u></u><u></u></p><p class=3D"MsoNormal"><=
+b><i><u><span style=3D"color:rgb(0,112,192)">Follow us on:</span></u></i></=
+b><b><i><u><span style=3D"font-size:14pt"> </span></u></i></b><u></u><u></u=
+></p><p class=3D"MsoNormal"><a href=3D"https://urlsand.esvalabs.com/?u=3Dht=
+tps%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fmapei-middleeast-eastafrica&amp;e=
+=3D86373c93&amp;h=3De2bb47c7&amp;f=3Dy&amp;p=3Dy" title=3D"www.linkedin.com=
+" target=3D"_blank"><b><span style=3D"font-size:110pt;color:windowtext;text=
+-decoration:none"><img border=3D"0" width=3D"38" height=3D"37" style=3D"wid=
+th: 0.4in; height: 0.3833in;" id=3D"m_-8354296439570449182m_-31307658438541=
+47441_x0000_i1039" alt=3D"Icon
+
+Description automatically generated"></span></b></a><a href=3D"https://urls=
+and.esvalabs.com/?u=3Dhttps%3A%2F%2Fwww.instagram.com%2Fmapeimeea%2F&amp;e=
+=3D86373c93&amp;h=3D5a7ffc52&amp;f=3Dy&amp;p=3Dy" title=3D"www.instagram.co=
+m" target=3D"_blank"><b><span style=3D"color:windowtext;text-decoration:non=
+e"><img border=3D"0" width=3D"38" height=3D"37" style=3D"width: 0.4in; heig=
+ht: 0.3833in;" id=3D"m_-8354296439570449182m_-3130765843854147441_x0000_i10=
+38" alt=3D"Icon
+
+Description automatically generated"></span></b></a><u></u><u></u></p><p cl=
+ass=3D"MsoNormal"><b><i><u><span style=3D"font-size:9pt">Note:</span></u></=
+i></b><u></u><u></u></p><p class=3D"MsoNormal"><i><u><span style=3D"font-si=
+ze:9pt">The Requirement of Official and Commercial Evidence under the Indir=
+ect Export of Goods.</span></u></i><u></u><u></u></p><p class=3D"MsoNormal"=
+><i><span style=3D"font-size:9pt">As per provisions of Article 30.2 of Cabi=
+net Decision No. 52 of 2017 on the Executive Regulations of the Federal=C2=
+=A0 Decree-law No. 8 of 2017 on Value Added Tax in the UAE, an indirect exp=
+ort of Goods from an implementing state ( which include UAE ) to overseas c=
+ustomer shall be subject to VAT at the rate of 0% (Zero percent) only if th=
+e prescribed conditions are fulfilled.</span></i><u></u><u></u></p><p class=
+=3D"MsoNormal" style=3D"text-align:justify"><i><span style=3D"font-size:9pt=
+">As set forth in the Article 4.a and 4.b of the aforementioned law and to =
+ensure our compliance with the regulatory requirements, we would require th=
+e <b>Official</b> and <b>Commercial </b>evidence documents of export of goo=
+ds <b>within 45 days</b> from our date of supply of goods. In case of failu=
+re in doing so, Mapei will not benefit of the tax rate of zero percent appl=
+icable for the indirect export of goods and therefore will be required to r=
+everse the initial Tax Invoice issued at the rate of 0% VAT and issue a new=
+ Tax Invoice with the standard rate applicable at 5% VAT. The customer ackn=
+owledges and agrees that it will accept the revised invoice and be obliged =
+to remit the VAT amount to Mapei in view of the regulatory requirement.</sp=
+an></i><u></u><u></u></p><p class=3D"MsoNormal" style=3D"text-align:justify=
+"><i><span style=3D"font-size:9pt">The <b>Official evidence</b> means Expor=
+t documents issued by the local Emirate Customs Department in respect of Go=
+ods leaving the State including Exit certificate from the customs authoriti=
+es. </span></i><u></u><u></u></p><p class=3D"MsoNormal"><i><span style=3D"f=
+ont-size:9pt">The <b>Commercial evidence</b> shall include any the followin=
+g: </span></i><u></u><u></u></p><p class=3D"MsoNormal" style=3D"margin-left=
+:0.75in">1.<span style=3D"font-size:7pt;font-family:&quot;Times New Roman&q=
+uot;,serif">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </span><i><span style=3D"f=
+ont-size:9pt">Airway bill. </span></i><u></u><u></u></p><p class=3D"MsoNorm=
+al" style=3D"margin-left:0.75in">2.<span style=3D"font-size:7pt;font-family=
+:&quot;Times New Roman&quot;,serif">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </=
+span><i><span style=3D"font-size:9pt">Bill of lading. </span></i><u></u><u>=
+</u></p><p class=3D"MsoNormal" style=3D"margin-left:0.75in">3.<span style=
+=3D"font-size:7pt;font-family:&quot;Times New Roman&quot;,serif">=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0 </span><i><span style=3D"font-size:9pt">Consign=
+ment note. </span></i><u></u><u></u></p><p class=3D"MsoNormal" style=3D"mar=
+gin-left:0.75in">4.<span style=3D"font-size:7pt;font-family:&quot;Times New=
+ Roman&quot;,serif">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </span><i><span st=
+yle=3D"font-size:9pt">Certificate of shipment. </span></i><u></u><u></u></p=
+><p class=3D"MsoNormal"><i><span style=3D"font-size:9pt">The evidence obtai=
+ned as proof of Export, whether official or commercial, must identify the f=
+ollowing;</span></i><u></u><u></u></p><p class=3D"MsoNormal" style=3D"margi=
+n-left:0.75in">1.<span style=3D"font-size:7pt;font-family:&quot;Times New R=
+oman&quot;,serif">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </span><i><span styl=
+e=3D"font-size:9pt">The Supplier.</span></i><u></u><u></u></p><p class=3D"M=
+soNormal" style=3D"margin-left:0.75in">2.<span style=3D"font-size:7pt;font-=
+family:&quot;Times New Roman&quot;,serif">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0 </span><i><span style=3D"font-size:9pt">The Consignor.</span></i><u></u=
+><u></u></p><p class=3D"MsoNormal" style=3D"margin-left:0.75in">3.<span sty=
+le=3D"font-size:7pt;font-family:&quot;Times New Roman&quot;,serif">=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </span><i><span style=3D"font-size:9pt">The =
+Goods.</span></i><u></u><u></u></p><p class=3D"MsoNormal" style=3D"margin-l=
+eft:0.75in">4.<span style=3D"font-size:7pt;font-family:&quot;Times New Roma=
+n&quot;,serif">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </span><i><span style=
+=3D"font-size:9pt">The Value.</span></i><u></u><u></u></p><p class=3D"MsoNo=
+rmal" style=3D"margin-left:0.75in">5.<span style=3D"font-size:7pt;font-fami=
+ly:&quot;Times New Roman&quot;,serif">=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 =
+</span><i><span style=3D"font-size:9pt">The Export destination.</span></i><=
+u></u><u></u></p><p class=3D"MsoNormal" style=3D"margin-left:0.75in">6.<spa=
+n style=3D"font-size:7pt;font-family:&quot;Times New Roman&quot;,serif">=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 </span><i><span style=3D"font-size:9pt">T=
+he mode of transport and route of the export movement.</span></i><u></u><u>=
+</u></p></div><p class=3D"MsoNormal">=C2=A0<u></u><u></u></p><div><div styl=
+e=3D"border-width:1pt medium medium;border-style:solid none none;border-col=
+or:rgb(225,225,225) currentcolor currentcolor;padding:3pt 0in 0in"><p class=
+=3D"MsoNormal"><b>From:</b> <a href=3D"mailto:babar@akghardware.com" target=
+=3D"_blank">babar@akghardware.com</a> &lt;<a href=3D"mailto:babar@akghardwa=
+re.com" target=3D"_blank">babar@akghardware.com</a>&gt; <br><b>Sent:</b> Tu=
+esday, September 12, 2023 8:39 AM<br><b>To:</b> Yazbeck Roger &lt;<a href=
+=3D"mailto:r.yazbeck@mapei.ae" target=3D"_blank">r.yazbeck@mapei.ae</a>&gt;=
+<br><b>Cc:</b> Abdallah Bachir &lt;<a href=3D"mailto:b.abdallah@mapei.ae" t=
+arget=3D"_blank">b.abdallah@mapei.ae</a>&gt;; MCC CSR Export &lt;<a href=3D=
+"mailto:csrexport@mapei.ae" target=3D"_blank">csrexport@mapei.ae</a>&gt;; <=
+a href=3D"mailto:jehad@akghardware.com" target=3D"_blank">jehad@akghardware=
+.com</a>; Hidalgo Reynaldo &lt;<a href=3D"mailto:r.hidalgo@mapei.ae" target=
+=3D"_blank">r.hidalgo@mapei.ae</a>&gt;; &#39;Joju Pradeep&#39; &lt;<a href=
+=3D"mailto:joju@mismuscat.com" target=3D"_blank">joju@mismuscat.com</a>&gt;=
+<br><b>Subject:</b> RE: Rawabi Bosher Trading &amp; Const. Est. LLC. Order =
+(Ref P00122) - DE 111780<u></u><u></u></p></div></div><p class=3D"MsoNormal=
+">=C2=A0<u></u><u></u></p><div style=3D"border:1pt dotted rgb(0,51,51);padd=
+ing:2pt"><p class=3D"MsoNormal" style=3D"background:pink"><b><span style=3D=
+"font-size:12pt;font-family:Arial,sans-serif;color:black">Informative</span=
+></b><span style=3D"color:black"> </span><u></u><u></u></p><div><p class=3D=
+"MsoNormal" style=3D"background:pink"><span style=3D"font-family:Arial,sans=
+-serif;color:black">This email was sent from an external party outside the =
+MAPEI group. Do not click on the links or open attachments unless you ident=
+ify the sender and know that the content is safe.</span><u></u><u></u></p><=
+/div></div><div class=3D"MsoNormal" align=3D"center" style=3D"text-align:ce=
+nter"><hr size=3D"1" width=3D"89%" align=3D"center"></div><div><p class=3D"=
+MsoNormal">Dear Roger,<u></u><u></u></p><p class=3D"MsoNormal">=C2=A0<u></u=
+><u></u></p><p class=3D"MsoNormal">Thank you for the email.<u></u><u></u></=
+p><p class=3D"MsoNormal">=C2=A0<u></u><u></u></p><p class=3D"MsoNormal">Ple=
+ase also advise on the readiness of the order, so that we may proceed accor=
+dingly.<u></u><u></u></p><p class=3D"MsoNormal">=C2=A0<u></u><u></u></p><di=
+v><p class=3D"MsoNormal"><b><i>Best regards,</i></b><u></u><u></u></p><p cl=
+ass=3D"MsoNormal">=C2=A0<u></u><u></u></p><p class=3D"MsoNormal"><img borde=
+r=3D"0" width=3D"624" height=3D"216" style=3D"width: 6.5in; height: 2.25in;=
+" id=3D"m_-8354296439570449182m_-3130765843854147441_x0000_i1037"><u></u><u=
+></u></p></div><p class=3D"MsoNormal">=C2=A0<u></u><u></u></p><div><div sty=
+le=3D"border-width:1pt medium medium;border-style:solid none none;border-co=
+lor:rgb(225,225,225) currentcolor currentcolor;padding:3pt 0in 0in"><p clas=
+s=3D"MsoNormal"><b>From:</b> Yazbeck Roger &lt;<a href=3D"mailto:r.yazbeck@=
+mapei.ae" target=3D"_blank">r.yazbeck@mapei.ae</a>&gt; <br><b>Sent:</b> Mon=
+day, September 11, 2023 4:32 PM<br><b>To:</b> <a href=3D"mailto:jehad@akgha=
+rdware.com" target=3D"_blank">jehad@akghardware.com</a><br><b>Cc:</b> Babar=
+ Affan &lt;<a href=3D"mailto:babar@akghardware.com" target=3D"_blank">babar=
+@akghardware.com</a>&gt;; Abdallah Bachir &lt;<a href=3D"mailto:b.abdallah@=
+mapei.ae" target=3D"_blank">b.abdallah@mapei.ae</a>&gt;; MCC CSR Export &lt=
+;<a href=3D"mailto:csrexport@mapei.ae" target=3D"_blank">csrexport@mapei.ae=
+</a>&gt;<br><b>Subject:</b> Rawabi Bosher Trading &amp; Const. Est. LLC. Or=
+der (Ref P00122) - DE 111780<u></u><u></u></p></div></div><p class=3D"MsoNo=
+rmal">=C2=A0<u></u><u></u></p><div><div><div><p class=3D"MsoNormal">Dear Je=
+had,<u></u><u></u></p></div><div><p class=3D"MsoNormal">=C2=A0<u></u><u></u=
+></p></div><div><p class=3D"MsoNormal">Kindly find attached revised PI.<u><=
+/u><u></u></p></div><div><p class=3D"MsoNormal">=C2=A0<u></u><u></u></p></d=
+iv><div><p class=3D"MsoNormal">Thank you.=C2=A0<u></u><u></u></p></div><div=
+ id=3D"m_-8354296439570449182m_-3130765843854147441m_4679587268579554648ms-=
+outlook-mobile-signature"><div><p class=3D"MsoNormal">=C2=A0<u></u><u></u><=
+/p></div><div><div><p class=3D"MsoNormal">Best regards,<u></u><u></u></p></=
+div><div><p class=3D"MsoNormal">=C2=A0<u></u><u></u></p></div><div><p class=
+=3D"MsoNormal">Roger Yazbeck |=C2=A0Business Development Executive<u></u><u=
+></u></p></div><div><div><p class=3D"MsoNormal">M. +971 56 656 0287<u></u><=
+u></u></p></div><div><p class=3D"MsoNormal">email <a href=3D"mailto:r.yazbe=
+ck@mapei.ae" target=3D"_blank">r.yazbeck@mapei.ae</a> <u></u><u></u></p></d=
+iv><div><p class=3D"MsoNormal">=C2=A0<u></u><u></u></p></div><div><p class=
+=3D"MsoNormal">MAPEI CONSTRUCTION CHEMICALS L.L.C<u></u><u></u></p></div><d=
+iv><p class=3D"MsoNormal">P.O Box: 73869, Dubai - United Arab Emirates<u></=
+u><u></u></p></div><p class=3D"MsoNormal">T. +971 4 815 6666 | F. +971 4 88=
+5 8438 | <a href=3D"https://urlsand.esvalabs.com/?u=3Dhttp%3A%2F%2Fwww.mape=
+i.com&amp;e=3D86373c93&amp;h=3De91c33f3&amp;f=3Dy&amp;p=3Dy" title=3D"www.m=
+apei.com" target=3D"_blank">www.mapei.com</a><u></u><u></u></p></div></div>=
+</div></div></div></div></div></div></div></div></div></blockquote></div></=
+div></div></div></div></blockquote></div>
+</blockquote></div>
+
+--0000000000004fc8730605c811d6--

@@ -1,0 +1,304 @@
+Return-Path: <blc2013.oman@gmail.com>
+Delivered-To: babar@akghardware.com
+Received: from cpanel21.interactivedns.com
+	by cpanel21.interactivedns.com with LMTP
+	id APS3Nd4MlWWTSzAAGRFUPQ
+	(envelope-from <blc2013.oman@gmail.com>)
+	for <babar@akghardware.com>; Wed, 03 Jan 2024 12:59:34 +0530
+Return-path: <blc2013.oman@gmail.com>
+Envelope-to: babar@akghardware.com
+Delivery-date: Wed, 03 Jan 2024 12:59:34 +0530
+Received: from mail-yb1-f171.google.com ([209.85.219.171]:60424)	by
+ cpanel21.interactivedns.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.96.2)	(envelope-from <blc2013.oman@gmail.com>)	id 1rKvgy-00DHij-19
+	for babar@akghardware.com;	Wed, 03 Jan 2024 12:59:34 +0530
+Received: by mail-yb1-f171.google.com with SMTP id
+ 3f1490d57ef6-dbd99c08cd6so6431622276.0        for <babar@akghardware.com>;
+ Tue, 02 Jan 2024 23:29:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com;
+ s=20230601; t=1704266968; x=1704871768; darn=akghardware.com;       
+ h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;       
+ bh=7rPpPm+UwrUzHpZb8EUFvE3FfrK0jcxiA0PIQ/ZF3wQ=;       
+ b=A59jLmujBmBB9S8/WUvrP+ILetCjdQgw0XiSdhWIIzv8bU/EFiJa/ehkvwc6tQArtR        
+ LZe/kfyPJYfw8UT6fcvouJujlBrkoMZNpjWvSrWltnBjY04zzx2tjEuIW0xy/X5Yjq/g        
+ /zwYaL4wWtKaUEQkXG/FngobKUFVr1hLbVBopuEmxsMNNmn68q5mZ0RZ2kP9CGUo/Ayc        
+ MRLczfFV1h2wB9TCA8J9s6l+R2fiG18SCfLSbHFmEeBC9ECad/Riy0Qdy8TMy3d3PeCq        
+ fZ1IVQTl08x7TB8RJYwfLEFDG4JasFaxQoah/SfO9NRAy5mLEnt7jFjBZ4k2gAIYPvSo        
+ y7bg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1704266968; x=1704871768;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=7rPpPm+UwrUzHpZb8EUFvE3FfrK0jcxiA0PIQ/ZF3wQ=;
+        b=HF9MvsozjiROASzsGY3nL7Ajuqz3YQwqX5udO9ja6AebnQQJGsBFxeNkw7gud7Dfnk
+         EqETNvH2Xca3QhEGM9DBksCejJkhlsE9ttNtEfcwKMCycag3MuqsbhwpQvP0M/HKJ6dQ
+         EIryk7oW9DegMaDEPlgQ5pxeGu3DJMOKVmHWu/bwBJQY+yJZxGTBNPNZa1lFM/4UoeJA
+         ionre+X1fC/222zq/wciqQGAt4fKNoA9i5G87YR3H4n3+5o0AI7cq4v2mBnJ+RQhAF2E
+         FLtVlzSxRA6ciAKAcm1Qc7OMCpLhpxIz1ebPXXOr5F6fhHZbvu89Nyk+WMmaof/j4f6X
+         v34g==
+X-Gm-Message-State: AOJu0YynTZiGyPyndfPBnw66evpVuOyAOdL1hpU0UyGCR7R02LL6g9um
+	kFKd8iHgav8BlsaT3rg8TUsE2eAMrr+MWutwzNrwb4Xq
+X-Google-Smtp-Source: =?utf-8?q?AGHT+IHhBzG0FFbGZjbRCJzOOay1nMYrno7K+oKNv0VZ?=
+ =?utf-8?q?PXpjOJaeIjB22MTaxY+KevWkjVX89quqgh4d9ltQvGMYoPs=3D?=
+X-Received: by 2002:a25:8e07:0:b0:dbd:b464:63a with SMTP id
+ p7-20020a258e07000000b00dbdb464063amr8465898ybl.26.1704266967639; Tue, 02 Jan
+ 2024 23:29:27 -0800 (PST)
+MIME-Version: 1.0
+References: <816516576141889.1704181624.926707744598389-openerp-message-notify@0ec842cea42d>
+ <958192220844465.1704266491.383679628372192-openerp-4679-purchase.order@0ec842cea42d>
+ <958192220844465.1704266491.383679628372192-openerp-4679-purchase.order@0ec842cea42d>
+In-Reply-To: <958192220844465.1704266491.383679628372192-openerp-4679-purchase.order@0ec842cea42d>
+From: BRILLIANT HOME Oman <blc2013.oman@gmail.com>
+Date: Wed, 3 Jan 2024 11:29:15 +0400
+Message-ID: <CACbAAR=PYso6-95HxZcE1A4EWrV=tGvjFct50UXc1jyhdoJzKg@mail.gmail.com>
+Subject: Re: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref P00431)
+To: "Rawabi Bosher Trading & Const. Est. LLC. P00431" <babar@akghardware.com>
+Content-Type: multipart/alternative; boundary="000000000000356c86060e059326"
+X-Spam-Status: No, score=-0.2
+X-Spam-Score: -1
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system
+ "cpanel21.interactivedns.com", has NOT identified this incoming email as
+ spam.  The original message has been attached to this so you can view it or
+ label similar future email.  If you have any questions, see root\@localhost
+ for details. Content preview:  Hi, Well received. Will issue an invoice soon.
+ Regrads, BRILLIANT    HOMES On Wed, 3 Jan 2024 at 11:21 AM Babar Affan wrote:
+  Content analysis details:   (-0.2 points, 5.0 required)  pts rule name
+              description ---- ----------------------
+ --------------------------------------------------  0.0 URIBL_BLOCKED
+          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See                            
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: akg-hardware.com]  0.0 FREEMAIL_FROM
+          Sender email is commonly abused enduser mail
+                             provider                            
+ [blc2013.oman[at]gmail.com] -0.0 SPF_PASS               SPF: sender matches
+ SPF record  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+                             identical to background  0.0 HTML_MESSAGE
+           BODY: HTML included in message  0.1 DKIM_SIGNED            Message
+ has a DKIM or DK signature, not necessarily                             valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain -0.1 DKIM_VALID_EF         
+ Message has a valid DKIM or DK signature from                            
+ envelope-from domain -0.1 DKIM_VALID             Message has at least one
+ valid DKIM or DK signature -0.0 T_SCC_BODY_TEXT_LINE   No description
+ available.
+X-Spam-Flag: NO
+
+--000000000000356c86060e059326
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+SGksDQpXZWxsIHJlY2VpdmVkLg0KV2lsbCBpc3N1ZSBhbiBpbnZvaWNlIHNvb24uDQoNClJlZ3Jh
+ZHMsDQpCUklMTElBTlQgSE9NRVMNCg0KT24gV2VkLCAzIEphbiAyMDI0IGF0IDExOjIxIEFNIEJh
+YmFyIEFmZmFuIDxiYWJhckBha2doYXJkd2FyZS5jb20+IHdyb3RlOg0KDQo+IERlYXIgQnJpbGxp
+YW50IEhvbWVzIEVuY2xvc2VkLCBwbGVhc2UgZmluZCwgcHVyY2hhc2Ugb3JkZXIgUDAwNDMxDQo+
+IGFtb3VudGluZyBpbiA0MjkuNDUwMCZuYnNwO09NUiBmcm9tIFJhd2FiaSBCb3NoZXIgVHJhZGlu
+ZyAmYW1wOyBDb25zdC4gRXN0Lg0KPiBMTEMuLiBUaGUgZGVsaXZlcnkgbG9jYXRpb24gaXMgb3Vy
+IE1hYmVsYSBbLi4uXSDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDN
+jyDigIsNCj4gzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCL
+IM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsg
+zY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLDQo+IM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKA
+iyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCL
+IM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiw0KPiDNjyDi
+gIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKA
+iyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCL
+IM2PIOKAiyDNjyDigIsNCj4gzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDi
+gIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKA
+iyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLDQo+IM2PIOKAiyDNjyDigIsgzY8g
+4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDi
+gIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKA
+iw0KPiDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g
+4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDi
+gIsgzY8g4oCLIM2PIOKAiyDNjyDigIsNCj4gzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2P
+IOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g
+4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLIM2PIOKAiyDNjyDigIsgzY8g4oCLDQo+IFtpbWFnZTog
+UmF3YWJpIEJvc2hlciBUcmFkaW5nICYgQ29uc3QuIEVzdC4gTExDLl0NCj4gLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tDQo+IENvbmZpcm0NCj4gPGh0dHBzOi8vb2Rvby5ha2doYXJkd2Fy
+ZS5jb20vbXkvcHVyY2hhc2UvNDY3OT9hY2Nlc3NfdG9rZW49YmUxYWU0MTAtNjU3My00ZTJjLWE2
+ZjItNWVmY2I0MWEyZDU3JmNvbmZpcm09cmVjZXB0aW9uJmNvbmZpcm1lZF9kYXRlPTIwMjQtMDEt
+MDk+DQo+ICAgIFAwMDQzMQ0KPiA0MjkuNDUwMCBPTVIgZHVlIDEvMi8yNA0KPiAtLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0NCj4NCj4gRGVhciBCcmlsbGlhbnQgSG9tZXMNCj4NCj4gRW5j
+bG9zZWQsIHBsZWFzZSBmaW5kLCBwdXJjaGFzZSBvcmRlciBQMDA0MzEgYW1vdW50aW5nIGluIDQy
+OS40NTAwIE9NUg0KPiBmcm9tIFJhd2FiaSBCb3NoZXIgVHJhZGluZyAmIENvbnN0LiBFc3QuIExM
+Qy4uDQo+DQo+IFRoZSBkZWxpdmVyeSBsb2NhdGlvbiBpcyBvdXIgTWFiZWxhIFNob3dyb29tLg0K
+Pg0KPiAtLQ0KPg0KPg0KPg0KPg0KPiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCj4g
+KlJhd2FiaSBCb3NoZXIgVHJhZGluZyAmIENvbnN0LiBFc3QuIExMQy4qDQo+DQo+ICs5NjggMjQ0
+OTI4NjEgfCBpbmZvQGFrZ2hhcmR3YXJlLmNvbSB8IGh0dHBzOi8vd3d3LmFrZy1oYXJkd2FyZS5j
+b20NCj4NCj4gUG93ZXJlZCBieSBPZG9vIDxodHRwczovL3d3dy5vZG9vLmNvbT91dG1fc291cmNl
+PWRiJnV0bV9tZWRpdW09ZW1haWw+DQo+DQo=
+--000000000000356c86060e059326
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">Hi,</div><div dir=3D"auto">Well=C2=A0received.</div><div =
+dir=3D"auto">Will issue an invoice soon.=C2=A0</div><div dir=3D"auto"><br><=
+/div><div dir=3D"auto">Regrads,</div><div dir=3D"auto">BRILLIANT HOMES</div=
+><div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">=
+On Wed, 3 Jan 2024 at 11:21 AM Babar Affan &lt;<a href=3D"mailto:babar@akgh=
+ardware.com">babar@akghardware.com</a>&gt; wrote:<br></div><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;pad=
+ding-left:1ex">
+
+
+   =20
+
+<div style=3D"font-family:Verdana,Arial,sans-serif;color:#454748">
+
+<div style=3D"display:none;max-height:0px;overflow:hidden">Dear Brilliant H=
+omes Enclosed, please find, purchase order P00431 amounting in 429.4500&amp=
+;nbsp;OMR from Rawabi Bosher Trading &amp;amp; Const. Est. LLC.. The delive=
+ry location is our Mabela [...]
+   =20
+    =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B=20
+</div>
+<div style=3D"max-width:900px;width:100%">
+<div>
+    <div>
+       =20
+       =20
+       =20
+    </div>
+</div>
+<div summary=3D"o_mail_notification" style=3D"padding:0px">
+    <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" style=3D"width:100%;margin-top:5px">
+        <tbody>
+            <tr>
+                <td valign=3D"center">
+                    <img style=3D"padding:0px;margin:0px;height:auto;max-wi=
+dth:200px;max-height:36px" src=3D"https://odoo.akghardware.com/logo.png?com=
+pany=3D1" alt=3D"Rawabi Bosher Trading &amp; Const. Est. LLC.">
+                </td>
+            </tr>
+            <tr>
+                <td valign=3D"center">
+                    <hr width=3D"100%" style=3D"background-color:rgb(204,20=
+4,204);border:medium none;clear:both;display:block;font-size:0px;min-height=
+:1px;line-height:0;margin:10px 0px">
+                </td>
+            </tr>
+            <tr>
+                <td valign=3D"center" style=3D"white-space:nowrap">
+                    <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+>
+                        <tbody>
+                            <tr>
+                                <td style=3D"border-radius:3px;text-align:c=
+enter;padding:8px 12px 11px;background:#58585a">
+                                    <a style=3D"font-size:12px;color:#fffff=
+f;text-decoration:none!important;font-weight:400" href=3D"https://odoo.akgh=
+ardware.com/my/purchase/4679?access_token=3Dbe1ae410-6573-4e2c-a6f2-5efcb41=
+a2d57&amp;confirm=3Dreception&amp;confirmed_date=3D2024-01-09" target=3D"_b=
+lank">
+                                        Confirm
+                                    </a>
+                                </td>
+                                <td>=C2=A0=C2=A0</td>
+
+                                <td style=3D"font-size:12px">
+                                        <span style=3D"font-weight:bold">P0=
+0431</span>
+                                        <br>
+                                        <span>429.4500=C2=A0OMR due=C2=A01/=
+2/24</span>
+                                </td>
+                                <td>=C2=A0=C2=A0</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td valign=3D"center">
+                    <hr width=3D"100%" style=3D"background-color:rgb(204,20=
+4,204);border:medium none;clear:both;display:block;font-size:0px;min-height=
+:1px;line-height:0;margin:10px 0px">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div style=3D"font-size:13px"><div style=3D"margin:0px;padding:0px">
+    <p style=3D"margin:0px;padding:0px;font-size:13px">
+        Dear Brilliant Homes
+        <br><br>
+        Enclosed, please find, purchase order <span style=3D"font-weight:bo=
+ld">P00431</span>
+        amounting in <span style=3D"font-weight:bold">429.4500=C2=A0OMR</sp=
+an>
+        from Rawabi Bosher Trading &amp; Const. Est. LLC..=20
+        <br><br>
+            The delivery location is our Mabela Showroom.
+            <br><br>
+            </p><p style=3D"margin:0px 0 12px 0">--</p><p style=3D"margin:0=
+px 0 12px 0"><img src=3D"https://odoo.akghardware.com/web/image/2044-7eb88d=
+a7/ajay%20copy.jpg?access_token=3Df825ef6d-72d9-4f67-8446-cc7aed119cc2" sty=
+le=3D"display:inline-block;max-width:100%;vertical-align:middle;width:545.4=
+63px;height:189px" width=3D"545.463" height=3D"189"><br></p>
+        <br><br>
+    <p style=3D"margin:0px 0 12px 0"></p>
+</div></div>
+
+               =20
+           =20
+<div style=3D"margin-top:32px">
+    <hr width=3D"100%" style=3D"background-color:rgb(204,204,204);border:me=
+dium none;clear:both;display:block;font-size:0px;min-height:1px;line-height=
+:0;margin:16px 0px 4px 0px">
+    <b style=3D"font-size:11px">Rawabi Bosher Trading &amp; Const. Est. LLC=
+.</b><br>
+    <p style=3D"color:#999999;margin-top:2px;font-size:11px">
+        +968 24492861
+         |
+        <a style=3D"text-decoration:none;color:#999999" href=3D"mailto:info=
+@akghardware.com" target=3D"_blank">info@akghardware.com</a>
+         |
+        <a style=3D"text-decoration:none;color:#999999" href=3D"https://www=
+.akg-hardware.com" target=3D"_blank">https://www.akg-hardware.com</a>
+    </p>
+</div>
+<p style=3D"color:#555555;font-size:11px">
+    Powered by <a href=3D"https://www.odoo.com?utm_source=3Ddb&amp;utm_medi=
+um=3Demail" style=3D"color:#875a7b" target=3D"_blank">Odoo</a>
+</p>
+</div>
+</div>
+</blockquote></div></div>
+
+--000000000000356c86060e059326--

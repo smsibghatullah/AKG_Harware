@@ -1,0 +1,38 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20240311T000005Z - 85552@0ec842cea42d
+DTSTART:20240311T030000Z
+DTEND:20240311T033000Z
+ATTENDEE:MAILTO:ahmed@akghardware.com
+ATTENDEE:MAILTO:saleh@akghardware.com
+CREATED:20240311T000005Z
+DESCRIPTION:Mobile: +96892866681\nEmail: ahmed@akghardware.com\nWhat do you
+  want to transport?: Glue Pallet\nPlease mention the products\, their quan
+ tities and Units:\nP7-GREY - 200 NOS\nPlease enter the Customer's delivery
+  location address:\nAD DAKHILIYA - BAHLA\nDelivery Contact Name: ABU OMAR\
+ nPlease enter the contact number for delivery:\nCUSTOMER NO : 99896670 / F
+ OREMAN NO : 98366361\nServing Branch: Ghubra\nServing Personnel: Ahmed\nIn
+ voice Reference: INV_2024_02452\nInvoice Date: 4/3/2024
+DTSTAMP:20240311T000005Z
+ORGANIZER;CN="Rawabi Bosher Trading & Const. Est. LLC., Mitsubishi/Fuso : 8
+ 201 BK":MAILTO:saleh@akghardware.com
+SUMMARY:3 Ton Transportation to Ad Dakhiliyah 1 Pallet with Ahmed
+BEGIN:VALARM
+ACTION:AUDIO
+DESCRIPTION:Notification - 15 Minutes
+TRIGGER;related=START:PT15M
+END:VALARM
+BEGIN:VALARM
+ACTION:AUDIO
+DESCRIPTION:Email - 3 Hours
+TRIGGER;related=START:PT3H
+END:VALARM
+BEGIN:VALARM
+ACTION:AUDIO
+DESCRIPTION:SMS Text Message - 1 Hours
+TRIGGER;related=START:PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

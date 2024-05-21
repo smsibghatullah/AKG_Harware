@@ -1,0 +1,260 @@
+Return-Path: <support@contabo.com>
+Received: from cpanel21.interactivedns.com
+	by cpanel21.interactivedns.com with LMTP
+	id QHIjJXShtmW5LhMAGRFUPQ
+	(envelope-from <support@contabo.com>); Mon, 29 Jan 2024 00:18:20 +0530
+Return-path: <support@contabo.com>
+Envelope-to: info@akghardware.com,
+ babar@akghardware.com
+Delivery-date: Mon, 29 Jan 2024 00:18:20 +0530
+Received: from mout.contabo.com ([173.212.194.103]:37192)	by
+ cpanel21.interactivedns.com with esmtps  (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384	(Exim 4.96.2)	(envelope-from
+ <support@contabo.com>)	id 1rUACW-005H3m-2M;	Mon, 29 Jan 2024 00:18:20 +0530
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=contabo.de;
+	s=default; h=Content-Type:References:In-Reply-To:Subject:Date:CC:To:From:
+	Message-ID:MIME-Version:Sender:Reply-To:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=sia2fhq2IdUCQcJh0FVY46/qMoW+DGhYX5WYK/QTES4=; b=0bnDKP8n9pg1aWPtQupI59Jh1+
+	ZQXoj+Ru9Zh3/uUaEtV/OpDL9dbt2xsoDxfOODwvwdQuUWIdB+K/SDSvIE7GxG7d2wh0TtYPlHKNx
+	mllCxeB700oDtRfyqC1E7wVkoQv7ZwqFzPKGT8ZJ2ZQGb8uzFbPtkh3P4XpoESnUCRisuSLQmVAfc
+	f5fRY7+f02Xv5nDUutSZpC8W+CZuYUVwm4H1apazu6DecUqWsMKMN+WVdHLHYX/3axZD8XCbVVjq8
+	WYjhpbQlTdQvS7wgvME3ryo2Ds2JKH+67dzbHj+uBH0f2jtFqe338V3auX82QcV0ZlImuE7PVdryt
+	UnfxJ1OA==;
+Received: from [213.136.95.18] (port=29263 helo=ticketsystem.contabo.de)	by
+ mout.contabo.com with esmtpsa  (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256	(Exim 4.96.2)	(envelope-from
+ <support@contabo.com>)	id 1rUACU-0001tk-0U;	Sun, 28 Jan 2024 19:48:13 +0100
+MIME-Version: 1.0
+Message-ID: <1706467659.198503.194090983@ticketsystem.contabo.de>
+From: Contabo Support Team <support@contabo.com>
+To: info@akghardware.com
+CC: "Babar Affan" <babar@akghardware.com>
+Organization: Contabo GmbH
+Date: Sun, 28 Jan 2024 18:47:39 +0000
+Subject: Re: [Ticket#2024011510043692] Request for assistance.
+In-Reply-To: <471303740313004.1706349350.326642990112305-openerp-private@0ec842cea42d>
+References: <471303740313004.1706349350.326642990112305-openerp-private@0ec842cea42d>
+ <1706349102.54488.9333140987@ticketsystem.contabo.de>
+Content-Type: multipart/alternative; boundary="----------=_1706467659-6619-0"
+X-AntiAbuse:
+ This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - mout.contabo.com
+X-AntiAbuse: Original Domain - akghardware.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - contabo.com
+X-Get-Message-Sender-Via: mout.contabo.com: authenticated_id: m2169@contabo.de
+X-Authenticated-Sender: mout.contabo.com: m2169@contabo.de
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Spam-Status: No, score=0.0
+X-Spam-Score: 0
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system
+ "cpanel21.interactivedns.com", has NOT identified this incoming email as
+ spam.  The original message has been attached to this so you can view it or
+ label similar future email.  If you have any questions, see root\@localhost
+ for details. Content preview:  Dear Babar, Thank you very much for your
+ email, =?unknown-8bit?q?=C2=A0This_address=C2=A0=5B1=5Dinfo=40akghardware?=
+ =?unknown-8bit?q?=2Ecom?=    is not an email address that is authorized by
+ your customer account. We would    recommend that if you plan to use this
+ email to communicate in the future,    you add [...]  Content analysis
+ details:   (0.0 points, 5.0 required)  pts rule name              description
+ ---- ----------------------
+ --------------------------------------------------  0.0 URIBL_BLOCKED
+          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See                            
+ http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: contabo.com] -0.0 SPF_HELO_PASS         
+ SPF: HELO matches SPF record -0.0 SPF_PASS               SPF: sender matches
+ SPF record  0.0 HTML_MESSAGE           BODY: HTML included in message -0.1
+ DKIM_VALID             Message has at least one valid DKIM or DK signature 
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not
+ necessarily                             valid -0.0 T_SCC_BODY_TEXT_LINE   No
+ description available.  0.0 T_REMOTE_IMAGE         Message contains an
+ external image
+X-Spam-Flag: NO
+
+This is a multi-part message in MIME format...
+
+------------=_1706467659-6619-0
+Content-Type: text/plain; charset="utf-8"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Dear Babar,
+
+Thank you very much for your email,
+
+=C2=A0This address=C2=A0[1]info@akghardware.com is not an email address tha=
+t is
+authorized by your customer account. We would recommend that if you plan to
+use this email to communicate in the future, you add it to the list of
+authorized emails via your Contabo customer control panel at
+[2]https://my.contabo.com/ or we will not be able to give any account-speci=
+fic
+information in our reply.
+
+Still, we are always available for you personally and will respond to all of
+your questions as soon as possible. Always feel free to contact us.
+
+--
+Best regards,
+
+Lynn Mosley
+Customer Support Specialist
+
+How nice was my reply?
+[3]  [4] [5]
+
+Contabo GmbH
+Aschauer Stra=C3=9Fe 32a
+81549 M=C3=BCnchen
+[6]https://contabo.com?utm_source=3Dsupport&utm_medium=3Demail
+
+E-mail: support@contabo.com
+Tel.: +49 (0) 89 3564717 70
+Fax: +49 (0) 89 216 658 62
+
+Visit us on Facebook: [7]http://www.facebook.com/contaboCom
+
+Amtsgericht M=C3=BCnchen
+HRB 180722
+Authorized executives:
+Dr. Christian B=C3=B6ing & Thomas Schimmel
+
+__________________________________________________________
+
+Please do not change the subject line of this e-mail. Only by this you make
+sure that your answer will not be out of context.
+
+Please direct all support issues directly to support@contabo.com .
+This will guarantee fastest processing possible.
+___________________________________________________________
+
+01/27/2024 05:35 (America/Chicago) - MAILER-DAEMON wrote: >=20
+> Hello ,
+>=20
+> The email sent to Babar Affan <babar@akghardware.com> cannot be processed.
+> This address is used to collect replies and should not be used to directly
+> contact Rawabi Bosher Trading & Const. Est. LLC..
+>=20
+> Please contact us instead using [8]info@akghardware.com
+>=20
+> Regards,
+>=20
+> The Rawabi Bosher Trading & Const. Est. LLC. team.
+>=20
+>=20=20
+=20
+
+=20
+
+
+[1] mailto:info@akghardware.com
+[2] https://my.contabo.com/
+[3] https://satisfaction.contabo.com/248/8213515?s=3D10
+[4] https://satisfaction.contabo.com/248/8213515?s=3D5
+[5] https://satisfaction.contabo.com/248/8213515?s=3D1
+[6] https://contabo.com?utm_source=3Dsupport&utm_medium=3Demail
+[7] http://www.facebook.com/contaboCom
+[8] mailto:info@akghardware.com
+
+------------=_1706467659-6619-0
+Content-Type: text/html; charset="utf-8"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3Dutf-8"/></head><body style=3D"font-family:Geneva,Helvetic=
+a,Arial,sans-serif; font-size: 12px;">Dear Babar,<br />
+<br />
+Thank you very much for your email,<br />
+<br />
+&nbsp;This address&nbsp;<a href=3D"mailto:info@akghardware.com" target=3D"_=
+blank">info@akghardware.com</a> is not an email address that is authorized =
+by your customer account. We would recommend that if you plan to use this e=
+mail to communicate in the future, you add it to the list of authorized ema=
+ils via your Contabo customer control panel at <a href=3D"https://my.contab=
+o.com/" target=3D"_blank" title=3D"https://my.contabo.com/">https://my.cont=
+abo.com/</a> or we will not be able to give any account-specific informatio=
+n in our reply.<br />
+<br />
+Still, we are always available for you personally and will respond to all o=
+f your questions as soon as possible. Always feel free to contact us.<br />
+<br />
+--<br />
+Best regards,<br />
+<br />
+Lynn Mosley<br />
+Customer Support Specialist<br />
+<br />
+<br />
+<strong>How nice was my reply?</strong><br />
+<a href=3D"https://satisfaction.contabo.com/248/8213515?s=3D10" target=3D"_=
+blank"><img alt=3D"Awesome" src=3D"https://img.nicereply.com/survey/templat=
+e/csat/smileys/10.png" /> </a> <a href=3D"https://satisfaction.contabo.com/=
+248/8213515?s=3D5" target=3D"_blank"><img alt=3D"Nice" src=3D"https://img.n=
+icereply.com/survey/template/csat/smileys/5.png" /></a> <a href=3D"https://=
+satisfaction.contabo.com/248/8213515?s=3D1" target=3D"_blank"><img alt=3D"B=
+oo!" src=3D"https://img.nicereply.com/survey/template/csat/smileys/1.png" /=
+></a><br />
+<br />
+Contabo GmbH<br />
+Aschauer Stra=C3=9Fe 32a<br />
+81549 M=C3=BCnchen<br />
+<a href=3D"https://contabo.com?utm_source=3Dsupport&utm_medium=3Demail" tit=
+le=3D"https://contabo.com?utm_source=3Dsupport&utm_medium=3Demail" target=
+=3D"_blank">https://contabo.com?utm_source=3Dsupport&utm_medium=3Demail</a>=
+<br />
+<br />
+E-mail: support@contabo.com<br />
+Tel.: +49 (0) 89 3564717 70<br />
+Fax: +49 (0) 89 216 658 62<br />
+<br />
+Visit us on Facebook: <a href=3D"http://www.facebook.com/contaboCom" title=
+=3D"http://www.facebook.com/contaboCom" target=3D"_blank">http://www.facebo=
+ok.com/contaboCom</a><br />
+<br />
+Amtsgericht M=C3=BCnchen<br />
+HRB 180722<br />
+Authorized executives:<br />
+Dr. Christian B=C3=B6ing &amp; Thomas Schimmel<br />
+<br />
+__________________________________________________________<br />
+<br />
+Please do not change the subject line of this e-mail. Only by this you make=
+<br />
+sure that your answer will not be out of context.<br />
+<br />
+Please direct all support issues directly to support@contabo.com .<br />
+This will guarantee fastest processing possible.<br />
+___________________________________________________________<br />
+<br />
+01/27/2024 05:35 (America/Chicago) - MAILER-DAEMON wrote:
+<div style=3D"border:none; border-left:solid blue 1.5pt; padding:0cm 0cm 0c=
+m 4.0pt" type=3D"cite">
+<div>
+<p>Hello ,</p>
+
+<p>The email sent to Babar Affan &lt;babar@akghardware.com&gt; cannot be pr=
+ocessed. This address is used to collect replies and should not be used to =
+directly contact Rawabi Bosher Trading &amp; Const. Est. LLC..</p>
+
+<p>Please contact us instead using <a href=3D"mailto:info@akghardware.com" =
+target=3D"_blank">info@akghardware.com</a></p>
+
+<p>Regards,</p>
+
+<p>The Rawabi Bosher Trading &amp; Const. Est. LLC. team.</p>
+</div>
+
+<div style=3D"border:none; border-left:solid blue 1.5pt; padding:0cm 0cm 0c=
+m 4.0pt">&nbsp;</div>
+</div></body></html>=
+
+------------=_1706467659-6619-0--

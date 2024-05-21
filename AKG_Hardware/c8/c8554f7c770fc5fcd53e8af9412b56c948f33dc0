@@ -1,0 +1,40 @@
+
+                .o_company_1_layout {
+                font-family: Oswald;
+                &.o_clean_footer {
+                    border-top: 3px solid #58585a;
+                    h4 {
+                        color: #58585a;
+                    }
+                    .pagenumber {
+                        border: 3px solid #1b9eaf;
+                        background-color: #58585a;
+                    }
+                }
+                &.o_report_layout_bold {
+                    h1, h2, h3 {
+                        color: #1b9eaf;
+                    }
+                    strong {
+                        color: #58585a;
+                    }
+                    table {
+                       thead {
+                           color: #58585a;
+                           tr th {
+                                border-top: 3px solid #58585a !important;
+                            }
+                        }
+                        tbody {
+                            tr:last-child td {
+                                border-bottom: 3px solid #58585a;
+                            }
+                        }
+                    }
+                    #total {
+                        strong {
+                            color: #58585a;
+                        }
+                    }
+                }
+            }

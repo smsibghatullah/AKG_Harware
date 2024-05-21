@@ -1,0 +1,2807 @@
+Return-Path: <farooqui@mismuscat.com>
+Delivered-To: babar@akghardware.com
+Received: from cpanel21.interactivedns.com
+	by cpanel21.interactivedns.com with LMTP
+	id 4GFNEdIJd2UnHDYAGRFUPQ
+	(envelope-from <farooqui@mismuscat.com>)
+	for <babar@akghardware.com>; Mon, 11 Dec 2023 18:38:34 +0530
+Return-path: <farooqui@mismuscat.com>
+Envelope-to: babar@akghardware.com
+Delivery-date: Mon, 11 Dec 2023 18:38:34 +0530
+Received: from mail-yb1-f172.google.com ([209.85.219.172]:59409)	by
+ cpanel21.interactivedns.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.96.2)	(envelope-from <farooqui@mismuscat.com>)	id 1rCg1R-00EzfL-2s
+	for babar@akghardware.com;	Mon, 11 Dec 2023 18:38:34 +0530
+Received: by mail-yb1-f172.google.com with SMTP id
+ 3f1490d57ef6-db5e692d4e0so4603135276.2        for <babar@akghardware.com>;
+ Mon, 11 Dec 2023 05:08:27 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=mismuscat.com;
+ s=google; t=1702300104; x=1702904904; darn=akghardware.com;       
+ h=cc:to:subject:message-id:date:from:in-reply-to:references        
+ :mime-version:from:to:cc:subject:date:message-id:reply-to;       
+ bh=Ag3Av+CPEKtLUo4V6T2mWa+c9AyhIiTkRO260vRLCr0=;       
+ b=Vg+otQlptklsQ+M6aB9IMW7fbaiDLUtnT1xCVH6/J2B6nPoPRIv5w3puB0o5W55c8K        
+ 239X/uFH+BKUT4WkcbBpLPYP46EuSkgBxJ0v+dWvnNgLpYnLJbc83BAJWzGvAS4zrxJm        
+ demJ0enLpkT3dvvg8k4hh/bhSDgYF7TvIyMcg=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1702300104; x=1702904904;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=Ag3Av+CPEKtLUo4V6T2mWa+c9AyhIiTkRO260vRLCr0=;
+        b=BkcBXLzcde4YlOC6ymxf5mOvmk+X9piIQWyKnbPRzCvIbKnykFNTmA54PeU2BZif6y
+         19LuVcC4K6Od2HY5Ppl6hg+1djKhWmi0KOsGlPkvdM01GP7SnYrpvJ9h0HDuiJCxdHaq
+         0lJQqEq2/oemiZSj0EFFGLt4UDHdKJ4OpLHucGU51eOOXjgLxFc7h1mQQHV4to9pZ98t
+         3Ma3wELQF6E7QQBOIvEg7rcBxN8okYODBUJcjQEGILi0u+9f+rj56aJT3KIxVwtBuKZ2
+         z0222nia0CsSWiQl8f11Ymw/reLUcRJshSCS3aTgun7YgXUIYOExT2eOsIY72RJwtVzM
+         2Xcw==
+X-Gm-Message-State: AOJu0Yw/KLkX+uO6VziPDZiFrm2qsa599GtqM+74wsJZO1jUq/geg9tm
+	uWBZiriqAQ0O7LNiSU+iOXSswssMN83EF9ilvuARMVc8FiPqaP+TZzhkaUdKmgClzmyVMNAp7gH
+	jH/JlJGfjhJdfC5LqMMlyhl0I0eFXGd4lRuQv7lRce5EgMdUO6rJWYKB08Ckn+qDQkuQbroFn4n
+	BOUSxYlLtMQBxH80jy
+X-Google-Smtp-Source: =?utf-8?q?AGHT+IG5g17kVaPIkdIjjE6yMYIsiIEc3HqxZoxEQ0Lo?=
+ =?utf-8?q?8mKm69eMLWQsakLajThub2iBGSjCXx+S1gjEJIVCmqp1Nj4=3D?=
+X-Received: by 2002:a81:7102:0:b0:5d0:7361:1e53 with SMTP id
+ m2-20020a817102000000b005d073611e53mr3852139ywc.25.1702300103354; Mon, 11 Dec
+ 2023 05:08:23 -0800 (PST)
+MIME-Version: 1.0
+References: <181085139725061.1692000835.883800745010376-openerp-message-notify@0ec842cea42d>
+ <DB8P194MB0936314BCB13AA74F8764E2CDBB7A@DB8P194MB0936.EURP194.PROD.OUTLOOK.COM>
+ <D36AE585-1506-5E47-9089-E4A791B81D2F@hxcore.ol>
+In-Reply-To: <D36AE585-1506-5E47-9089-E4A791B81D2F@hxcore.ol>
+From: FAROOQUI HU <farooqui@mismuscat.com>
+Date: Mon, 11 Dec 2023 17:08:11 +0400
+Message-ID: <CADbRMYLs_EVWvkKjA39NffLqwJ_x54xV24U2TYhyvnGs+fJmZQ@mail.gmail.com>
+Subject: Re: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref P00089)
+To: Babar Affan <babar@akghardware.com>
+Cc: Ajay Kumar <ajay@akghardware.com>, saroop <import@mismuscat.com>
+Content-Type: multipart/alternative; boundary="000000000000f64750060c3ba0ec"
+
+--000000000000f64750060c3ba0ec
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Babar,
+
+Please share the BL copy to check the status of shipment, attached only
+invoice copy
+
+
+
+*Please note our VAT Registration No. VATIN OM1100017102*
+
+
+=E2=80=9CEffective from 16th April 2021, VAT shall be applicable as per new
+Government regulation in the Sultanate of Oman. All our quotations are
+exclusive of value added tax (VAT) & will be subject to VAT at the
+prevailing rate=E2=80=9D.
+
+
+
+
+
+*Notification:*
+
+*As per Royal Oman Police (ROP) Customs with immediate effect,  all import
+shipments must have the*
+
+*original : invoice, Packing List and Certificate of Origin. If any of
+these documents is not available or is a*
+
+*copy, then it will attract 2% additional customs duty on CIF value.*
+
+
+
+*FAROOQUI *
+
+*Assistant Manager =E2=80=93 Imports*
+
+[image: Description: Description: cid:f71b3b8f-2bd1-4c9a-9012-b2a9a65ae53d]
+
+*MUSCAT INTERNATIONAL SHIPPING & LOGISTICS LLC*
+
+Office No 104, AL Khaleel Head Office Building, Way No 240
+Building No 439, Al Ghubra North, Muscat, Sultanate of Oman
+Po Box: 1820 | PC: 133
+
+farooqui@mismuscat.com *|* mismuscat.com
+
+PHONE +968 22555566| 22553355 | 24498177| 24494680
+
+MOB + 968 9524 1933 | FAX +968 24493049 |
+
+*JCILO** | **GAIN** | **OCPA** | **PCN (OVERSEAS NETWORK)*
+
+
+On Mon, Dec 11, 2023 at 4:57=E2=80=AFPM Babar Affan <babar@akghardware.com>=
+ wrote:
+
+>
+>
+> Get Outlook for Android <https://aka.ms/AAb9ysg>
+>
+> ------------------------------
+> *From:* Nadeem Khan <nkhan@rubi.com>
+> *Sent:* Friday, November 17, 2023 7:35:30 AM
+> *To:* Babar Affan <babar@akghardware.com>
+> *Subject:* Re: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref P00089=
+)
+>
+> Dear Babar, Please find attached a copy of the invoice, the shipment was
+> loaded yesterday and the ETA is expected to be around 15th&nbsp;December.
+> The original documents will be ready [...] =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B
+> [image: Rawabi Bosher Trading & Const. Est. LLC.]
+> ------------------------------
+> View Purchase Order
+> <https://redirect-url.email/?link=3Dhttps%3A%2F%2Fodoo.akghardware.com%2F=
+mail%2Fview%3Fmodel%3Dpurchase.order%26res_id%3D4337&apn=3Dcom.odoo.mobile&=
+afl=3Dhttps%3A%2F%2Fodoo.akghardware.com%2Fmail%2Fview%3Fmodel%3Dpurchase.o=
+rder%26res_id%3D4337&ibi=3Dcom.odoo.mobile&ifl=3Dhttps%3A%2F%2Fodoo.akghard=
+ware.com%2Fmail%2Fview%3Fmodel%3Dpurchase.order%26res_id%3D4337>
+>    P00089
+> $ 29,514.10 due 8/13/23
+> ------------------------------
+>
+> Dear Babar,
+>
+> Please find attached a copy of the invoice, the shipment was loaded
+> yesterday and the ETA is expected to be around 15th December.
+>
+> The original documents will be ready within the next week and will be sen=
+t
+> over to you soon after we receive them.
+>
+> Thanks for your great support!
+>
+> Have a nice weekend!
+>
+> Best Regards
+>
+>
+> <https://www.rubi.com/us>
+> NADEEM=E2=80=8B   KHAN
+> Middle East  =E2=80=91  Business Development Manager
+> Tel.  +34 936 806500 <+34%20936%20806500>
+> Cell. +971 52 9697852 <+971%2052%209697852>
+> Fax. +34 936 806501
+> <https://www.facebook.com/RubiArabs/>   <https://www.rubi.com/us/youtube>
+> <https://www.rubi.com/es/instagram> <https://www.rubi.com/us/linkedin>
+> <https://www.rubi.com/en/turbo-viper-tva-hard-materials-diamond-blade-r16=
+0>
+>
+> =E2=99=BB Before printing this email, make sure it is necessary to do so.=
+ Protecting the environment is also in your hands.
+> This message and its attachments contain confidential and reserved
+> information addressed exclusively to the recipient. If you have received
+> this message in error, please notify it immediately by this same way and
+> delete the message from your system. In accordance with the provisions of
+> Regulation (EU) 2016/679 of the European Parliament and of the Council of
+> April 27, 2016 (hereinafter, "RGPD") the information contained in this
+> message and / or attached file (s) , sent from Germans Boada, SA, is
+> confidential and is intended to be read only by the person (s) to whom it
+> is addressed. We remind you that your data has been incorporated into the
+> treatment system of Germans Boada, S.A. and that as long as the
+> requirements demanded by the regulations are met, you can exercise your
+> rights of access, rectification, limitation of treatment, deletion,
+> portability and opposition / revocation, in the terms established by the
+> current regulations on data protection , directing your request to the
+> postal address Avinguda de les Olimp=C3=ADades 89-91, 08191, Rub=C3=AD (B=
+arcelona).
+> ------------------------------
+> *From:* babar@akghardware.com <babar@akghardware.com>
+> *Sent:* Tuesday, November 14, 2023 7:55 AM
+> *To:* Nadeem Khan <nkhan@rubi.com>
+> *Cc:* jehad@akghardware.com <jehad@akghardware.com>; 'Ajay Kumaran' <
+> ajay@akghardware.com>
+> *Subject:* RE: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref P00089=
+)
+>
+>
+> Dear Nadeem,
+>
+>
+>
+> Thank you for the email =F0=9F=98=8A.
+>
+>
+>
+> Will wait for the shipment tracking details.
+>
+>
+>
+> *Best regards,*
+>
+>
+>
+>
+>
+> *From:* Nadeem Khan <nkhan@rubi.com>
+> *Sent:* Monday, November 13, 2023 5:40 PM
+> *To:* Rawabi Bosher Trading & Const. Est. LLC. P00089 <
+> babar@akghardware.com>
+> *Cc:* jehad@akghardware.com; Ajay Kumaran <ajay@akghardware.com>
+> *Subject:* Re: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref P00089=
+)
+>
+>
+>
+> Dear Mr. Babar,
+>
+>
+>
+> Please find the attached copy of the Confirmation of Order.
+>
+>
+>
+> The shipment has been prepared and is going to be loaded on 16th Nov
+> Thursday, please.
+>
+>
+>
+> You might notice some variations in quantities due to the packaging etc.
+>
+>
+>
+> Thank you once again for your support.
+>
+>
+>
+> Best Regards
+>
+> <https://www.rubi.com/us>
+>
+> *NADEEM**=E2=80=8B*
+>
+>
+>
+> *KHAN*
+>
+> *Middle East*
+>
+> * =E2=80=91 *
+>
+> *Business Development Manager*
+>
+> *Tel. *
+>
+> *+34 936 806500 <+34%20936%20806500>*
+>
+> *Cell.*
+>
+> *+971 52 9697852 <+971%2052%209697852>*
+>
+> *Fax.*
+>
+> *+34 936 806501*
+>
+> <https://www.facebook.com/RubiArabs/>
+>
+>
+>
+> <https://www.rubi.com/us/youtube>
+>
+> <https://www.rubi.com/es/instagram>
+>
+> <https://www.rubi.com/us/linkedin>
+>
+>
+>
+> <https://www.rubi.com/en/turbo-viper-tva-hard-materials-diamond-blade-r16=
+0>
+>
+> =E2=99=BB
+>  Before printing this email, make sure it is necessary to do so. Protecti=
+ng the environment is also in your hands.
+>
+> This message and its attachments contain confidential and reserved
+> information addressed exclusively to the recipient. If you have received
+> this message in error, please notify it immediately by this same way and
+> delete the message from your system. In accordance with the provisions of
+> Regulation (EU) 2016/679 of the European Parliament and of the Council of
+> April 27, 2016 (hereinafter, "RGPD") the information contained in this
+> message and / or attached file (s) , sent from Germans Boada, SA, is
+> confidential and is intended to be read only by the person (s) to whom it
+> is addressed. We remind you that your data has been incorporated into the
+> treatment system of Germans Boada, S.A. and that as long as the
+> requirements demanded by the regulations are met, you can exercise your
+> rights of access, rectification, limitation of treatment, deletion,
+> portability and opposition / revocation, in the terms established by the
+> current regulations on data protection , directing your request to the
+> postal address Avinguda de les Olimp=C3=ADades 89-91, 08191, Rub=C3=AD (B=
+arcelona).
+> ------------------------------
+>
+> *From:* Nadeem Khan <nkhan@rubi.com>
+> *Sent:* Sunday, November 5, 2023 5:36 PM
+> *To:* Rawabi Bosher Trading & Const. Est. LLC. P00089 <
+> babar@akghardware.com>
+> *Subject:* RE: Rawabi Bosher Trading & Const. Est. LLC. Order (Ref P00089=
+)
+>
+>
+>
+> [image: like]
+>
+> *Nadeem Khan* reacted to your message:
+>
+>
+>
+> <https://www.rubi.com/us>
+>
+> *NADEEM**=E2=80=8B*
+>
+>
+>
+> *KHAN*
+>
+> *Middle East*
+>
+> * =E2=80=91 *
+>
+> *Business Development Manager*
+>
+> *Tel. *
+>
+> *+34 936 806500 <+34%20936%20806500>*
+>
+> *Cell.*
+>
+> *+971 52 9697852 <+971%2052%209697852>*
+>
+> *Fax.*
+>
+> *+34 936 806501*
+>
+> <https://www.facebook.com/RubiArabs/>
+>
+>
+>
+> <https://www.rubi.com/us/youtube>
+>
+> <https://www.rubi.com/es/instagram>
+>
+> <https://www.rubi.com/us/linkedin>
+>
+>
+>
+> <https://www.rubi.com/en/turbo-viper-tva-hard-materials-diamond-blade-r16=
+0>
+>
+> =E2=99=BB
+>  Before printing this email, make sure it is necessary to do so. Protecti=
+ng the environment is also in your hands.
+>
+> This message and its attachments contain confidential and reserved
+> information addressed exclusively to the recipient. If you have received
+> this message in error, please notify it immediately by this same way and
+> delete the message from your system. In accordance with the provisions of
+> Regulation (EU) 2016/679 of the European Parliament and of the Council of
+> April 27, 2016 (hereinafter, "RGPD") the information contained in this
+> message and / or attached file (s) , sent from Germans Boada, SA, is
+> confidential and is intended to be read only by the person (s) to whom it
+> is addressed. We remind you that your data has been incorporated into the
+> treatment system of Germans Boada, S.A. and that as long as the
+> requirements demanded by the regulations are met, you can exercise your
+> rights of access, rectification, limitation of treatment, deletion,
+> portability and opposition / revocation, in the terms established by the
+> current regulations on data protection , directing your request to the
+> postal address Avinguda de les Olimp=C3=ADades 89-91, 08191, Rub=C3=AD (B=
+arcelona).
+> ------------------------------
+>
+> *From:* Babar Affan <babar@akghardware.com>
+> *Sent:* Sunday, November 5, 2023 11:53:39 AM
+> *To:* Nadeem Khan <nkhan@rubi.com>
+> *Subject:* Rawabi Bosher Trading & Const. Est. LLC. Order (Ref P00089)
+>
+>
+>
+> Dear Nadeem, I hope this email finds you well. As per the conversation b/=
+w
+> yourself and Mr. Jehad last week, the Purchase Order has been updated.
+> Therefore, please disregard the [...] =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F
+> =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F
+> =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F
+> =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B
+> =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F
+> =E2=80=8B =CD=8F =E2=80=8B
+>
+> [image: Rawabi Bosher Trading & Const. Est. LLC.]
+> ------------------------------
+>
+> *P00089*
+> $ 29,514.10 due 8/13/23
+>
+>
+> ------------------------------
+>
+> Dear Nadeem,
+>
+> I hope this email finds you well.
+>
+> As per the conversation b/w yourself and Mr. Jehad last week, the Purchas=
+e
+> Order has been updated. Therefore, please disregard the previous email
+> related to the Purchase Order and consider the revised attached Purchase
+> Order *P00089* amounting in *$ 29,514.10* from Rawabi Bosher Trading &
+> Const. Est. LLC.
+>
+> Please advise on the readiness and shipment date.
+>
+>
+> ------------------------------
+>
+> *Rawabi Bosher Trading & Const. Est. LLC.*
+>
+> +968 24492861 | info@akghardware.com | https://www.akg-hardware.com
+>
+> Powered by Odoo <https://www.odoo.com/?utm_source=3Ddb&utm_medium=3Demail=
+>
+>
+> --
+> Nadeem Khan
+> ------------------------------
+> *Rawabi Bosher Trading & Const. Est. LLC.*
+>
+> +968 24492861 | info@akghardware.com | https://www.akg-hardware.com
+>
+> Powered by Odoo <https://www.odoo.com?utm_source=3Ddb&utm_medium=3Demail>
+>
+>
+
+--000000000000f64750060c3ba0ec
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:comic sa=
+ns ms,sans-serif;color:#073763">Dear Babar,</div><div class=3D"gmail_defaul=
+t" style=3D"font-family:comic sans ms,sans-serif;color:#073763"><br></div><=
+div class=3D"gmail_default" style=3D"font-family:comic sans ms,sans-serif;c=
+olor:#073763">Please share the BL copy to check the status of shipment, att=
+ached only invoice copy</div><div><div dir=3D"ltr" class=3D"gmail_signature=
+" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><span style=3D"backgr=
+ound-color:rgb(255,255,0)"></span><div><br></div><div><br></div><div><br></=
+div><b><u><span style=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sa=
+ns-serif;color:red">Please note our VAT=C2=A0Registration No.=C2=A0VATIN OM=
+1100017102</span></u></b><table cellpadding=3D"0" border=3D"0"><tbody><tr><=
+td style=3D"padding:7.5pt .75pt .75pt .75pt"><p class=3D"MsoNormal" style=
+=3D"background:white"><b><u><span style=3D"font-size:9.0pt;font-family:&quo=
+t;Calibri&quot;,sans-serif;color:red"><br></span></u></b><span style=3D"fon=
+t-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#222222"></sp=
+an></p><p class=3D"MsoNormal" style=3D"background:white"><span style=3D"fon=
+t-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#1f3864;backg=
+round:yellow">=E2=80=9CEffective
+ from 16th=C2=A0April 2021,=C2=A0VAT=C2=A0shall be applicable as per new Go=
+vernment=20
+regulation in the Sultanate of Oman. All our quotations are exclusive of
+ value added tax (VAT) &amp; will=C2=A0be=C2=A0subject to=C2=A0VAT=C2=A0at =
+the=20
+prevailing=C2=A0rate=E2=80=9D.</span><span style=3D"font-size:9.0pt;font-fa=
+mily:&quot;Calibri&quot;,sans-serif;color:#1f3864"></span></p><p class=3D"M=
+soNormal" style=3D"background:white"><span style=3D"font-size:9.0pt;font-fa=
+mily:&quot;Calibri&quot;,sans-serif;color:#1f3864">=C2=A0</span></p><p clas=
+s=3D"MsoNormal" style=3D"margin-left:47.25pt;line-height:11.2pt;background:=
+white"><span style=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-=
+serif;color:#1f3864">=C2=A0<span style=3D"background:yellow"></span></span>=
+<span style=3D"font-size:9.0pt;font-family:&quot;Sylfaen&quot;,serif;color:=
+#222222"> <br></span></p><p class=3D"MsoNormal" style=3D"background:white">=
+<b><u><span style=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-s=
+erif;color:#c00000" lang=3D"EN-GB">Notification:</span></u></b></p><p class=
+=3D"MsoNormal" style=3D"background:white"><b><span style=3D"font-size:9.0pt=
+;font-family:&quot;Calibri&quot;,sans-serif;color:#c00000" lang=3D"EN-GB">A=
+s per Royal Oman Police (ROP) Customs with immediate effect,=C2=A0 all impo=
+rt shipments must have the</span></b><span style=3D"font-size:9.0pt;font-fa=
+mily:&quot;Calibri&quot;,sans-serif;color:#222222"></span></p><p class=3D"M=
+soNormal" style=3D"background:white"><b><span style=3D"font-size:9.0pt;font=
+-family:&quot;Calibri&quot;,sans-serif;color:#c00000" lang=3D"EN-GB">origin=
+al : invoice, Packing List and Certificate of Origin. If any of these docum=
+ents is not available or is a</span></b><span style=3D"font-size:9.0pt;font=
+-family:&quot;Calibri&quot;,sans-serif;color:#222222"></span></p><p class=
+=3D"MsoNormal" style=3D"background:white"><b><span style=3D"font-size:9.0pt=
+;font-family:&quot;Calibri&quot;,sans-serif;color:#c00000" lang=3D"EN-GB">c=
+opy, then it will attract 2% additional customs duty on CIF value.</span></=
+b><span style=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif=
+;color:#222222"></span></p><b><span style=3D"font-size:10.0pt;font-family:&=
+quot;Calibri&quot;,sans-serif;color:red">=C2=A0</span></b><p class=3D"MsoNo=
+rmal" style=3D"color:rgb(34,34,34);background-image:initial;background-posi=
+tion:initial;background-repeat:initial"><span style=3D"font-family:comic sa=
+ns ms,sans-serif"><b><span style=3D"font-size:10pt;color:rgb(192,0,0)" lang=
+=3D"EN-GB"><br></span></b></span></p><p class=3D"MsoNormal"><span style=3D"=
+font-family:comic sans ms,sans-serif"><b><span style=3D"font-size:13.5pt;co=
+lor:rgb(190,26,42)">FAROOQUI </span></b></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D"padding:6.0pt .75pt 3.0pt .75pt">
+  <p class=3D"MsoNormal" style=3D"line-height:105%"><b><u><span style=3D"fo=
+nt-family:Verdana,sans-serif;color:rgb(0,32,96);background-image:initial;ba=
+ckground-position:initial;background-repeat:initial">Assistant Manager =E2=
+=80=93
+  Imports</span></u></b><span style=3D"font-size:8.5pt;line-height:105%;fon=
+t-family:&quot;Roboto&quot;,&quot;serif&quot;;color:#002060"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style=3D"border-top:solid #b2b2b2 2.25pt;border-left:none;border-bott=
+om:solid #b2b2b2 6.0pt;border-right:none;padding:7.5pt .75pt .75pt .75pt">
+  <table cellpadding=3D"0" border=3D"0">
+   <tbody><tr>
+    <td style=3D"padding:.75pt .75pt .75pt .75pt">
+    <p class=3D"MsoNormal" style=3D"text-align:center;line-height:105%" ali=
+gn=3D"center"><span style=3D"font-size:12.0pt;line-height:105%;font-family:=
+&quot;Times New Roman&quot;,&quot;serif&quot;;color:#1f4e79"><img alt=3D"De=
+scription: Description: cid:f71b3b8f-2bd1-4c9a-9012-b2a9a65ae53d" width=3D"=
+248" height=3D"80"></span></p>
+    </td>
+    <td style=3D"padding:0in 0in 0in 7.5pt">
+    <table style=3D"width:246.9pt" width=3D"329" cellpadding=3D"0" border=
+=3D"0">
+     <tbody><tr style=3D"height:10.3pt">
+      <td style=3D"padding:7.5pt .75pt .75pt .75pt;height:10.3pt">
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><b><span style=3D"f=
+ont-size:8.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&qu=
+ot;serif&quot;;color:#1f4e79">MUSCAT
+      INTERNATIONAL SHIPPING &amp; LOGISTICS LLC</span></b><span style=3D"f=
+ont-size:8.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&qu=
+ot;serif&quot;;color:#1f4e79"></span></p>
+      </td>
+     </tr>
+     <tr style=3D"height:31.6pt">
+      <td style=3D"padding:.75pt .75pt .75pt .75pt;height:31.6pt">
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><span style=3D"font=
+-size:9.0pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;;color:#4f4f4f">Office
+      No 104, AL Khaleel Head Office Building, Way No 240<br>
+      Building No 439, Al Ghubra North, Muscat, Sultanate of Oman<br>
+      Po Box: 1820 | PC: 133</span></p>
+      </td>
+     </tr>
+     <tr style=3D"height:11.0pt">
+      <td style=3D"padding:.75pt .75pt .75pt .75pt;height:11.0pt">
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><a href=3D"mailto:f=
+arooqui@mismuscat.com" target=3D"_blank"><span style=3D"font-size:9.0pt;lin=
+e-height:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;col=
+or:blue">farooqui@mismuscat.com</span></a><span style=3D"font-size:9.0pt;li=
+ne-height:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;co=
+lor:#595959">=C2=A0<b>|</b>=C2=A0</span><a href=3D"http://mismuscat.com/" t=
+arget=3D"_blank"><span style=3D"font-size:9.0pt;line-height:105%;font-famil=
+y:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#595959">mismuscat.co=
+m</span></a><span style=3D"font-size:9.0pt;line-height:105%;font-family:&qu=
+ot;Times New Roman&quot;,&quot;serif&quot;;color:#595959"></span></p>
+      </td>
+     </tr>
+     <tr style=3D"height:19.85pt">
+      <td style=3D"padding:.75pt .75pt .75pt .75pt;height:19.85pt">
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><span style=3D"font=
+-size:8.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;;color:#4f4f4f">PHONE=C2=A0+968
+      22555566| 22553355=C2=A0|=C2=A024498177| 24494680</span></p>
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><span style=3D"font=
+-size:8.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&quot;=
+serif&quot;;color:#4f4f4f">MOB=C2=A0+
+      968 9524 1933=C2=A0|=C2=A0FAX=C2=A0+968
+      24493049=C2=A0|=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0</span></p>
+      </td>
+     </tr>
+     <tr style=3D"height:8.8pt">
+      <td style=3D"padding:.75pt .75pt .75pt .75pt;height:8.8pt">
+      <p class=3D"MsoNormal" style=3D"line-height:105%"><b><span style=3D"f=
+ont-size:7.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&qu=
+ot;serif&quot;;color:#7c7c7c">JCILO</span></b><b><span style=3D"font-size:7=
+.5pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&q=
+uot;;color:#be1a2a">=C2=A0|=C2=A0</span></b><b><span style=3D"font-size:7.5=
+pt;line-height:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quo=
+t;;color:#7c7c7c">GAIN</span></b><b><span style=3D"font-size:7.5pt;line-hei=
+ght:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#b=
+e1a2a">=C2=A0|=C2=A0</span></b><b><span style=3D"font-size:7.5pt;line-heigh=
+t:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#7c7=
+c7c">OCPA</span></b><b><span style=3D"font-size:7.5pt;line-height:105%;font=
+-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#be1a2a">=C2=A0=
+|=C2=A0</span></b><b><span style=3D"font-size:7.5pt;line-height:105%;font-f=
+amily:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#7c7c7c">PCN
+      (OVERSEAS NETWORK)</span></b><span style=3D"font-size:7.5pt;line-heig=
+ht:105%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:#7c=
+7c7c"></span></p>
+      </td>
+     </tr>
+    </tbody></table>
+    </td>
+   </tr>
+  </tbody></table>
+  </td>
+ </tr>
+</tbody></table></div></div></div><br></div><br><div class=3D"gmail_quote">=
+<div dir=3D"ltr" class=3D"gmail_attr">On Mon, Dec 11, 2023 at 4:57=E2=80=AF=
+PM Babar Affan &lt;<a href=3D"mailto:babar@akghardware.com">babar@akghardwa=
+re.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"m=
+argin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left=
+:1ex"><div><div><br></div><div id=3D"m_5334313734964344572ms-outlook-mobile=
+-signature" dir=3D"auto"><div><br></div>Get <a href=3D"https://aka.ms/AAb9y=
+sg" target=3D"_blank">Outlook for Android</a><div id=3D"m_53343137349643445=
+72mail-editor-reference-message-container" dir=3D"auto"><br><hr style=3D"di=
+splay:inline-block;width:98%"><div id=3D"m_5334313734964344572divRplyFwdMsg=
+" style=3D"font-size:11pt"><strong>From:</strong> Nadeem Khan &lt;<a href=
+=3D"mailto:nkhan@rubi.com" target=3D"_blank">nkhan@rubi.com</a>&gt;<br><str=
+ong>Sent:</strong> Friday, November 17, 2023 7:35:30 AM<br><strong>To:</str=
+ong> Babar Affan &lt;<a href=3D"mailto:babar@akghardware.com" target=3D"_bl=
+ank">babar@akghardware.com</a>&gt;<br><strong>Subject:</strong> Re: Rawabi =
+Bosher Trading &amp; Const. Est. LLC. Order (Ref P00089)<br></div><br>
+
+
+   =20
+
+
+
+<div style=3D"display:none;max-height:0px;overflow:hidden">Dear Babar, Plea=
+se find attached a copy of the invoice, the shipment was loaded yesterday a=
+nd the ETA is expected to be around 15th&amp;nbsp;December. The original do=
+cuments will be ready [...]
+   =20
+    =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=
+=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =
+=CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =
+=E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=
+=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=
+=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B =CD=8F =E2=80=8B=20
+</div>
+<div style=3D"max-width:900px;width:100%">
+<div>
+    <div>
+       =20
+       =20
+       =20
+    </div>
+</div>
+<div summary=3D"o_mail_notification" style=3D"padding:0px">
+    <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" style=3D"width:100%;margin-top:5px">
+        <tbody>
+            <tr>
+                <td valign=3D"center">
+                    <img src=3D"https://odoo.akghardware.com/logo.png?compa=
+ny=3D1" alt=3D"Rawabi Bosher Trading &amp; Const. Est. LLC." style=3D"paddi=
+ng: 0px; margin: 0px; height: auto; max-width: 200px; max-height: 36px;">
+                </td>
+            </tr>
+            <tr>
+                <td valign=3D"center">
+                    <hr width=3D"100%" style=3D"border:medium none;clear:bo=
+th;display:block;font-size:0px;min-height:1px;line-height:0;margin:10px 0px=
+;background-color:rgb(204,204,204)">
+                </td>
+            </tr>
+            <tr>
+                <td valign=3D"center" style=3D"white-space:nowrap">
+                    <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+>
+                        <tbody>
+                            <tr>
+                                <td style=3D"border-radius:3px;text-align:c=
+enter;padding:8px 12px 11px;background:rgb(88,88,90)">
+                                    <a href=3D"https://redirect-url.email/?=
+link=3Dhttps%3A%2F%2Fodoo.akghardware.com%2Fmail%2Fview%3Fmodel%3Dpurchase.=
+order%26res_id%3D4337&amp;apn=3Dcom.odoo.mobile&amp;afl=3Dhttps%3A%2F%2Fodo=
+o.akghardware.com%2Fmail%2Fview%3Fmodel%3Dpurchase.order%26res_id%3D4337&am=
+p;ibi=3Dcom.odoo.mobile&amp;ifl=3Dhttps%3A%2F%2Fodoo.akghardware.com%2Fmail=
+%2Fview%3Fmodel%3Dpurchase.order%26res_id%3D4337" style=3D"font-size:12px;f=
+ont-weight:400;color:rgb(255,255,255);text-decoration:none" target=3D"_blan=
+k">
+                                        View Purchase Order
+                                    </a>
+                                </td>
+                                <td>=C2=A0=C2=A0</td>
+
+                                <td style=3D"font-size:12px">
+                                        <span style=3D"font-weight:bold">P0=
+0089</span>
+                                        <br>
+                                        <span>$=C2=A029,514.10 due=C2=A08/1=
+3/23</span>
+                                </td>
+                                <td>=C2=A0=C2=A0</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td valign=3D"center">
+                    <hr width=3D"100%" style=3D"border:medium none;clear:bo=
+th;display:block;font-size:0px;min-height:1px;line-height:0;margin:10px 0px=
+;background-color:rgb(204,204,204)">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div style=3D"font-size:13px"><p>
+
+</p>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+Dear Babar,</div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+Please find attached a copy of the invoice, the shipment was loaded yesterd=
+ay and the ETA is expected to be around 15<span><sup>th</sup>=C2=A0December=
+.</span></div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<span><br>
+</span></div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<span>The original documents will be ready within the next week and will be=
+ sent over to you soon after we receive them.</span></div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<span><br>
+</span></div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<span>Thanks for your great support!</span></div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<span><br>
+</span></div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<span>Have a nice weekend!</span></div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<span><br>
+</span></div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<span>Best Regards=C2=A0</span></div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"font-family:Calibri,Helvetica,sans-serif;font-size:11pt;color=
+:rgb(0,0,0)">
+<br>
+</div>
+<div id=3D"m_5334313734964344572appendonsend"></div>
+<div dir=3D"ltr" style=3D"font-size:1px"><table cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"width:100%;font-size:1px"><tbody><tr style=
+=3D"font-size:0px"><td align=3D"left" style=3D"vertical-align:top"><table c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-size:0px"><tb=
+ody><tr style=3D"font-size:0px"><td align=3D"left" style=3D"padding:0px;ver=
+tical-align:top"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"font-size:0px;line-height:normal"><tbody><tr style=3D"font-size:0px"=
+><td align=3D"left" style=3D"padding:31px 13px 0px 0px;vertical-align:top">=
+<a href=3D"https://www.rubi.com/us" id=3D"m_5334313734964344572LPlnk689713"=
+ style=3D"text-decoration:none" target=3D"_blank"><img src=3D"https://odoo.=
+akghardware.com/web/image/6258?access_token=3D63a682ac-da9d-4faf-aa9b-b6e30=
+83c44c6" width=3D"75" border=3D"0" alt=3D"" style=3D"width: 75px; min-width=
+: 75px; max-width: 75px; font-size: 0px;"></a></td></tr></tbody></table></t=
+d><td align=3D"left" style=3D"padding:0px;vertical-align:top"><table cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-size:0px"><tbody><=
+tr style=3D"font-size:0px"><td align=3D"left" style=3D"vertical-align:top">=
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-size:=
+0px"><tbody><tr style=3D"font-size:0px"><td align=3D"left" style=3D"padding=
+:0px 19px 0px 0px;vertical-align:top"><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"font-size:0px"><tbody><tr style=3D"font-size:0=
+px"><td align=3D"left" style=3D"vertical-align:top"><table cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"font-size:0px"><tbody><tr style=
+=3D"font-size:0px"><td align=3D"left" style=3D"padding:12px 0px 0px;vertica=
+l-align:top"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=
+=3D"font-size:0px;font-style:normal;font-weight:700;white-space:nowrap;colo=
+r:rgb(254,0,0)"><tbody><tr style=3D"font-size:16px"><td align=3D"left" styl=
+e=3D"vertical-align:top;font-family:&quot;Century Gothic&quot;">NADEEM<span=
+ style=3D"font-family:remialcxesans;font-size:1px;line-height:1px;color:rgb=
+(255,255,255)">=E2=80=8B</span></td><td align=3D"left" style=3D"vertical-al=
+ign:top;font-size:14.67px;font-family:Verdana;color:rgb(0,0,1)">=C2=A0</td>=
+<td align=3D"left" style=3D"vertical-align:top;font-family:&quot;Century Go=
+thic&quot;">KHAN</td></tr></tbody></table></td></tr></tbody></table></td></=
+tr><tr style=3D"font-size:0px"><td align=3D"left" style=3D"vertical-align:t=
+op"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-s=
+ize:0px"><tbody><tr style=3D"font-size:0px"><td align=3D"left" style=3D"pad=
+ding:2px 0px 6px;vertical-align:top"><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"font-size:0px;font-style:normal;font-weight:70=
+0;white-space:nowrap;color:rgb(0,0,1)"><tbody><tr style=3D"font-size:12px">=
+<td align=3D"left" style=3D"vertical-align:top;font-family:&quot;Century Go=
+thic&quot;">Middle=C2=A0East</td><td align=3D"left" style=3D"vertical-align=
+:top;font-family:&quot;Century Gothic&quot;">=C2=A0=E2=80=91=C2=A0</td><td =
+align=3D"left" style=3D"vertical-align:top;font-family:&quot;Century Gothic=
+&quot;">Business=C2=A0Development=C2=A0Manager</td></tr></tbody></table></t=
+d></tr></tbody></table></td></tr><tr style=3D"font-size:0px"><td align=3D"l=
+eft" style=3D"vertical-align:top"><table cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" style=3D"font-size:0px"><tbody><tr style=3D"font-size:0px"><=
+td align=3D"left" style=3D"padding:0px;border-top:1px solid rgb(254,0,0);bo=
+rder-bottom:1px solid rgb(254,0,0);vertical-align:top"><table cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-size:0px"><tbody><tr st=
+yle=3D"font-size:0px"><td align=3D"left" style=3D"padding:8px 20px 8px 0px;=
+vertical-align:top"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ style=3D"font-size:0px"><tbody><tr style=3D"font-size:0px"><td align=3D"le=
+ft" style=3D"vertical-align:top"><table cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0" style=3D"font-size:0px;font-style:normal;font-weight:700;whit=
+e-space:nowrap;color:rgb(0,0,1)"><tbody><tr style=3D"font-size:12px"><td al=
+ign=3D"left" style=3D"vertical-align:top;font-family:Arial">Tel.=C2=A0</td>=
+<td align=3D"left" style=3D"vertical-align:top;font-family:Arial"><a href=
+=3D"tel:+34%20936%20806500" id=3D"m_5334313734964344572LPlnk689713" style=
+=3D"text-decoration:none;color:rgb(0,0,1)" target=3D"_blank">+34=C2=A0936=
+=C2=A0806500</a></td><td align=3D"left" style=3D"vertical-align:top;font-si=
+ze:0px"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"fo=
+nt-size:0px;font-style:normal;font-weight:700;white-space:nowrap;color:rgb(=
+0,0,1)"><tbody><tr style=3D"font-size:12px"><td align=3D"left" style=3D"pad=
+ding:0px 0px 0px 15px;vertical-align:top;font-family:Arial">Cell.</td></tr>=
+</tbody></table></td><td align=3D"left" style=3D"vertical-align:top;font-fa=
+mily:Arial"><a href=3D"tel:+971%2052%209697852" id=3D"m_5334313734964344572=
+LPlnk689713" style=3D"text-decoration:none;color:rgb(0,0,1)" target=3D"_bla=
+nk">+971=C2=A052=C2=A09697852</a></td></tr></tbody></table></td></tr><tr st=
+yle=3D"font-size:0px"><td align=3D"left" style=3D"vertical-align:top"><tabl=
+e cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"font-size:0px">=
+<tbody><tr style=3D"font-size:0px"><td align=3D"left" style=3D"padding:5px =
+0px 0px;vertical-align:top"><table cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0" style=3D"font-size:0px;font-style:normal;font-weight:700;white-spa=
+ce:nowrap;color:rgb(0,0,1)"><tbody><tr style=3D"font-size:12px"><td align=
+=3D"left" style=3D"vertical-align:top;font-family:Arial">Fax.</td><td align=
+=3D"left" style=3D"vertical-align:top;font-family:Arial"><a id=3D"m_5334313=
+734964344572LPlnk689713" style=3D"text-decoration:none;color:rgb(0,0,1)">+3=
+4=C2=A0936=C2=A0806501</a></td></tr></tbody></table></td></tr></tbody></tab=
+le></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></=
+table></td></tr><tr style=3D"font-size:0px"><td align=3D"left" style=3D"ver=
+tical-align:top"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"font-size:0px"><tbody><tr style=3D"font-size:0px"><td align=3D"left"=
+ style=3D"padding:8px 0px 0px;vertical-align:top"><table cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"font-size:0px;line-height:normal"><=
+tbody><tr style=3D"font-size:0px"><td align=3D"left" style=3D"padding:0px 1=
+0px 0px 0px;vertical-align:top"><a href=3D"https://www.facebook.com/RubiAra=
+bs/" id=3D"m_5334313734964344572LPlnk689713" style=3D"text-decoration:none"=
+ target=3D"_blank"><img src=3D"https://odoo.akghardware.com/web/image/6259?=
+access_token=3Df24cad48-50f5-41de-b23d-4c44d797d336" border=3D"0" alt=3D"" =
+style=3D"font-size: 0px;"></a></td><td style=3D"padding:0px 10px 0px 0px">=
+=C2=A0</td><td align=3D"left" style=3D"padding:0px 10px 0px 0px;vertical-al=
+ign:top"><a href=3D"https://www.rubi.com/us/youtube" id=3D"m_53343137349643=
+44572LPlnk689713" style=3D"text-decoration:none" target=3D"_blank"><img src=
+=3D"https://odoo.akghardware.com/web/image/6260?access_token=3D94d867ac-4d8=
+f-45d9-934b-ea78c4d4de5b" border=3D"0" alt=3D"" style=3D"font-size: 0px;"><=
+/a></td><td align=3D"left" style=3D"padding:0px 10px 0px 0px;vertical-align=
+:top"><a href=3D"https://www.rubi.com/es/instagram" id=3D"m_533431373496434=
+4572LPlnk689713" style=3D"text-decoration:none" target=3D"_blank"><img src=
+=3D"https://odoo.akghardware.com/web/image/6261?access_token=3D1a4a9a00-82b=
+e-40e4-8193-677c931d5ff6" border=3D"0" alt=3D"" style=3D"font-size: 0px;"><=
+/a></td><td align=3D"left" style=3D"padding:0px;vertical-align:top"><a href=
+=3D"https://www.rubi.com/us/linkedin" id=3D"m_5334313734964344572LPlnk68971=
+3" style=3D"text-decoration:none" target=3D"_blank"><img src=3D"https://odo=
+o.akghardware.com/web/image/6262?access_token=3Dce6e0e74-6be8-4b35-bd98-222=
+9f4e4c67e" border=3D"0" alt=3D"" style=3D"font-size: 0px;"></a></td><td sty=
+le=3D"padding:0px">=C2=A0</td></tr></tbody></table></td></tr></tbody></tabl=
+e></td></tr></tbody></table></td></tr></tbody></table></td><td align=3D"lef=
+t" style=3D"vertical-align:top"><table cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"font-size:0px;line-height:normal"><tbody><tr style=3D=
+"font-size:0px"><td align=3D"left" style=3D"padding:12px 0px 0px;vertical-a=
+lign:top"><a href=3D"https://www.rubi.com/en/turbo-viper-tva-hard-materials=
+-diamond-blade-r160" id=3D"m_5334313734964344572LPlnk689713" style=3D"text-=
+decoration:none" target=3D"_blank"><img src=3D"https://odoo.akghardware.com=
+/web/image/6263?access_token=3Df36ffb0c-3dc9-400b-b35c-ccee4dd69643" width=
+=3D"460" height=3D"120" border=3D"0" alt=3D"" style=3D"width: 460px; min-wi=
+dth: 460px; max-width: 460px; height: 120px; min-height: 120px; font-size: =
+0px;"></a></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr=
+ style=3D"font-size:12px;font-style:normal;font-weight:400;white-space:nowr=
+ap;color:rgb(0,128,0)"><td colspan=3D"2" align=3D"left" style=3D"padding:15=
+px 0px 0px;vertical-align:top;font-family:Roboto,RobotoDraft,Helvetica,Aria=
+l,sans-serif">=E2=99=BB=C2=A0Before=C2=A0printing=C2=A0this=C2=A0email,=C2=
+=A0make=C2=A0sure=C2=A0it=C2=A0is=C2=A0necessary=C2=A0to=C2=A0do=C2=A0so.=
+=C2=A0Protecting=C2=A0the=C2=A0environment=C2=A0is=C2=A0also=C2=A0in=C2=A0y=
+our=C2=A0hands.<br></td></tr><tr style=3D"font-size:0px"><td colspan=3D"2" =
+align=3D"left" style=3D"padding:5px 0px 0px;vertical-align:top"><table cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"white-space:normal;fo=
+nt-size:14.67px;font-family:Calibri,Arial,sans-serif;font-weight:400;font-s=
+tyle:normal;text-align:justify;line-height:12px;width:840px;color:rgb(0,0,1=
+)"><tbody><tr style=3D"font-size:10px"><td style=3D"font-family:Roboto,Robo=
+toDraft,Helvetica,Arial,sans-serif">This message and its attachments contai=
+n confidential and reserved information addressed exclusively to the recipi=
+ent. If you have received this message in error, please notify it immediate=
+ly by this same way and delete the message from your system. In accordance =
+with the provisions of Regulation (EU) 2016/679 of the European Parliament =
+and of the Council of April 27, 2016 (hereinafter, &quot;RGPD&quot;) the in=
+formation contained in this message and / or attached file (s) , sent from =
+Germans Boada, SA, is confidential and is intended to be read only by the p=
+erson (s) to whom it is addressed. We remind you that your data has been in=
+corporated into the treatment system of Germans Boada, S.A. and that as lon=
+g as the requirements demanded by the regulations are met, you can exercise=
+ your rights of access, rectification, limitation of treatment, deletion, p=
+ortability and opposition / revocation, in the terms established by the cur=
+rent regulations on data protection , directing your request to the postal =
+address Avinguda de les Olimp=C3=ADades 89-91, 08191, Rub=C3=AD (Barcelona)=
+.<br></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody>=
+</table></div><hr style=3D"display:inline-block;width:98%">
+<div id=3D"m_5334313734964344572divRplyFwdMsg" dir=3D"ltr"><font style=3D"f=
+ont-size:11pt;color:rgb(0,0,0)"><b>From:</b> <a href=3D"mailto:babar@akghar=
+dware.com" target=3D"_blank">babar@akghardware.com</a> &lt;<a href=3D"mailt=
+o:babar@akghardware.com" target=3D"_blank">babar@akghardware.com</a>&gt;<br=
+>
+<b>Sent:</b> Tuesday, November 14, 2023 7:55 AM<br>
+<b>To:</b> Nadeem Khan &lt;<a href=3D"mailto:nkhan@rubi.com" target=3D"_bla=
+nk">nkhan@rubi.com</a>&gt;<br>
+<b>Cc:</b> <a href=3D"mailto:jehad@akghardware.com" target=3D"_blank">jehad=
+@akghardware.com</a> &lt;<a href=3D"mailto:jehad@akghardware.com" target=3D=
+"_blank">jehad@akghardware.com</a>&gt;; &#39;Ajay Kumaran&#39; &lt;<a href=
+=3D"mailto:ajay@akghardware.com" target=3D"_blank">ajay@akghardware.com</a>=
+&gt;<br>
+<b>Subject:</b> RE: Rawabi Bosher Trading &amp; Const. Est. LLC. Order (Ref=
+ P00089)</font>
+<div>=C2=A0</div>
+</div>
+
+<div lang=3D"EN-US">
+<div>
+<p>Dear Nadeem,</p>
+<p>=C2=A0</p>
+<p>Thank you for the email <span style=3D"font-family:&quot;Segoe UI Emoji&=
+quot;,sans-serif">
+=F0=9F=98=8A</span>.</p>
+<p>=C2=A0</p>
+<p>Will wait for the shipment tracking details.</p>
+<p>=C2=A0</p>
+<div>
+<p><b><i>Best regards,</i></b></p>
+<p>=C2=A0</p>
+<p><img width=3D"624" height=3D"216" id=3D"m_5334313734964344572x_Picture_x=
+0020_7" src=3D"https://odoo.akghardware.com/web/image/6251?access_token=3D9=
+54bddfa-da43-425f-ac12-8dc23d52af44" style=3D"width: 6.5in; height: 2.25in;=
+"></p>
+</div>
+<p>=C2=A0</p>
+<div>
+<div style=3D"border-right:none;border-bottom:none;border-left:none;border-=
+top:1pt solid rgb(225,225,225);padding:3pt 0in 0in">
+<p><b>From:</b> Nadeem Khan &lt;<a href=3D"mailto:nkhan@rubi.com" target=3D=
+"_blank">nkhan@rubi.com</a>&gt; <br>
+<b>Sent:</b> Monday, November 13, 2023 5:40 PM<br>
+<b>To:</b> Rawabi Bosher Trading &amp; Const. Est. LLC. P00089 &lt;<a href=
+=3D"mailto:babar@akghardware.com" target=3D"_blank">babar@akghardware.com</=
+a>&gt;<br>
+<b>Cc:</b> <a href=3D"mailto:jehad@akghardware.com" target=3D"_blank">jehad=
+@akghardware.com</a>; Ajay Kumaran &lt;<a href=3D"mailto:ajay@akghardware.c=
+om" target=3D"_blank">ajay@akghardware.com</a>&gt;<br>
+<b>Subject:</b> Re: Rawabi Bosher Trading &amp; Const. Est. LLC. Order (Ref=
+ P00089)</p>
+</div>
+</div>
+<p>=C2=A0</p>
+<div>
+<p><span style=3D"color:black">Dear Mr. Babar,</span></p>
+</div>
+<div>
+<p><span style=3D"color:black">=C2=A0</span></p>
+</div>
+<div>
+<p><span style=3D"color:black">Please find the attached copy of the Confirm=
+ation of Order.</span></p>
+</div>
+<div>
+<p><span style=3D"color:black">=C2=A0</span></p>
+</div>
+<div>
+<p><span style=3D"color:black">The shipment has been prepared and is going =
+to be loaded on 16<sup>th</sup>=C2=A0Nov Thursday, please.</span></p>
+</div>
+<div>
+<p><span style=3D"color:black">=C2=A0</span></p>
+</div>
+<div>
+<p><span style=3D"color:black">You might notice some variations in quantiti=
+es due to the packaging etc.</span></p>
+</div>
+<div>
+<p><span style=3D"color:black">=C2=A0</span></p>
+</div>
+<div>
+<p><span style=3D"color:black">Thank you once again for your support.</span=
+></p>
+</div>
+<div>
+<p><span style=3D"color:black">=C2=A0</span></p>
+</div>
+<div>
+<p><span style=3D"color:black">Best Regards=C2=A0</span></p>
+</div>
+<div>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" styl=
+e=3D"width:100%">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:23.25pt 9.75pt 0in 0in">
+<p><a href=3D"https://www.rubi.com/us" target=3D"_blank"><span style=3D"fon=
+t-size:1pt;text-decoration:none"><img border=3D"0" width=3D"75" height=3D"7=
+5" id=3D"m_5334313734964344572x_Picture_x0020_1" src=3D"https://odoo.akghar=
+dware.com/web/image/6252?access_token=3D8a48104f-0835-4393-b54c-0c176df29c0=
+8" style=3D"width: 0.7833in; height: 0.7833in;"></span></a><span style=3D"f=
+ont-size:1pt"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in 14.25pt 0in 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:9pt 0in 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:12pt;font-family:&quot;Century Gothic&quot;,=
+sans-serif;color:rgb(254,0,0)">NADEEM</span></b><b><span style=3D"font-size=
+:1pt;font-family:remialcxesans,serif;color:white">=E2=80=8B</span></b><b><s=
+pan style=3D"font-size:12pt;font-family:&quot;Century Gothic&quot;,sans-ser=
+if;color:rgb(254,0,0)"></span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-family:Verdana,sans-serif;color:rgb(0,0,1)">=C2=
+=A0</span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:12pt;font-family:&quot;Century Gothic&quot;,=
+sans-serif;color:rgb(254,0,0)">KHAN</span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:1.5pt 0in 4.5pt">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:&quot;Century Gothic&quot;,s=
+ans-serif;color:rgb(0,0,1)">Middle=C2=A0East</span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:&quot;Century Gothic&quot;,s=
+ans-serif;color:rgb(0,0,1)">=C2=A0=E2=80=91=C2=A0</span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:&quot;Century Gothic&quot;,s=
+ans-serif;color:rgb(0,0,1)">Business=C2=A0Development=C2=A0Manager</span></=
+b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"border-top:1pt solid rgb(254,0,0);border-bottom=
+:1pt solid rgb(254,0,0);padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:6pt 15pt 6pt 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)">Tel.=C2=A0</span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)"><a href=3D"tel:+34%20936%20806500" target=3D"_blank"><span style=3D"=
+text-decoration:none;color:rgb(0,0,1)">+34=C2=A0936=C2=A0806500</span></a><=
+/span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in 0in 0in 11.25pt">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)">Cell.</span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)"><a href=3D"tel:+971%2052%209697852" target=3D"_blank"><span style=3D=
+"text-decoration:none;color:rgb(0,0,1)">+971=C2=A052=C2=A09697852</span></a=
+></span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:3.75pt 0in 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)">Fax.</span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)"><a><span style=3D"text-decoration:none;color:rgb(0,0,1)">+34=C2=A093=
+6=C2=A0806501</span></a></span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:6pt 0in 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in 7.5pt 0in 0in">
+<p><a href=3D"https://www.facebook.com/RubiArabs/" target=3D"_blank"><span =
+style=3D"font-size:1pt;text-decoration:none"><img border=3D"0" width=3D"9" =
+height=3D"18" id=3D"m_5334313734964344572x_Picture_x0020_2" src=3D"https://=
+odoo.akghardware.com/web/image/6253?access_token=3Da88e8d6a-19ea-4b32-8f9e-=
+97af50964ead" style=3D"width: 0.0916in; height: 0.1916in;"></span></a><span=
+ style=3D"font-size:1pt"></span></p>
+</td>
+<td style=3D"padding:0in 7.5pt 0in 0in">
+<p><span style=3D"font-size:1pt">=C2=A0</span></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in 7.5pt 0in 0in">
+<p><a href=3D"https://www.rubi.com/us/youtube" target=3D"_blank"><span styl=
+e=3D"font-size:1pt;text-decoration:none"><img border=3D"0" width=3D"26" hei=
+ght=3D"18" id=3D"m_5334313734964344572x_Picture_x0020_3" src=3D"https://odo=
+o.akghardware.com/web/image/6254?access_token=3D475bb6d5-0076-41ad-bd6e-201=
+be1342953" style=3D"width: 0.275in; height: 0.1916in;"></span></a><span sty=
+le=3D"font-size:1pt"></span></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in 7.5pt 0in 0in">
+<p><a href=3D"https://www.rubi.com/es/instagram" target=3D"_blank"><span st=
+yle=3D"font-size:1pt;text-decoration:none"><img border=3D"0" width=3D"18" h=
+eight=3D"18" id=3D"m_5334313734964344572x_Picture_x0020_4" src=3D"https://o=
+doo.akghardware.com/web/image/6255?access_token=3Db65c160c-2886-48fc-8f24-f=
+88eab9acd39" style=3D"width: 0.1916in; height: 0.1916in;"></span></a><span =
+style=3D"font-size:1pt"></span></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><a href=3D"https://www.rubi.com/us/linkedin" target=3D"_blank"><span sty=
+le=3D"font-size:1pt;text-decoration:none"><img border=3D"0" width=3D"18" he=
+ight=3D"18" id=3D"m_5334313734964344572x_Picture_x0020_5" src=3D"https://od=
+oo.akghardware.com/web/image/6256?access_token=3D2930e661-eacc-4998-a878-bd=
+0431aa273f" style=3D"width: 0.1916in; height: 0.1916in;"></span></a><span s=
+tyle=3D"font-size:1pt"></span></p>
+</td>
+<td style=3D"padding:0in">
+<p><span style=3D"font-size:1pt">=C2=A0</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:9pt 0in 0in">
+<p><a href=3D"https://www.rubi.com/en/turbo-viper-tva-hard-materials-diamon=
+d-blade-r160" target=3D"_blank"><span style=3D"font-size:1pt;text-decoratio=
+n:none"><img border=3D"0" width=3D"460" height=3D"120" id=3D"m_533431373496=
+4344572x_Picture_x0020_6" src=3D"https://odoo.akghardware.com/web/image/625=
+7?access_token=3D5c8cfa98-7a91-499c-9a3d-fcbee5879546" style=3D"width: 4.79=
+16in; height: 1.25in;"></span></a><span style=3D"font-size:1pt"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan=3D"2" valign=3D"top" style=3D"padding:11.25pt 0in 0in">
+<p><span style=3D"font-size:9pt;font-family:&quot;Segoe UI Emoji&quot;,sans=
+-serif;color:green">=E2=99=BB</span><span style=3D"font-size:9pt;font-famil=
+y:Roboto;color:green">=C2=A0Before=C2=A0printing=C2=A0this=C2=A0email,=C2=
+=A0make=C2=A0sure=C2=A0it=C2=A0is=C2=A0necessary=C2=A0to=C2=A0do=C2=A0so.=
+=C2=A0Protecting=C2=A0the=C2=A0environment=C2=A0is=C2=A0also=C2=A0in=C2=A0y=
+our=C2=A0hands.</span></p>
+</td>
+</tr>
+<tr>
+<td colspan=3D"2" valign=3D"top" style=3D"padding:3.75pt 0in 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"840" style=
+=3D"width:8.75in">
+<tbody>
+<tr>
+<td style=3D"padding:0in">
+<p style=3D"text-align:justify;line-height:9pt"><span style=3D"font-size:7.=
+5pt;font-family:Roboto;color:rgb(0,0,1)">This message and its attachments c=
+ontain confidential and reserved information addressed exclusively to the r=
+ecipient. If you
+ have received this message in error, please notify it immediately by this =
+same way and delete the message from your system. In accordance with the pr=
+ovisions of Regulation (EU) 2016/679 of the European Parliament and of the =
+Council of April 27, 2016 (hereinafter,
+ &quot;RGPD&quot;) the information contained in this message and / or attac=
+hed file (s) , sent from Germans Boada, SA, is confidential and is intended=
+ to be read only by the person (s) to whom it is addressed. We remind you t=
+hat your data has been incorporated into the
+ treatment system of Germans Boada, S.A. and that as long as the requiremen=
+ts demanded by the regulations are met, you can exercise your rights of acc=
+ess, rectification, limitation of treatment, deletion, portability and oppo=
+sition / revocation, in the terms
+ established by the current regulations on data protection , directing your=
+ request to the postal address Avinguda de les Olimp=C3=ADades 89-91, 08191=
+, Rub=C3=AD (Barcelona).</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div align=3D"center" style=3D"text-align:center">
+<hr size=3D"2" width=3D"98%" align=3D"center">
+</div>
+<div id=3D"m_5334313734964344572x_divRplyFwdMsg">
+<p><b><span style=3D"color:black">From:</span></b><span style=3D"color:blac=
+k"> Nadeem Khan &lt;<a href=3D"mailto:nkhan@rubi.com" target=3D"_blank">nkh=
+an@rubi.com</a>&gt;<br>
+<b>Sent:</b> Sunday, November 5, 2023 5:36 PM<br>
+<b>To:</b> Rawabi Bosher Trading &amp; Const. Est. LLC. P00089 &lt;<a href=
+=3D"mailto:babar@akghardware.com" target=3D"_blank">babar@akghardware.com</=
+a>&gt;<br>
+<b>Subject:</b> RE: Rawabi Bosher Trading &amp; Const. Est. LLC. Order (Ref=
+ P00089)</span>
+</p>
+<div>
+<p>=C2=A0</p>
+</div>
+</div>
+<div>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" styl=
+e=3D"width:100%;border-radius:6px">
+<tbody>
+<tr>
+<td style=3D"padding:3.75pt 11.25pt">
+<table border=3D"0" cellspacing=3D"3" cellpadding=3D"0" width=3D"100%" styl=
+e=3D"width:100%;border-spacing:0px">
+<tbody>
+<tr>
+<td style=3D"padding:0.75pt">
+<table border=3D"0" cellspacing=3D"3" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"padding:0.75pt">
+<p><img border=3D"0" width=3D"32" height=3D"32" id=3D"m_5334313734964344572=
+x__x0000_i1037" alt=3D"like" src=3D"https://outlook-1.cdn.office.net/assets=
+/reaction/like.png" style=3D"width: 0.3333in; height: 0.3333in;"></p>
+</td>
+<td style=3D"padding:0.75pt">
+<p><b>Nadeem Khan</b> reacted to your message: </p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<div>
+<p><span style=3D"font-size:1pt;font-family:Verdana,sans-serif;color:rgb(69=
+,71,72)">=C2=A0</span></p>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" styl=
+e=3D"width:100%">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:23.25pt 9.75pt 0in 0in">
+<p><a href=3D"https://www.rubi.com/us" target=3D"_blank"><span style=3D"fon=
+t-size:1pt;text-decoration:none"><img border=3D"0" width=3D"75" height=3D"7=
+5" id=3D"m_5334313734964344572x_Picture_x0020_9" src=3D"https://odoo.akghar=
+dware.com/web/image/6252?access_token=3D8a48104f-0835-4393-b54c-0c176df29c0=
+8" style=3D"width: 0.7833in; height: 0.7833in;"></span></a><span style=3D"f=
+ont-size:1pt"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in 14.25pt 0in 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:9pt 0in 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:12pt;font-family:&quot;Century Gothic&quot;,=
+sans-serif;color:rgb(254,0,0)">NADEEM</span></b><b><span style=3D"font-size=
+:1pt;font-family:remialcxesans,serif;color:white">=E2=80=8B</span></b><b><s=
+pan style=3D"font-size:12pt;font-family:&quot;Century Gothic&quot;,sans-ser=
+if;color:rgb(254,0,0)"></span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-family:Verdana,sans-serif;color:rgb(0,0,1)">=C2=
+=A0</span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:12pt;font-family:&quot;Century Gothic&quot;,=
+sans-serif;color:rgb(254,0,0)">KHAN</span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:1.5pt 0in 4.5pt">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:&quot;Century Gothic&quot;,s=
+ans-serif;color:rgb(0,0,1)">Middle=C2=A0East</span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:&quot;Century Gothic&quot;,s=
+ans-serif;color:rgb(0,0,1)">=C2=A0=E2=80=91=C2=A0</span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:&quot;Century Gothic&quot;,s=
+ans-serif;color:rgb(0,0,1)">Business=C2=A0Development=C2=A0Manager</span></=
+b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"border-top:1pt solid rgb(254,0,0);border-bottom=
+:1pt solid rgb(254,0,0);padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:6pt 15pt 6pt 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)">Tel.=C2=A0</span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)"><a href=3D"tel:+34%20936%20806500" target=3D"_blank"><span style=3D"=
+text-decoration:none;color:rgb(0,0,1)">+34=C2=A0936=C2=A0806500</span></a><=
+/span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in 0in 0in 11.25pt">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)">Cell.</span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)"><a href=3D"tel:+971%2052%209697852" target=3D"_blank"><span style=3D=
+"text-decoration:none;color:rgb(0,0,1)">+971=C2=A052=C2=A09697852</span></a=
+></span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:3.75pt 0in 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)">Fax.</span></b></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt;font-family:Arial,sans-serif;color:rgb(0=
+,0,1)"><a><span style=3D"text-decoration:none;color:rgb(0,0,1)">+34=C2=A093=
+6=C2=A0806501</span></a></span></b></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:6pt 0in 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:0in 7.5pt 0in 0in">
+<p><a href=3D"https://www.facebook.com/RubiArabs/" target=3D"_blank"><span =
+style=3D"font-size:1pt;text-decoration:none"><img border=3D"0" width=3D"9" =
+height=3D"18" id=3D"m_5334313734964344572x_Picture_x0020_10" src=3D"https:/=
+/odoo.akghardware.com/web/image/6253?access_token=3Da88e8d6a-19ea-4b32-8f9e=
+-97af50964ead" style=3D"width: 0.0916in; height: 0.1916in;"></span></a><spa=
+n style=3D"font-size:1pt"></span></p>
+</td>
+<td style=3D"padding:0in 7.5pt 0in 0in">
+<p><span style=3D"font-size:1pt">=C2=A0</span></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in 7.5pt 0in 0in">
+<p><a href=3D"https://www.rubi.com/us/youtube" target=3D"_blank"><span styl=
+e=3D"font-size:1pt;text-decoration:none"><img border=3D"0" width=3D"26" hei=
+ght=3D"18" id=3D"m_5334313734964344572x_Picture_x0020_11" src=3D"https://od=
+oo.akghardware.com/web/image/6254?access_token=3D475bb6d5-0076-41ad-bd6e-20=
+1be1342953" style=3D"width: 0.275in; height: 0.1916in;"></span></a><span st=
+yle=3D"font-size:1pt"></span></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in 7.5pt 0in 0in">
+<p><a href=3D"https://www.rubi.com/es/instagram" target=3D"_blank"><span st=
+yle=3D"font-size:1pt;text-decoration:none"><img border=3D"0" width=3D"18" h=
+eight=3D"18" id=3D"m_5334313734964344572x_Picture_x0020_12" src=3D"https://=
+odoo.akghardware.com/web/image/6255?access_token=3Db65c160c-2886-48fc-8f24-=
+f88eab9acd39" style=3D"width: 0.1916in; height: 0.1916in;"></span></a><span=
+ style=3D"font-size:1pt"></span></p>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<p><a href=3D"https://www.rubi.com/us/linkedin" target=3D"_blank"><span sty=
+le=3D"font-size:1pt;text-decoration:none"><img border=3D"0" width=3D"18" he=
+ight=3D"18" id=3D"m_5334313734964344572x_Picture_x0020_13" src=3D"https://o=
+doo.akghardware.com/web/image/6256?access_token=3D2930e661-eacc-4998-a878-b=
+d0431aa273f" style=3D"width: 0.1916in; height: 0.1916in;"></span></a><span =
+style=3D"font-size:1pt"></span></p>
+</td>
+<td style=3D"padding:0in">
+<p><span style=3D"font-size:1pt">=C2=A0</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td valign=3D"top" style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td valign=3D"top" style=3D"padding:9pt 0in 0in">
+<p><a href=3D"https://www.rubi.com/en/turbo-viper-tva-hard-materials-diamon=
+d-blade-r160" target=3D"_blank"><span style=3D"font-size:1pt;text-decoratio=
+n:none"><img border=3D"0" width=3D"460" height=3D"120" id=3D"m_533431373496=
+4344572x_Picture_x0020_14" src=3D"https://odoo.akghardware.com/web/image/62=
+57?access_token=3D5c8cfa98-7a91-499c-9a3d-fcbee5879546" style=3D"width: 4.7=
+916in; height: 1.25in;"></span></a><span style=3D"font-size:1pt"></span></p=
+>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan=3D"2" valign=3D"top" style=3D"padding:11.25pt 0in 0in">
+<p><span style=3D"font-size:9pt;font-family:&quot;Segoe UI Emoji&quot;,sans=
+-serif;color:green">=E2=99=BB</span><span style=3D"font-size:9pt;font-famil=
+y:Roboto;color:green">=C2=A0Before=C2=A0printing=C2=A0this=C2=A0email,=C2=
+=A0make=C2=A0sure=C2=A0it=C2=A0is=C2=A0necessary=C2=A0to=C2=A0do=C2=A0so.=
+=C2=A0Protecting=C2=A0the=C2=A0environment=C2=A0is=C2=A0also=C2=A0in=C2=A0y=
+our=C2=A0hands.</span></p>
+</td>
+</tr>
+<tr>
+<td colspan=3D"2" valign=3D"top" style=3D"padding:3.75pt 0in 0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"840" style=
+=3D"width:8.75in">
+<tbody>
+<tr>
+<td style=3D"padding:0in">
+<p style=3D"text-align:justify;line-height:9pt"><span style=3D"font-size:7.=
+5pt;font-family:Roboto;color:rgb(0,0,1)">This message and its attachments c=
+ontain confidential and reserved information addressed exclusively to the r=
+ecipient. If you
+ have received this message in error, please notify it immediately by this =
+same way and delete the message from your system. In accordance with the pr=
+ovisions of Regulation (EU) 2016/679 of the European Parliament and of the =
+Council of April 27, 2016 (hereinafter,
+ &quot;RGPD&quot;) the information contained in this message and / or attac=
+hed file (s) , sent from Germans Boada, SA, is confidential and is intended=
+ to be read only by the person (s) to whom it is addressed. We remind you t=
+hat your data has been incorporated into the
+ treatment system of Germans Boada, S.A. and that as long as the requiremen=
+ts demanded by the regulations are met, you can exercise your rights of acc=
+ess, rectification, limitation of treatment, deletion, portability and oppo=
+sition / revocation, in the terms
+ established by the current regulations on data protection , directing your=
+ request to the postal address Avinguda de les Olimp=C3=ADades 89-91, 08191=
+, Rub=C3=AD (Barcelona).</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div align=3D"center" style=3D"text-align:center"><span style=3D"font-famil=
+y:Verdana,sans-serif;color:rgb(69,71,72)">
+<hr size=3D"2" width=3D"98%" align=3D"center">
+</span></div>
+<div id=3D"m_5334313734964344572x_x_divRplyFwdMsg">
+<p><b><span style=3D"color:black">From:</span></b><span style=3D"color:blac=
+k"> Babar Affan &lt;<a href=3D"mailto:babar@akghardware.com" target=3D"_bla=
+nk">babar@akghardware.com</a>&gt;<br>
+<b>Sent:</b> Sunday, November 5, 2023 11:53:39 AM<br>
+<b>To:</b> Nadeem Khan &lt;<a href=3D"mailto:nkhan@rubi.com" target=3D"_bla=
+nk">nkhan@rubi.com</a>&gt;<br>
+<b>Subject:</b> Rawabi Bosher Trading &amp; Const. Est. LLC. Order (Ref P00=
+089)</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72=
+)">
+</span></p>
+<div>
+<p><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)">=C2=
+=A0</span></p>
+</div>
+</div>
+<div>
+<div>
+<p><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)">Dear =
+Nadeem, I hope this email finds you well. As per the conversation b/w yours=
+elf and Mr. Jehad last week, the Purchase Order has been updated. Therefore=
+, please disregard
+ the [...] </span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,=
+71,72)">=CD=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rg=
+b(69,71,72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=CD=
+=8F</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)=
+">
+</span><span style=3D"font-family:Arial,sans-serif;color:rgb(69,71,72)">=E2=
+=80=8B</span><span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,=
+72)">
+</span></p>
+</div>
+<div>
+<div>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" styl=
+e=3D"width:100%">
+<tbody>
+<tr>
+<td style=3D"padding:0in">
+<p style=3D"margin-top:3.75pt"><img border=3D"0" width=3D"180" height=3D"11=
+8" id=3D"m_5334313734964344572x__x0000_i1030" alt=3D"Rawabi Bosher Trading =
+&amp; Const. Est. LLC." src=3D"https://odoo.akghardware.com/logo.png?compan=
+y=3D1" style=3D"width: 1.875in; height: 1.2333in;"></p>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:0in">
+<div align=3D"center" style=3D"margin-right:0in;margin-bottom:7.5pt;margin-=
+left:0in;text-align:center">
+<hr size=3D"2" width=3D"100%" align=3D"center">
+</div>
+</td>
+</tr>
+<tr>
+<td nowrap style=3D"padding:0in">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"padding:0in">
+<p><b><span style=3D"font-size:9pt">P00089</span></b><span style=3D"font-si=
+ze:9pt">
+<br>
+$=C2=A029,514.10 due=C2=A08/13/23 </span></p>
+</td>
+<td style=3D"padding:0in">
+<p>=C2=A0=C2=A0</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3D"padding:0in">
+<div align=3D"center" style=3D"margin-right:0in;margin-bottom:7.5pt;margin-=
+left:0in;text-align:center">
+<hr size=3D"2" width=3D"100%" align=3D"center">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<div>
+<p style=3D"margin-bottom:9pt"><span style=3D"font-size:10pt;font-family:Ve=
+rdana,sans-serif;color:rgb(69,71,72)">Dear Nadeem,</span></p>
+<p style=3D"margin-bottom:9pt"><span style=3D"font-size:10pt;font-family:Ve=
+rdana,sans-serif;color:rgb(69,71,72)">I hope this email finds you well.</sp=
+an></p>
+<p style=3D"margin-bottom:9pt"><span style=3D"font-size:10pt;font-family:Ve=
+rdana,sans-serif;color:rgb(69,71,72)">As per the conversation b/w yourself =
+and Mr. Jehad last week, the Purchase Order has been updated. Therefore, pl=
+ease disregard the previous email
+ related to the Purchase Order and consider the revised attached Purchase O=
+rder=C2=A0<b>P00089</b>=C2=A0amounting in=C2=A0<b>$ 29,514.10</b>=C2=A0from=
+ Rawabi Bosher Trading &amp; Const. Est. LLC.<br>
+<br>
+Please advise on the readiness and shipment date.</span></p>
+<p><span style=3D"font-size:10pt;font-family:Verdana,sans-serif;color:rgb(6=
+9,71,72)">=C2=A0</span></p>
+</div>
+</div>
+<div style=3D"margin-top:24pt">
+<div align=3D"center" style=3D"margin-right:0in;margin-bottom:3pt;margin-le=
+ft:0in;text-align:center">
+<span style=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)">
+<hr size=3D"2" width=3D"100%" align=3D"center">
+</span></div>
+<p style=3D"margin-right:0in;margin-bottom:3pt;margin-left:0in">
+<b><span style=3D"font-size:8.5pt;font-family:Verdana,sans-serif;color:rgb(=
+69,71,72)">Rawabi Bosher Trading &amp; Const. Est. LLC.</span></b><span sty=
+le=3D"font-family:Verdana,sans-serif;color:rgb(69,71,72)"></span></p>
+<p style=3D"margin-top:1.5pt"><span style=3D"font-size:8.5pt;font-family:Ve=
+rdana,sans-serif;color:rgb(153,153,153)">+968 24492861 |
+<a href=3D"mailto:info@akghardware.com" target=3D"_blank"><span style=3D"te=
+xt-decoration:none;color:rgb(153,153,153)">info@akghardware.com</span></a> =
+|
+<a href=3D"https://www.akg-hardware.com/" target=3D"_blank">
+<span style=3D"text-decoration:none;color:rgb(153,153,153)">https://www.akg=
+-hardware.com</span></a>
+</span></p>
+</div>
+<p><span style=3D"font-size:8.5pt;font-family:Verdana,sans-serif;color:rgb(=
+85,85,85)">Powered by
+<a href=3D"https://www.odoo.com/?utm_source=3Ddb&amp;utm_medium=3Demail" ta=
+rget=3D"_blank">
+<span style=3D"color:rgb(135,90,123)">Odoo</span></a> </span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+    <div style=3D"font-size:13px"><p>-- <br>Nadeem Khan</p></div>
+
+
+<div style=3D"margin-top:32px">
+    <hr width=3D"100%" style=3D"border:medium none;clear:both;display:block=
+;font-size:0px;min-height:1px;line-height:0;margin:16px 0px 4px;background-=
+color:rgb(204,204,204)">
+    <b style=3D"font-size:11px">Rawabi Bosher Trading &amp; Const. Est. LLC=
+.</b><br>
+    <p style=3D"margin-top:2px;font-size:11px;color:rgb(153,153,153)">
+        +968 24492861
+         |
+        <a href=3D"mailto:info@akghardware.com" style=3D"text-decoration:no=
+ne;color:rgb(153,153,153)" target=3D"_blank">info@akghardware.com</a>
+         |
+        <a href=3D"https://www.akg-hardware.com" style=3D"text-decoration:n=
+one;color:rgb(153,153,153)" target=3D"_blank">https://www.akg-hardware.com<=
+/a>
+    </p>
+</div>
+<p style=3D"font-size:11px;color:rgb(85,85,85)">
+    Powered by <a href=3D"https://www.odoo.com?utm_source=3Ddb&amp;utm_medi=
+um=3Demail" style=3D"color:rgb(135,90,123)" target=3D"_blank">Odoo</a>
+</p>
+</div>
+
+<br></div></div></div></blockquote></div>
+
+--000000000000f64750060c3ba0ec--

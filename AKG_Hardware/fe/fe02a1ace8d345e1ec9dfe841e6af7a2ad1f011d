@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20240229T010014Z - 14609@0ec842cea42d
+DTSTART:20240229T040000Z
+DTEND:20240229T043000Z
+ATTENDEE:MAILTO:saleh@akghardware.com
+CREATED:20240229T010014Z
+DESCRIPTION:Mobile: +96898083207\nEmail: babar@akghardware.com\nWhat do you
+  want to transport?: Glue Pallet\nPlease mention the products\, their quan
+ tities and Units:\nglue\nPlease enter the Customer's delivery location add
+ ress:\nsample\nDelivery Contact Name: sample\nPlease enter the contact num
+ ber for delivery:\nsample\nServing Branch: Ghubra\nServing Personnel: Ajay
+ \nInvoice Reference: 1234\nInvoice Date: 213214
+DTSTAMP:20240229T010014Z
+ORGANIZER;CN="Rawabi Bosher Trading & Const. Est. LLC., Mitsubishi/Fuso : 8
+ 201 BK":MAILTO:saleh@akghardware.com
+SUMMARY:3 Ton Transportation to Quriyat 1 Pallet with Babar Affan
+BEGIN:VALARM
+ACTION:AUDIO
+DESCRIPTION:Notification - 15 Minutes
+TRIGGER;related=START:PT15M
+END:VALARM
+BEGIN:VALARM
+ACTION:AUDIO
+DESCRIPTION:Email - 3 Hours
+TRIGGER;related=START:PT3H
+END:VALARM
+BEGIN:VALARM
+ACTION:AUDIO
+DESCRIPTION:SMS Text Message - 1 Hours
+TRIGGER;related=START:PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
